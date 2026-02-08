@@ -53,32 +53,34 @@ p {
 ul, ol {
     margin: 0;
     padding: 0;
-    margin-right: 1.5em; /* Indentation for all lists */
+    margin-right: 2rem; /* Indentation for all lists */
     margin-bottom: 1.5em;
     list-style: none;
+}
+/* Reduce bottom margin for nested lists to keep them tight */
+ul ul, ol ol, ul ol, ol ul {
+    margin-bottom: 0;
 }
 
 /* List Items Common */
 li {
-    margin-bottom: 0.8em;
-    line-height: 1.6;
-    display: flex;
-    align-items: flex-start;
+    margin-bottom: 0.8rem;
+    line-height: 1.8;
+    position: relative;
+    padding-right: 2rem; /* Space for the marker */
 }
 
-/* Custom Bullets for UL (Direct Children Only) */
+/* Markers as absolute to prevent flow issues with flexbox on long lines */
 ul > li::before {
     content: "•";
     color: #3498db;
     font-weight: bold;
-    font-size: 1.8em;
-    line-height: 1;
-    margin-left: 0.5em; 
-    flex-shrink: 0;
-    margin-top: -5px; /* Slight adjustment for large bullet */
+    font-size: 1.5em;
+    position: absolute;
+    right: 0;
+    top: -0.2em;
 }
 
-/* Custom Numbers for OL (Direct Children Only) */
 ol {
     counter-reset: item;
 }
@@ -93,12 +95,9 @@ ol > li::before {
     padding: 2px 8px;
     border-radius: 4px;
     font-size: 0.9em;
-    margin-left: 0.8em;
-    flex-shrink: 0;
-    min-width: 1.5em;
-    text-align: center;
-    margin-top: 3px;
-    line-height: normal;
+    position: absolute;
+    right: 0;
+    top: 0.2em;
 }
 img {
     max-width: 100%;
@@ -127,6 +126,12 @@ pre {
     direction: ltr;
     text-align: left;
     margin: 20px 0;
+}
+/* MathJax Specifics */
+mjx-container, .MathJax {
+    direction: ltr !important;
+    text-align: left !important;
+    display: inline-block !important;
 }
 table {
     width: 100%;
@@ -170,7 +175,7 @@ strong {
 <h2>السؤال 1 (2 درجات)</h2>
 <p><img alt="Question 1" src="images/Q1_economic_forces.png" /></p>
 <p><strong>السؤال:</strong> إيه من دول <strong>مش</strong> من القوى الاقتصادية اللي بتدعم ربحية الشركات على المدى الطويل؟</p>
-<p><strong>الإجابة:</strong> <strong>Fierce rivalry among the firms competing in the industry (المنافسة الشرسة بين الشركات)</strong> ✅</p>
+<p><strong>الإجابة:</strong> <strong><span dir="ltr" style="display:inline-block;">Fierce rivalry among the firms competing in the industry (المنافسة الشرسة بين الشركات)</span></strong> ✅</p>
 <p><strong>ليه اخترنا دي؟ (الشرح بالبلدي):</strong>
 بص يا سيدي، دي نظرية "قوى بورتر الخمسة" (Porter's 5 Forces). النظرية دي بتقولنا إيه اللي بيخلي الصناعة "جذابة" وتكسب، وإيه اللي يخسرها.</p>
 <ul>
@@ -189,24 +194,24 @@ strong {
 <h2>السؤال 2 (2 درجات)</h2>
 <p><img alt="Question 2" src="images/Q2_economic_cost.png" /></p>
 <p><strong>السؤال:</strong> محاسب مرتبه 60 ألف، عنده عقار بيأجره بـ 40 ألف. ساب الشغل وبطل يأجر العقار وفتح محل حلاقة. إيرادات المحل 180 ألف، ومصاريفه (كهرباء وعمالة) 90 ألف.
-عايز يعرف: <strong>التكلفة الاقتصادية (Economic Cost)</strong> و <strong>الربح الاقتصادي (Economic Profit)</strong>.</p>
-<p><strong>الإجابة:</strong> <strong>$190,000; -$10,000</strong> ✅</p>
+عايز يعرف: <strong><span dir="ltr" style="display:inline-block;">التكلفة الاقتصادية (Economic Cost)</span></strong> و <strong><span dir="ltr" style="display:inline-block;">الربح الاقتصادي (Economic Profit)</span></strong>.</p>
+<p><strong>الإجابة:</strong> <strong><span dir="ltr" style="display:inline-block;">$190,000; -$10,000</span></strong> ✅</p>
 <p><strong>الحسبة جت منين؟:</strong>
 في الاقتصاد، التكلفة مش بس اللي بتدفعه من جيبك (Explicit)، لأ وكمان اللي "خسرته" أو "ضحيته بيه" (Implicit/Opportunity Cost).</p>
 <ol>
 <li>
 <p><strong>نحسب التكلفة الاقتصادية الكلية:</strong></p>
 <ul>
-<li>مصاريف نقدية (Explicit): <strong>90,000</strong> (دفعهم كهرباء وعمال).</li>
-<li>مرتب ضاع عليه (Opportunity Cost 1): <strong>60,000</strong> (كان ممكن ياخدهم لو فضل محاسب).</li>
-<li>إيجار ضاع عليه (Opportunity Cost 2): <strong>40,000</strong> (كان ممكن ياخدهم لو أجر العقار).</li>
+<li>مصاريف نقدية (Explicit): <strong><span dir="ltr" style="display:inline-block;">90,000</span></strong> (دفعهم كهرباء وعمال).</li>
+<li>مرتب ضاع عليه (Opportunity Cost 1): <strong><span dir="ltr" style="display:inline-block;">60,000</span></strong> (كان ممكن ياخدهم لو فضل محاسب).</li>
+<li>إيجار ضاع عليه (Opportunity Cost 2): <strong><span dir="ltr" style="display:inline-block;">40,000</span></strong> (كان ممكن ياخدهم لو أجر العقار).</li>
 <li><strong>المجموع:</strong> $90,000 + 60,000 + 40,000 = \mathbf{190,000}$ (دي التكلفة الحقيقية).</li>
 </ul>
 </li>
 <li>
 <p><strong>نحسب الربح الاقتصادي:</strong></p>
 <ul>
-<li>الإيراد (180,000) - التكلفة الاقتصادية (190,000) = <strong>-10,000</strong> (خسارة 10 آلاف).</li>
+<li>الإيراد (180,000) - التكلفة الاقتصادية (190,000) = <strong><span dir="ltr" style="display:inline-block;">-10,000</span></strong> (خسارة 10 آلاف).</li>
 <li>يعني الراجل ده خسران، كان أحسن له يفضل في وظيفته ويأجر محله.</li>
 </ul>
 </li>
@@ -216,7 +221,7 @@ strong {
 <p><img alt="Question 3" src="images/Q3_accounting_vs_economic.png" /></p>
 <p><strong>السؤال:</strong> شركة إيراداتها 5 مليون، وتكاليفها الصريحة 3.5 مليون. صاحب الشركة استثمر مليون دولار كان ممكن يحطهم في البنك بفائدة 12%.
 عايز: <strong>الربح المحاسبي</strong> و <strong>الربح الاقتصادي</strong>.</p>
-<p><strong>الإجابة:</strong> <strong>$1,500,000; $1,380,000</strong> ✅</p>
+<p><strong>الإجابة:</strong> <strong><span dir="ltr" style="display:inline-block;">$1,500,000; $1,380,000</span></strong> ✅</p>
 <p><strong>الشرح:</strong>
 1.  <strong>الربح المحاسبي (زي ما المحاسب بيحسب):</strong>
     *   إيراد - مصروفات فعلية
@@ -234,7 +239,7 @@ strong {
 <h2>السؤال 4 (2 درجات)</h2>
 <p><img alt="Question 4" src="images/Q4_supply_shift.png" /></p>
 <p><strong>السؤال:</strong> اكتشفوا تكنولوجيا جديدة (بكتيريا) بتقلل أضرار الصقيع على المحاصيل، وده وفر مليار دولار سنوياً للمزارعين. إيه اللي هيحصل للسعر والكمية؟</p>
-<p><strong>الإجابة:</strong> <strong>Price will decrease, and quantity will increase. (السعر هيقل، والكمية هتزيد)</strong> ✅</p>
+<p><strong>الإجابة:</strong> <strong><span dir="ltr" style="display:inline-block;">Price will decrease, and quantity will increase. (السعر هيقل، والكمية هتزيد)</span></strong> ✅</p>
 <p><strong>ليه؟:</strong></p>
 <ul>
 <li>تكنولوجيا جديدة بتوفر فلوس = تكلفة الإنتاج قلت.</li>
@@ -245,13 +250,13 @@ strong {
 <h2>السؤال 5 (2 درجات)</h2>
 <p><img alt="Question 5" src="images/Q5_producer_surplus.png" /></p>
 <p><strong>السؤال:</strong> السعر في السوق 150. الشركة كانت مستعدة تبيع بـ 70. المستهلك قيم المنتج بـ 200.
-عايز: <strong>فائض المنتج (Producer Surplus)</strong>.</p>
-<p><strong>الإجابة:</strong> <strong>$80</strong> ✅</p>
+عايز: <strong><span dir="ltr" style="display:inline-block;">فائض المنتج (Producer Surplus)</span></strong>.</p>
+<p><strong>الإجابة:</strong> <strong><span dir="ltr" style="display:inline-block;">$80</span></strong> ✅</p>
 <p><strong>الحسبة:</strong></p>
 <ul>
 <li>فائض المنتج هو الفرق بين "السعر اللي باع بيه فعلاً" و"أقل سعر كان راضي بيه".</li>
-<li>هو باع بـ <strong>150</strong>.</li>
-<li>كان راضي يبيع بـ <strong>70</strong>.</li>
+<li>هو باع بـ <strong><span dir="ltr" style="display:inline-block;">150</span></strong>.</li>
+<li>كان راضي يبيع بـ <strong><span dir="ltr" style="display:inline-block;">70</span></strong>.</li>
 <li>مكسبه الزيادة (الفائض) = $150 - 70 = \mathbf{80}$.</li>
 <li><em>(ملحوظة: الـ 200 دي عشان يحسب فائض المستهلك، مش محتاجينها هنا).</em></li>
 </ul>
@@ -269,9 +274,9 @@ strong {
 </ul>
 </li>
 </ul>
-<p><strong>الإجابة:</strong> <strong>P = $10 and Q = 540</strong> ✅</p>
+<p><strong>الإجابة:</strong> <strong><span dir="ltr" style="display:inline-block;">P = $10 and Q = 540</span></strong> ✅</p>
 <p><strong>خطوات الحل:</strong>
-1.  <strong>ساوي الطلب بالعرض (Equilibrium):</strong>
+1.  <strong><span dir="ltr" style="display:inline-block;">ساوي الطلب بالعرض (Equilibrium):</span></strong>
     $$600 - 6P = 480 + 6P$$
 2.  جمع الـ P في ناحية والأرقام في ناحية:
     $$600 - 480 = 6P + 6P$$
@@ -284,7 +289,7 @@ strong {
 <h2>السؤال 7 (2 درجات)</h2>
 <p><img alt="Question 7" src="images/Q7_min_price.png" /></p>
 <p><strong>السؤال:</strong> مديك معطيات جديدة ($P_I=40, F=50$) وعايز السعر اللي يخلينا ننتج كمية 400 وحدة.</p>
-<p><strong>الإجابة:</strong> <strong>$30</strong> ✅</p>
+<p><strong>الإجابة:</strong> <strong><span dir="ltr" style="display:inline-block;">$30</span></strong> ✅</p>
 <p><strong>الخطوات:</strong>
 1.  نحسب معادلة العرض الجديدة بالأرقام الجديدة:
     *   $Q_s = 40 + 6P - 8(40) + 10(50)$
@@ -298,12 +303,12 @@ strong {
 <hr />
 <h2>السؤال 8 (2 درجات)</h2>
 <p><img alt="Question 8" src="images/Q8_price_fix.png" /></p>
-<p><strong>السؤال:</strong> الحكومة حددت السعر عند <strong>50 دولار</strong>. إيه اللي هيحصل؟ (باستخدام نفس بيانات السؤال 7).</p>
+<p><strong>السؤال:</strong> الحكومة حددت السعر عند <strong><span dir="ltr" style="display:inline-block;">50 دولار</span></strong>. إيه اللي هيحصل؟ (باستخدام نفس بيانات السؤال 7).</p>
 <ul>
 <li>معادلة العرض: $Q_s = 220 + 6P$</li>
 <li>معادلة الطلب (ثابتة): $Q_d = 700 - 6P$</li>
 </ul>
-<p><strong>الإجابة:</strong> <strong>A surplus of 120 (فائض 120 وحدة)</strong> ✅</p>
+<p><strong>الإجابة:</strong> <strong><span dir="ltr" style="display:inline-block;">A surplus of 120 (فائض 120 وحدة)</span></strong> ✅</p>
 <p><strong>الخطوات:</strong></p>
 <ol>
 <li>نعوض بالسعر 50 في العرض والطلب:<ul>
@@ -314,7 +319,7 @@ strong {
 <li>نقارن:<ul>
 <li>المعروض (520) أكبر من المطلوب (400).</li>
 <li>الفرق = $520 - 400 = 120$.</li>
-<li>لما العرض يكون أكبر من الطلب بنسميه <strong>Surplus (فائض)</strong>.</li>
+<li>لما العرض يكون أكبر من الطلب بنسميه <strong><span dir="ltr" style="display:inline-block;">Surplus (فائض)</span></strong>.</li>
 </ul>
 </li>
 </ol>
@@ -324,7 +329,7 @@ strong {
 <p><strong>السؤال:</strong> حصل حاجتين في نفس الوقت لسوق الشرائح الإلكترونية:
 1.  أسعار البلاستيك (مادة خام) قلت. (ده يأثر على العرض).
 2.  أسعار برامج الكمبيوتر (سلعة مكملة) زادت. (ده يأثر على الطلب).</p>
-<p><strong>الإجابة:</strong> <strong>Price decreases, but quantity is indeterminate. (السعر هيقل، بس الكمية مش عارفين)</strong> ✅</p>
+<p><strong>الإجابة:</strong> <strong><span dir="ltr" style="display:inline-block;">Price decreases, but quantity is indeterminate. (السعر هيقل، بس الكمية مش عارفين)</span></strong> ✅</p>
 <p><strong>التحليل:</strong></p>
 <ol>
 <li><strong>تكلفة قلت:</strong> العرض يزيد (Shift Right). -&gt; ده بيقلل السعر ويزود الكمية.</li>
@@ -342,8 +347,8 @@ strong {
 *   مهندس راتبه 40 ألف.
 *   باحث راتبه 20 ألف.
 *   الجدول بيبين الإنتاجية الحدية (Marginal Product) لكل واحد.</p>
-<p><strong>الإجابة:</strong> <strong>Hire three engineers and one market researcher.</strong> ✅</p>
-<p><strong>طريقة التفكير (Marginal Analysis):</strong>
+<p><strong>الإجابة:</strong> <strong><span dir="ltr" style="display:inline-block;">Hire three engineers and one market researcher.</span></strong> ✅</p>
+<p><strong><span dir="ltr" style="display:inline-block;">طريقة التفكير (Marginal Analysis):</span></strong>
 بنشوف كل دولار بندفعه بيجبلنا إنتاجية قد إيه (MP/Price).</p>
 <ul>
 <li><strong>المهندس:</strong> (240/40=6)، (200/40=5)، (160/40=4).</li>
@@ -362,7 +367,7 @@ strong {
 <h2>السؤال 11 (2 درجات)</h2>
 <p><img alt="Question 11" src="images/Q11_budget_240k.png" /></p>
 <p><strong>السؤال:</strong> نفس الفكرة بس الميزانية زادت لـ 240 ألف.</p>
-<p><strong>الإجابة:</strong> <strong>Hire four engineers and four market researchers.</strong> ✅</p>
+<p><strong>الإجابة:</strong> <strong><span dir="ltr" style="display:inline-block;">Hire four engineers and four market researchers.</span></strong> ✅</p>
 <p><strong>الشرح:</strong>
 الميزانية كبرت، هنفضل نعين الناس اللي إنتاجيتهم عالية لحد ما الفلوس تخلص وتتحقق قاعدة التوازن $\frac{MP_E}{P_E} = \frac{MP_R}{P_R}$.</p>
 <ul>
@@ -373,44 +378,44 @@ strong {
 <p><img alt="Question 12" src="images/Q12_inspectors.png" /></p>
 <p><strong>السؤال:</strong> تكلفة المفتش 100 دولار. وتكلفة اللعبة المعيوبة (اللي بتعدي) 20 دولار.
 الجدول بيقول كل مفتش بيسيب كام لعبة معيوبة تعدي.</p>
-<p><strong>الإجابة:</strong> <strong>3</strong> ✅</p>
+<p><strong>الإجابة:</strong> <strong><span dir="ltr" style="display:inline-block;">3</span></strong> ✅</p>
 <p><strong>الحسبة:</strong>
 الهدف إننا نقلل "التكلفة الكلية" (تكلفة المفتشين + خسارة العيوب).</p>
 <ul>
-<li><strong>مفتش 1:</strong> تكلفته 100 + عيوب (50 لعبة × 20$) = 100 + 1000 = 1100.</li>
-<li><strong>مفتش 2:</strong> تكلفته 200 + عيوب (25 × 20) = 200 + 500 = 700.</li>
-<li><strong>مفتش 3:</strong> تكلفته 300 + عيوب (10 × 20) = 300 + 200 = <strong>500</strong>. (أقل تكلفة)</li>
-<li><strong>مفتش 4:</strong> تكلفته 400 + عيوب (5 × 20) = 400 + 100 = 500. (زيها، بس بنقف عند 3 أوفر).</li>
+<li><strong><span dir="ltr" style="display:inline-block;">مفتش 1:</span></strong> تكلفته 100 + عيوب (50 لعبة × 20$) = 100 + 1000 = 1100.</li>
+<li><strong><span dir="ltr" style="display:inline-block;">مفتش 2:</span></strong> تكلفته 200 + عيوب (25 × 20) = 200 + 500 = 700.</li>
+<li><strong><span dir="ltr" style="display:inline-block;">مفتش 3:</span></strong> تكلفته 300 + عيوب (10 × 20) = 300 + 200 = <strong><span dir="ltr" style="display:inline-block;">500</span></strong>. (أقل تكلفة)</li>
+<li><strong><span dir="ltr" style="display:inline-block;">مفتش 4:</span></strong> تكلفته 400 + عيوب (5 × 20) = 400 + 100 = 500. (زيها، بس بنقف عند 3 أوفر).</li>
 </ul>
 <hr />
 <h2>السؤال 13 (2 درجات)</h2>
 <p><img alt="Question 13" src="images/Q13_security_guard.png" /></p>
 <p><strong>السؤال:</strong> كل سرقة بتكلفنا 25 دولار. حارس الأمن بيقلل السرقات من 50 لـ 30.
 يعني منع 20 سرقة. مستعدين ندفعله كام كحد أقصى؟</p>
-<p><strong>الإجابة:</strong> <strong>$500</strong> ✅</p>
+<p><strong>الإجابة:</strong> <strong><span dir="ltr" style="display:inline-block;">$500</span></strong> ✅</p>
 <p><strong>الشرح:</strong>
 قيمته بالنسبالنا هي الفلوس اللي وفرها.
-وفر 20 سرقة × 25 دولار للسرقة الواحدة = <strong>500 دولار</strong>.
+وفر 20 سرقة × 25 دولار للسرقة الواحدة = <strong><span dir="ltr" style="display:inline-block;">500 دولار</span></strong>.
 ده أقصى مبلغ ممكن ندفعهوله (اسمه Marginal Benefit).</p>
 <hr />
 <h2>السؤال 14 (2 درجات)</h2>
 <p><img alt="Question 14" src="images/Q14_optimal_guards.png" /></p>
 <p><strong>السؤال:</strong> لو راتب الحارس 200 دولار في الأسبوع. نعين كام حارس؟</p>
-<p><strong>الإجابة:</strong> <strong>2</strong> ✅</p>
-<p><strong>التحليل (MB vs MC):</strong>
+<p><strong>الإجابة:</strong> <strong><span dir="ltr" style="display:inline-block;">2</span></strong> ✅</p>
+<p><strong><span dir="ltr" style="display:inline-block;">التحليل (MB vs MC):</span></strong>
 القاعدة: عين طالما الفايدة (MB) أكبر من أو تساوي التكلفة (MC $200).</p>
 <ul>
 <li><strong>الحارس الأول:</strong> بيوفر 20 سرقة (=500$). الـ 500 &gt; 200. (عينه ✅).</li>
 <li><strong>الحارس الثاني:</strong> بيقلل السرقات من 30 لـ 20 (وفر 10 سرقات). قيمتهم 10×25 = 250$. الـ 250 &gt; 200. (عينه ✅).</li>
 <li><strong>الحارس الثالث:</strong> بيقلل السرقات من 20 لـ 14 (وفر 6). قيمتهم 6×25 = 150$. الـ 150 &lt; 200. (لأ متعهينوش ❌ بتخسر).</li>
-<li>يبقى نعين <strong>2</strong> بس.</li>
+<li>يبقى نعين <strong><span dir="ltr" style="display:inline-block;">2</span></strong> بس.</li>
 </ul>
 <hr />
 <h2>السؤال 15 (2 درجات)</h2>
 <p><img alt="Question 15" src="images/Q15_max_profit.png" /></p>
 <p><strong>السؤال:</strong> الإيراد 25 لكل وحدة تنظيف. أجر العامل 130.
 الجدول بيبين إنتاجية كل عامل إضافي.</p>
-<p><strong>الإجابة:</strong> <strong>$230</strong> ✅</p>
+<p><strong>الإجابة:</strong> <strong><span dir="ltr" style="display:inline-block;">$230</span></strong> ✅</p>
 <p><strong>خطوات الحل:</strong>
 1.  نحسب الربح عند كل مستوى عمالة. (الربح = الإيراد الكلي - التكلفة الكلية).</p>
 <pre><code>*   الإيراد = عدد البيوت × 25.
@@ -422,7 +427,7 @@ strong {
 <ul>
 <li>بينظفوا 30 بيت. الدخل = 30 × 25 = 750.</li>
 <li>راتبهم = 4 × 130 = 520.</li>
-<li>الربح = 750 - 520 = <strong>230</strong>.</li>
+<li>الربح = 750 - 520 = <strong><span dir="ltr" style="display:inline-block;">230</span></strong>.</li>
 <li>لو جربت أي رقم تاني هتلاقيه أقل من 230.</li>
 </ul>
 </li>
