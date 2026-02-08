@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 - Visual Study Guide | الملخص المرئي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #fff;
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .header h1 {
+            font-size: 3em;
+            background: linear-gradient(90deg, #e94560, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        .header .subtitle {
+            color: #94a3b8;
+            font-size: 1.3em;
+        }
+        
+        /* Concept Cards */
+        .concepts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        .concept-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .concept-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(233,69,96,0.2);
+        }
+        .concept-card .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        .concept-card h3 {
+            font-size: 1.5em;
+            color: #e94560;
+            margin-bottom: 15px;
+        }
+        .concept-card p {
+            color: #cbd5e1;
+            margin-bottom: 15px;
+        }
+        
+        /* Formula Box */
+        .formula-box {
+            background: linear-gradient(135deg, #1e3a5f, #2d5a87);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            text-align: center;
+            border-right: 5px solid #e94560;
+        }
+        .formula-box .formula {
+            font-size: 1.4em;
+            color: #fbbf24;
+            direction: ltr;
+            display: inline-block;
+        }
+        
+        /* Section Title */
+        .section-title {
+            font-size: 2em;
+            color: #e94560;
+            text-align: center;
+            margin: 50px 0 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid rgba(233,69,96,0.3);
+        }
+        
+        /* Infographic */
+        .infographic {
+            background: rgba(255,255,255,0.03);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px 0;
+        }
+        
+        /* Elasticity Table */
+        .elasticity-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 10px;
+            margin: 20px 0;
+        }
+        .elasticity-table th {
+            background: #e94560;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .elasticity-table th:first-child {
+            border-radius: 0 10px 10px 0;
+        }
+        .elasticity-table th:last-child {
+            border-radius: 10px 0 0 10px;
+        }
+        .elasticity-table td {
+            background: rgba(255,255,255,0.05);
+            padding: 15px;
+            text-align: center;
+        }
+        .elasticity-table tr td:first-child {
+            border-radius: 0 10px 10px 0;
+        }
+        .elasticity-table tr td:last-child {
+            border-radius: 10px 0 0 10px;
+        }
+        
+        /* Badge */
+        .badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+        .badge-elastic { background: #ef4444; }
+        .badge-inelastic { background: #22c55e; }
+        .badge-unit { background: #eab308; color: #000; }
+        
+        /* Flow Chart */
+        .flow-chart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .flow-box {
+            background: linear-gradient(135deg, #e94560, #ff6b6b);
+            padding: 20px 30px;
+            border-radius: 15px;
+            text-align: center;
+            min-width: 150px;
+        }
+        .flow-arrow {
+            font-size: 2em;
+            color: #e94560;
+        }
+        
+        /* Quick Tips */
+        .quick-tips {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .tip-card {
+            background: rgba(34,197,94,0.1);
+            border: 1px solid rgba(34,197,94,0.3);
+            border-radius: 15px;
+            padding: 20px;
+        }
+        .tip-card.warning {
+            background: rgba(239,68,68,0.1);
+            border-color: rgba(239,68,68,0.3);
+        }
+        .tip-card h4 {
+            color: #22c55e;
+            margin-bottom: 10px;
+        }
+        .tip-card.warning h4 {
+            color: #ef4444;
+        }
+        
+        /* Quiz Section */
+        .quiz-section {
+            background: linear-gradient(135deg, #1e3a5f, #0f3460);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+        .quiz-question {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px 0;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .quiz-question:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        .quiz-answer {
+            display: none;
+            background: rgba(34,197,94,0.2);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 10px;
+            border-right: 4px solid #22c55e;
+        }
+        .quiz-question.active .quiz-answer {
+            display: block;
+        }
+        
+        /* MathJax override */
+        mjx-container {
+            direction: ltr !important;
+            display: inline-block !important;
+            color: #fbbf24 !important;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2em; }
+            .concepts-grid { grid-template-columns: 1fr; }
+            .flow-chart { flex-direction: column; }
+            .flow-arrow { transform: rotate(90deg); }
+        }
+    </style>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$']],
+                displayMath: [['$$', '$$']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>📚 الأسبوع الثاني - الملخص المرئي</h1>
+            <div class="subtitle">Managerial Economics | سلوك المستهلك والمرونة</div>
+        </div>
+        
+        <!-- Core Concepts Grid -->
+        <div class="concepts-grid">
+            <div class="concept-card">
+                <div class="icon">💰</div>
+                <h3>قيد الميزانية</h3>
+                <p>خط يوضح كل الاختيارات الممكنة بالفلوس اللي معاك</p>
+                <div class="formula-box">
+                    <div class="formula">$\text{Income} = P_X \cdot X + P_Y \cdot Y$</div>
+                </div>
+                <p><strong>الميل:</strong> $-\frac{P_X}{P_Y}$</p>
+            </div>
+            
+            <div class="concept-card">
+                <div class="icon">📈</div>
+                <h3>المرونة السعرية</h3>
+                <p>الناس بتستجيب قد إيه لما السعر يتغير</p>
+                <div class="formula-box">
+                    <div class="formula">$E_d = \frac{\%\Delta Q}{\%\Delta P}$</div>
+                </div>
+                <p><strong>E > 1:</strong> مرن | <strong>E < 1:</strong> غير مرن</p>
+            </div>
+            
+            <div class="concept-card">
+                <div class="icon">📊</div>
+                <h3>الإيراد الكلي</h3>
+                <p>إجمالي اللي بتكسبه من البيع</p>
+                <div class="formula-box">
+                    <div class="formula">$TR = P \times Q$</div>
+                </div>
+                <p><strong>الأقصى:</strong> عند منتصف منحنى الطلب</p>
+            </div>
+            
+            <div class="concept-card">
+                <div class="icon">🎯</div>
+                <h3>الإيراد الحدي</h3>
+                <p>الزيادة في الإيراد من بيع وحدة زيادة</p>
+                <div class="formula-box">
+                    <div class="formula">$MR = \frac{\Delta TR}{\Delta Q}$</div>
+                </div>
+                <p><strong>MR > 0:</strong> طلب مرن | <strong>MR < 0:</strong> غير مرن</p>
+            </div>
+        </div>
+        
+        <!-- Elasticity Section -->
+        <h2 class="section-title">🎯 أنواع المرونة</h2>
+        <div class="infographic">
+            <table class="elasticity-table">
+                <tr>
+                    <th>النوع</th>
+                    <th>القيمة</th>
+                    <th>المعنى</th>
+                    <th>تأثير زيادة السعر على TR</th>
+                </tr>
+                <tr>
+                    <td><span class="badge badge-elastic">مرن Elastic</span></td>
+                    <td>E > 1</td>
+                    <td>الناس بتهرب لما السعر يغلى</td>
+                    <td>⬇️ الإيراد يقل</td>
+                </tr>
+                <tr>
+                    <td><span class="badge badge-unit">أحادي Unit</span></td>
+                    <td>E = 1</td>
+                    <td>التغير متساوي</td>
+                    <td>➡️ الإيراد ثابت</td>
+                </tr>
+                <tr>
+                    <td><span class="badge badge-inelastic">غير مرن Inelastic</span></td>
+                    <td>E < 1</td>
+                    <td>الناس مش بتتأثر كتير</td>
+                    <td>⬆️ الإيراد يزيد</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- TR Curve Flow -->
+        <h2 class="section-title">📈 منحنى الإيراد الكلي</h2>
+        <div class="infographic">
+            <div class="flow-chart">
+                <div class="flow-box">
+                    <div>🟢 MR > 0</div>
+                    <div>الطلب مرن</div>
+                    <div>TR يزيد</div>
+                </div>
+                <div class="flow-arrow">←</div>
+                <div class="flow-box" style="background: linear-gradient(135deg, #eab308, #f59e0b);">
+                    <div>🟡 MR = 0</div>
+                    <div>نقطة الذروة</div>
+                    <div>TR الأقصى</div>
+                </div>
+                <div class="flow-arrow">←</div>
+                <div class="flow-box" style="background: linear-gradient(135deg, #22c55e, #16a34a);">
+                    <div>🔴 MR < 0</div>
+                    <div>الطلب غير مرن</div>
+                    <div>TR يقل</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Demand Estimation -->
+        <h2 class="section-title">🔢 تقدير الطلب</h2>
+        <div class="infographic">
+            <div class="formula-box" style="margin-bottom: 30px;">
+                <div class="formula">$Q = a - bP + cM + dP_R$</div>
+            </div>
+            
+            <div class="quick-tips">
+                <div class="tip-card">
+                    <h4>✅ معامل السعر (b) سالب</h4>
+                    <p>قانون الطلب: لما السعر يزيد، الكمية تقل</p>
+                </div>
+                <div class="tip-card">
+                    <h4>✅ معامل الدخل (c) موجب</h4>
+                    <p>سلعة عادية: لما الدخل يزيد، الطلب يزيد</p>
+                </div>
+                <div class="tip-card warning">
+                    <h4>⚠️ معامل الدخل (c) سالب</h4>
+                    <p>سلعة رديئة: لما الدخل يزيد، الطلب يقل</p>
+                </div>
+                <div class="tip-card">
+                    <h4>✅ معامل سعر المنافس (d) موجب</h4>
+                    <p>السلعتين بدائل (زي بيبسي وكوكاكولا)</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Quiz Section -->
+        <h2 class="section-title">❓ اختبر نفسك</h2>
+        <div class="quiz-section">
+            <div class="quiz-question" onclick="this.classList.toggle('active')">
+                <strong>1️⃣ لو الدخل = $1000 و Px = $25 و Py = $50، كم وحدة من X ممكن تشتري لو مش هتشتري Y؟</strong>
+                <div class="quiz-answer">
+                    <strong>الإجابة:</strong> 1000 ÷ 25 = <strong>40 وحدة</strong>
+                </div>
+            </div>
+            
+            <div class="quiz-question" onclick="this.classList.toggle('active')">
+                <strong>2️⃣ لو المرونة = 0.8، الطلب مرن ولا غير مرن؟</strong>
+                <div class="quiz-answer">
+                    <strong>الإجابة:</strong> <span class="badge badge-inelastic">غير مرن</span> لأن 0.8 < 1
+                </div>
+            </div>
+            
+            <div class="quiz-question" onclick="this.classList.toggle('active')">
+                <strong>3️⃣ لو MR = -10، الإيراد الكلي هيزيد ولا يقل لو زودنا الإنتاج؟</strong>
+                <div class="quiz-answer">
+                    <strong>الإجابة:</strong> <strong>هيقل</strong> لأن MR سالب يعني كل وحدة زيادة بتقلل الإيراد
+                </div>
+            </div>
+            
+            <div class="quiz-question" onclick="this.classList.toggle('active')">
+                <strong>4️⃣ معامل الدخل = -0.5، السلعة دي عادية ولا رديئة؟</strong>
+                <div class="quiz-answer">
+                    <strong>الإجابة:</strong> <strong>رديئة (Inferior)</strong> لأن المعامل سالب - لما الدخل يزيد الناس بتشتري أقل
+                </div>
+            </div>
+            
+            <div class="quiz-question" onclick="this.classList.toggle('active')">
+                <strong>5️⃣ لو السعر زاد والطلب غير مرن، الإيراد الكلي هيزيد ولا يقل؟</strong>
+                <div class="quiz-answer">
+                    <strong>الإجابة:</strong> <strong>هيزيد</strong> لأن في الطلب غير المرن، زيادة السعر بتزود الإيراد
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div style="text-align: center; margin-top: 50px; color: #64748b;">
+            <p>MBA Study Portal | Managerial Economics Week 2</p>
+        </div>
+    </div>
+</body>
+</html>
