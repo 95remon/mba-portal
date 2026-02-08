@@ -1,0 +1,424 @@
+
+    <!DOCTYPE html>
+    <html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week 2 Practice Problems - الأسبوع الثاني</title>
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+body {
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+    background-color: #fafafa;
+    color: #2c3e50;
+    line-height: 1.9;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+h1 {
+    text-align: center;
+    color: #2980b9;
+    font-size: 2.5em;
+    border-bottom: 3px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+h2 {
+    color: white;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    padding: 15px 25px;
+    border-radius: 8px;
+    margin-top: 50px;
+    font-size: 1.5em;
+}
+h3 {
+    color: #2980b9;
+    border-right: 5px solid #3498db;
+    padding-right: 15px;
+    margin-top: 30px;
+}
+p {
+    margin-bottom: 1.2em;
+    font-size: 1.15em;
+}
+
+/* List Styling */
+ul, ol {
+    margin: 0;
+    padding: 0;
+    margin-right: 2rem;
+    margin-bottom: 1.5em;
+    list-style: none;
+}
+ul ul, ol ol, ul ol, ol ul {
+    margin-bottom: 0;
+}
+
+li {
+    margin-bottom: 0.8rem;
+    line-height: 1.8;
+    position: relative;
+    padding-right: 2rem;
+}
+
+ul > li::before {
+    content: "•";
+    color: #3498db;
+    font-weight: bold;
+    font-size: 1.5em;
+    position: absolute;
+    right: 0;
+    top: -0.2em;
+}
+
+ol {
+    counter-reset: item;
+}
+ol > li {
+    counter-increment: item;
+}
+ol > li::before {
+    content: counter(item) ".";
+    color: #d35400;
+    font-weight: bold;
+    background: #fdf2e9;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    position: absolute;
+    right: 0;
+    top: 0.2em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    border: 1px solid #eee;
+}
+code {
+    background: #f8f9fa;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Consolas', monospace;
+    color: #e74c3c;
+    direction: ltr; 
+    display: inline-block;
+}
+pre {
+    background: #2d3436;
+    color: #dfe6e9;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    direction: ltr;
+    text-align: left;
+    margin: 20px 0;
+}
+
+/* MathJax */
+mjx-container, .MathJax {
+    direction: ltr !important;
+    text-align: left !important;
+    display: inline-block !important;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    background: white;
+}
+th, td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+th {
+    background-color: #2980b9;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+strong {
+    color: #c0392b;
+}
+hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, rgba(0,0,0,0), #bdc3c7, rgba(0,0,0,0));
+    margin: 40px 0;
+}
+</style>
+         <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['$', '$']],
+                    displayMath: [['$$', '$$']],
+                    processEscapes: true
+                },
+                options: {
+                    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Week 2 Practice Problems - الأسبوع الثاني</h1>
+<hr />
+<h2>السؤال 1: قيد الميزانية (Budget Constraint)</h2>
+<p><img alt="Q1 Budget Constraint" src="excel_charts/image1.emf" /></p>
+<p><strong>المعطيات من الشيت:</strong></p>
+<blockquote>
+<p>Suppose that the price of good X is $20 and the price of good Y is $40.</p>
+</blockquote>
+<p><strong>الأسئلة:</strong></p>
+<hr />
+<h3>1) If U1 is the highest level of utility that the consumer can achieve, what is the consumer's income?</h3>
+<p><strong>الإجابة من الشيت:</strong></p>
+<blockquote>
+<p>Find income at the endpoints when one good is 0 units.
+40 units of good X at $20 per unit = <strong><span dir="ltr" style="display:inline-block;">$800</span></strong></p>
+</blockquote>
+<p><strong>الشرح بالمصري:</strong>
+بنروح لأي طرف من خط الميزانية ونحسب. لو المستهلك اشترى 40 وحدة من X بس (و صفر من Y):
+- الدخل = 40 × $20 = <strong><span dir="ltr" style="display:inline-block;">$800</span></strong></p>
+<hr />
+<h3>2) How many units of good X will the consumer choose if point B is the utility-maximizing choice?</h3>
+<p><strong>الإجابة من الشيت:</strong></p>
+<blockquote>
+<p>Write the equation of the income line, fill in the units of good Y, and solve for units of good X.
+Income at point B is (30 units x $40/unit) = $1200
+1200 = ($20 x X) + ($40 x 14)
+X = <strong><span dir="ltr" style="display:inline-block;">32 units</span></strong></p>
+</blockquote>
+<p><strong>الشرح بالمصري:</strong>
+عند النقطة B، الدخل = $1200 (لأن عنده 30 وحدة من Y × $40 = $1200)
+نعوض في معادلة الميزانية:
+$$1200 = (20 \times X) + (40 \times 14)$$
+$$1200 = 20X + 560$$
+$$X = 32$$</p>
+<hr />
+<h3>3) If income is $800, how many units of good Y will the consumer choose?</h3>
+<p><strong>الإجابة من الشيت:</strong></p>
+<blockquote>
+<p>Write the equation of the income line, fill in the units of good X, and solve for units of good Y.
+Income at point A is (40 units x $20/unit) = $800
+800 = ($20 x 24) + ($40 x Y)
+Y = <strong><span dir="ltr" style="display:inline-block;">8 units</span></strong></p>
+</blockquote>
+<p><strong>الشرح بالمصري:</strong>
+عند النقطة A، بيشتري 24 وحدة من X:
+$$800 = (20 \times 24) + (40 \times Y)$$
+$$800 = 480 + 40Y$$
+$$Y = 8$$</p>
+<hr />
+<h2>السؤال 2: الإيراد الكلي والمرونة (TR &amp; Elasticity)</h2>
+<p><img alt="Q2 TR and Demand Chart" src="excel_charts/image2.jpeg" /></p>
+<p><strong>الرسمة بتوضح:</strong>
+- <strong>الشمال:</strong> منحنى الطلب (P من 0 لـ 50، Q من 0 لـ 1000)
+- <strong>اليمين:</strong> منحنى الإيراد الكلي TR (شكل قوس)
+- عند Q=100: TR = $4,500، MR = +40
+- عند Q=700: MR = -20</p>
+<hr />
+<h3>1) What is the price for which 100 units can be sold?</h3>
+<p><strong>الإجابة من الشيت:</strong></p>
+<blockquote>
+<p>At 100 units, TR = $4,500 and TR = P x Q
+4500 = P x 100
+P = <strong><span dir="ltr" style="display:inline-block;">$45</span></strong></p>
+</blockquote>
+<p><strong>الشرح بالمصري:</strong>
+من الرسمة، عند 100 وحدة الإيراد = $4,500
+TR = P × Q → 4500 = P × 100 → P = $45</p>
+<hr />
+<h3>2) At what price is total revenue maximized?</h3>
+<p><strong>الإجابة من الشيت:</strong></p>
+<blockquote>
+<p>On a linear demand curve, TR is maximized at its midpoint.
+P = <strong><span dir="ltr" style="display:inline-block;">$25</span></strong></p>
+</blockquote>
+<p><strong>الشرح بالمصري:</strong>
+في منحنى الطلب الخطي، أعلى إيراد بيكون عند <strong>نقطة المنتصف</strong> (Midpoint).
+السعر = $25، الكمية = 500</p>
+<hr />
+<h3>3) What is the marginal revenue of the 100th unit?</h3>
+<p><strong>الإجابة من الشيت:</strong></p>
+<blockquote>
+<p>MR is the slope of the TR curve - shown in the graph as <strong><span dir="ltr" style="display:inline-block;">40</span></strong></p>
+</blockquote>
+<p><strong>الشرح بالمصري:</strong>
+الإيراد الحدي = ميل منحنى TR. من الرسمة عند 100 وحدة، MR = <strong><span dir="ltr" style="display:inline-block;">40</span></strong> (موجب = الطلب مرن)</p>
+<hr />
+<h3>4) At the 700th unit, is demand elastic or inelastic?</h3>
+<p><strong>الإجابة من الشيت:</strong></p>
+<blockquote>
+<p>At 700 units, MR is negative.
+This corresponds to the lower half of the Demand curve which is the <strong><span dir="ltr" style="display:inline-block;">Inelastic</span></strong> portion.</p>
+</blockquote>
+<p><strong>الشرح بالمصري:</strong>
+- النصف العلوي من منحنى الطلب (من 0 لـ 500): MR موجب = طلب مرن
+- النصف السفلي (من 500 لـ 1000): MR سالب = <strong>طلب غير مرن</strong>
+عند 700 وحدة، MR = -20 (سالب) = <strong><span dir="ltr" style="display:inline-block;">Inelastic</span></strong></p>
+<hr />
+<h3>5) What is the maximum possible total revenue?</h3>
+<p><strong>الإجابة من الشيت:</strong></p>
+<blockquote>
+<p>TR is maximized at the midpoint of the linear Demand curve.
+At that point, P = $25 and Q = 500.
+TR = (P x Q) = <strong><span dir="ltr" style="display:inline-block;">$12,500</span></strong></p>
+</blockquote>
+<p><strong>الشرح بالمصري:</strong>
+عند نقطة المنتصف: P = $25، Q = 500
+TR = 25 × 500 = <strong><span dir="ltr" style="display:inline-block;">$12,500</span></strong></p>
+<hr />
+<h2>السؤال 3: حساب المرونة (Arc Elasticity)</h2>
+<p><strong>البيانات من الشيت:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Price</th>
+<th style="text-align: center;">Quantity demanded</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">$200</td>
+<td style="text-align: center;">1,000</td>
+</tr>
+<tr>
+<td style="text-align: center;">$150</td>
+<td style="text-align: center;">1,400</td>
+</tr>
+<tr>
+<td style="text-align: center;">$100</td>
+<td style="text-align: center;">1,800</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>1) If price falls from $200 to $150, what is the price elasticity of demand over this range?</h3>
+<p><strong>الإجابة من الشيت:</strong></p>
+<blockquote>
+<p>E = [ (1400 - 1000) / 1200 ] / [ (200 - 150) / 175 ] = <strong><span dir="ltr" style="display:inline-block;">1.17</span></strong></p>
+</blockquote>
+<p><strong>الشرح بالمصري:</strong>
+نستخدم Arc Elasticity:
+$$E = \frac{(1400 - 1000) / 1200}{(200 - 150) / 175} = \frac{400/1200}{50/175} = 1.17$$</p>
+<hr />
+<h3>2) Is that elastic or inelastic demand?</h3>
+<p><strong>الإجابة من الشيت:</strong></p>
+<blockquote>
+<p>E &gt; 1 → <strong><span dir="ltr" style="display:inline-block;">Elastic</span></strong></p>
+</blockquote>
+<p><strong>الشرح بالمصري:</strong>
+بما إن 1.17 &gt; 1، الطلب <strong><span dir="ltr" style="display:inline-block;">مرن (Elastic)</span></strong></p>
+<hr />
+<h3>3) As output increases from 1000 to 1400 units, what is marginal revenue per unit?</h3>
+<p><strong>الإجابة من الشيت:</strong></p>
+<blockquote>
+<p>MR is change in total revenue (TR) per unit
+MR = [ ($150 x 1400) - ($200 x 1000) ] / (1400 - 1000)
+MR = <strong><span dir="ltr" style="display:inline-block;">$25 per unit</span></strong></p>
+</blockquote>
+<p><strong>الشرح بالمصري:</strong>
+$$MR = \frac{(\$150 \times 1400) - (\$200 \times 1000)}{1400 - 1000}$$
+$$MR = \frac{210,000 - 200,000}{400} = \frac{10,000}{400} = \$25$$</p>
+<hr />
+<h3>4) If price falls from $150 to $100, what is the price elasticity of demand over this range?</h3>
+<p><strong>الإجابة من الشيت:</strong></p>
+<blockquote>
+<p>E = [ (1800 - 1400) / 1600 ] / [ (150 - 100) / 125 ] = <strong><span dir="ltr" style="display:inline-block;">0.625</span></strong>
+E &lt; 1 → <strong><span dir="ltr" style="display:inline-block;">Inelastic</span></strong></p>
+</blockquote>
+<p><strong>الشرح بالمصري:</strong>
+$$E = \frac{(1800 - 1400) / 1600}{(150 - 100) / 125} = \frac{400/1600}{50/125} = 0.625$$
+بما إن 0.625 &lt; 1، الطلب <strong><span dir="ltr" style="display:inline-block;">غير مرن (Inelastic)</span></strong></p>
+<hr />
+<h3>5) If price rises from $100 to $150, what will happen to total revenue?</h3>
+<p><strong>الإجابة من الشيت:</strong></p>
+<blockquote>
+<p>If Demand is Inelastic, increasing price will yield greater TR
+TR will <strong><span dir="ltr" style="display:inline-block;">Increase</span></strong></p>
+</blockquote>
+<p><strong>الشرح بالمصري:</strong>
+في المنطقة غير المرنة، لما السعر يزيد، الإيراد الكلي <strong>بيزيد</strong> (لأن الناس مش بتقلل استهلاكها كتير)</p>
+<hr />
+<h2>السؤال 4: تقدير الطلب (Demand Estimation)</h2>
+<p><img alt="Q4 Demand Equation" src="excel_charts/image4.emf" /></p>
+<p><strong>من الشيت:</strong></p>
+<blockquote>
+<p>The estimated demand for a good is [equation shown in image]
+where Q is the quantity demanded of the good, P is the price of the good, M is income, and PR is the price of related good R.</p>
+</blockquote>
+<hr />
+<h3>1) Does the coefficient on P have the expected sign?</h3>
+<p><strong>الإجابة من الشيت:</strong></p>
+<blockquote>
+<p><strong><span dir="ltr" style="display:inline-block;">YES</span></strong> - Law of Demand requires that if P increases, Qd decreases
+(Inverse Relationship) means negative coefficient</p>
+</blockquote>
+<p><strong>الشرح بالمصري:</strong>
+أيوه! قانون الطلب بيقول لما السعر يزيد، الكمية تقل = علاقة عكسية = معامل سالب ✓</p>
+<hr />
+<h3>2) What does the coefficient on M tell us?</h3>
+<p><strong>الإجابة من الشيت:</strong></p>
+<blockquote>
+<p>Positive coefficient on M means that as income rises, Qd rises
+<strong><span dir="ltr" style="display:inline-block;">NORMAL</span></strong> good</p>
+</blockquote>
+<p><strong>الشرح بالمصري:</strong>
+المعامل موجب = لما الدخل يزيد، الطلب يزيد = سلعة <strong><span dir="ltr" style="display:inline-block;">عادية (Normal Good)</span></strong>
+(لو كان سالب، كانت هتكون سلعة رديئة Inferior Good)</p>
+<hr />
+<h3>3) What can we infer about this good and the related good?</h3>
+<p><strong>الإجابة من الشيت:</strong></p>
+<blockquote>
+<p>Positive coefficient on PR means that as price of related good rises,
+Qd for this good rises
+<strong><span dir="ltr" style="display:inline-block;">SUBSTITUTES</span></strong></p>
+</blockquote>
+<p><strong>الشرح بالمصري:</strong>
+المعامل موجب = لما سعر السلعة المرتبطة يزيد، الطلب على سلعتنا يزيد
+= السلعتين <strong><span dir="ltr" style="display:inline-block;">بدائل (Substitutes)</span></strong> (زي بيبسي وكوكاكولا)</p>
+<hr />
+<h3>4) If income decreases by $1000 (all else the same), what will happen to the quantity demanded?</h3>
+<p><strong>الإجابة من الشيت:</strong></p>
+<blockquote>
+<p>ΔQd = (Income Change x M Coefficient)
+ΔQd = (-1000 x .32) = <strong><span dir="ltr" style="display:inline-block;">-320</span></strong></p>
+</blockquote>
+<p><strong>الشرح بالمصري:</strong>
+$$\Delta Q = \Delta M \times \text{معامل } M$$
+$$\Delta Q = -1000 \times 0.32 = -320$$
+الكمية هتقل بـ <strong><span dir="ltr" style="display:inline-block;">320 وحدة</span></strong></p>
+<hr />
+<h3>5) If the price of the good falls by $4, what will happen to the quantity demanded?</h3>
+<p><strong>الإجابة من الشيت:</strong></p>
+<blockquote>
+<p>ΔQd = (Price Change x P Coefficient)
+ΔQd = (-4 x -5) = <strong><span dir="ltr" style="display:inline-block;">+20</span></strong></p>
+</blockquote>
+<p><strong>الشرح بالمصري:</strong>
+$$\Delta Q = \Delta P \times \text{معامل } P$$
+$$\Delta Q = -4 \times (-5) = +20$$
+الكمية هتزيد بـ <strong><span dir="ltr" style="display:inline-block;">20 وحدة</span></strong> (لأن السعر قل، الناس بتشتري أكتر)</p>
+        </div>
+    </body>
+    </html>
+    

@@ -26,7 +26,8 @@ export const subjects = [
                 title: { en: "Week 2", ar: "الأسبوع الثاني" },
                 resources: [
                     { type: "summary", label: { en: "Summary (Arabic)", ar: "ملخص (عربي)" }, url: "./courses/managerial-economics/week2/" },
-                    { type: "summary", label: { en: "Summary (English)", ar: "ملخص (إنجليزي)" }, url: "./courses/managerial-economics/week2/english/" }
+                    { type: "summary", label: { en: "Summary (English)", ar: "ملخص (إنجليزي)" }, url: "./courses/managerial-economics/week2/english/" },
+                    { type: "quiz", label: { en: "Practice Problems (Egyptian Arabic)", ar: "تمارين عملية (عامية مصرية)" }, url: "./courses/managerial-economics/week2/quiz.html" }
                 ]
             }
         ]
