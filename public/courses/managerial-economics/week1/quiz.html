@@ -49,45 +49,43 @@ p {
     margin-bottom: 1.2em;
     font-size: 1.2em;
 }
+/* List Containers */
 ul, ol {
-    margin-right: 0;
-    padding-right: 0;
+    margin: 0;
+    padding: 0;
+    margin-right: 1.5em; /* Indentation for all lists */
     margin-bottom: 1.5em;
+    list-style: none;
 }
+
+/* List Items Common */
 li {
     margin-bottom: 0.8em;
     line-height: 1.6;
-}
-
-/* Custom Bullets for UL */
-ul {
-    list-style: none;
-}
-ul li {
     display: flex;
     align-items: flex-start;
 }
-ul li::before {
+
+/* Custom Bullets for UL (Direct Children Only) */
+ul > li::before {
     content: "•";
     color: #3498db;
     font-weight: bold;
-    font-size: 1.5em;
-    line-height: 1.2;
-    margin-left: 0.5em;
+    font-size: 1.8em;
+    line-height: 1;
+    margin-left: 0.5em; 
     flex-shrink: 0;
+    margin-top: -5px; /* Slight adjustment for large bullet */
 }
 
-/* Custom Numbers for OL */
+/* Custom Numbers for OL (Direct Children Only) */
 ol {
-    list-style: none;
     counter-reset: item;
 }
-ol li {
+ol > li {
     counter-increment: item;
-    display: flex;
-    align-items: flex-start;
 }
-ol li::before {
+ol > li::before {
     content: counter(item) ".";
     color: #d35400;
     font-weight: bold;
@@ -99,7 +97,8 @@ ol li::before {
     flex-shrink: 0;
     min-width: 1.5em;
     text-align: center;
-    margin-top: 2px;
+    margin-top: 3px;
+    line-height: normal;
 }
 img {
     max-width: 100%;
