@@ -12,7 +12,7 @@ export const subjects = [
         },
         notebookLink: "#",
         resources: [
-            { type: "summary", label: { en: "Week 1 Summary (Arabic)", ar: "ملخص الأسبوع الأول" }, url: "/courses/managerial-economics/week1/" }
+            { type: "summary", label: { en: "Week 1 Summary (Arabic)", ar: "ملخص الأسبوع الأول" }, url: "./courses/managerial-economics/week1/" }
         ]
     },
     {
