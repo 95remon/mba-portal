@@ -12,8 +12,10 @@ export const subjects = [
         },
         notebookLink: "#",
         resources: [
-            { type: "summary", label: { en: "Week 1 Summary (Arabic)", ar: "ملخص الأسبوع الأول" }, url: "./courses/managerial-economics/week1/" },
-            { type: "summary", label: { en: "Week 2 Summary (Arabic)", ar: "ملخص الأسبوع الثاني" }, url: "./courses/managerial-economics/week2/" }
+            { type: "summary", label: { en: "Week 1 Summary (Arabic)", ar: "ملخص الأسبوع الأول (عربي)" }, url: "./courses/managerial-economics/week1/" },
+            { type: "summary", label: { en: "Week 1 Summary (English)", ar: "ملخص الأسبوع الأول (إنجليزي)" }, url: "./courses/managerial-economics/week1/english/" },
+            { type: "summary", label: { en: "Week 2 Summary (Arabic)", ar: "ملخص الأسبوع الثاني (عربي)" }, url: "./courses/managerial-economics/week2/" },
+            { type: "summary", label: { en: "Week 2 Summary (English)", ar: "ملخص الأسبوع الثاني (إنجليزي)" }, url: "./courses/managerial-economics/week2/english/" }
         ]
     },
     {
