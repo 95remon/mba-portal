@@ -16,8 +16,9 @@ export const subjects = [
                 id: "week1",
                 title: { en: "Week 1", ar: "الأسبوع الأول" },
                 resources: [
-                    { type: "summary", label: { en: "Summary (Arabic)", ar: "ملخص (عربي)" }, url: "./courses/managerial-economics/week1/" },
-                    { type: "summary", label: { en: "Summary (English)", ar: "ملخص (إنجليزي)" }, url: "./courses/managerial-economics/week1/english/" }
+                    { type: "summary", label: { en: "Summary (Arabic)", ar: "ملخص (عربي)" }, url: "./courses/managerial-economics/week1/book.html" },
+                    { type: "summary", label: { en: "Summary (English)", ar: "ملخص (إنجليزي)" }, url: "./courses/managerial-economics/week1/english/" },
+                    { type: "quiz", label: { en: "Quiz 1 (Egyptian Arabic)", ar: "كويز 1 (عامية مصرية)" }, url: "./courses/managerial-economics/week1/quiz.html" }
                 ]
             },
             {
