@@ -51,12 +51,11 @@ p {
 }
 ul, ol {
     margin-right: 0;
-    padding-right: 20px;
+    padding-right: 0;
     margin-bottom: 1.5em;
 }
 li {
     margin-bottom: 0.8em;
-    position: relative;
     line-height: 1.6;
 }
 
@@ -65,17 +64,17 @@ ul {
     list-style: none;
 }
 ul li {
-    padding-right: 1.5em;
+    display: flex;
+    align-items: flex-start;
 }
 ul li::before {
     content: "•";
     color: #3498db;
     font-weight: bold;
     font-size: 1.5em;
-    position: absolute;
-    right: 0;
-    top: -5px;
-    line-height: 1;
+    line-height: 1.2;
+    margin-left: 0.5em;
+    flex-shrink: 0;
 }
 
 /* Custom Numbers for OL */
@@ -85,18 +84,22 @@ ol {
 }
 ol li {
     counter-increment: item;
-    padding-right: 2em;
+    display: flex;
+    align-items: flex-start;
 }
 ol li::before {
     content: counter(item) ".";
     color: #d35400;
     font-weight: bold;
-    position: absolute;
-    right: 0;
     background: #fdf2e9;
-    padding: 0 8px;
+    padding: 2px 8px;
     border-radius: 4px;
     font-size: 0.9em;
+    margin-left: 0.8em;
+    flex-shrink: 0;
+    min-width: 1.5em;
+    text-align: center;
+    margin-top: 2px;
 }
 img {
     max-width: 100%;
