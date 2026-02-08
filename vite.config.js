@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-    base: './', // Use relative paths for maximum compatibility
+    base: '/mba-portal/', // Explicit base path for GitHub Pages
     build: {
         outDir: 'dist',
+        assetsDir: 'assets',
     }
 })
