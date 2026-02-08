@@ -1,0 +1,725 @@
+
+    <!DOCTYPE html>
+    <html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Managerial Economics - Week 2 Summary (Arabic)</title>
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+body {
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.8;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+h1, h2, h3 {
+    color: #2c3e50;
+    margin-top: 1.5em;
+    font-weight: 700;
+}
+h1 {
+    text-align: center;
+    color: #2980b9;
+    font-size: 2.8em;
+    border-bottom: 3px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+h2 {
+    color: #d35400;
+    border-right: 6px solid #d35400;
+    padding-right: 20px;
+    background: #fdf2e9;
+    padding: 15px 20px;
+    border-radius: 4px;
+}
+p {
+    margin-bottom: 1.2em;
+    font-size: 1.1em;
+}
+ul, ol {
+    margin-right: 20px;
+    padding-right: 25px;
+    margin-bottom: 1.2em;
+    list-style-position: outside;
+}
+li {
+    margin-bottom: 0.5em;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    border: 1px solid #eee;
+}
+code {
+    background: #f8f9fa;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Consolas', monospace;
+    color: #e74c3c;
+    direction: ltr; 
+    display: inline-block;
+}
+pre {
+    background: #2d3436;
+    color: #dfe6e9;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    direction: ltr;
+    text-align: left;
+    margin: 20px 0;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    background: white;
+}
+th, td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: right;
+}
+th {
+    background-color: #2980b9;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+blockquote {
+    border-right: 5px solid #bdc3c7;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    color: #7f8c8d;
+    font-style: italic;
+}
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    margin: 50px 0;
+}
+.cover-page {
+    text-align: center;
+    padding: 100px 0;
+    page-break-after: always;
+}
+.cover-title {
+    font-size: 4em;
+    color: #2980b9;
+    margin-bottom: 20px;
+}
+.cover-subtitle {
+    font-size: 2em;
+    color: #7f8c8d;
+}
+</style>
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['$', '$']],
+                    displayMath: [['$$', '$$']],
+                    processEscapes: true
+                },
+                options: {
+                    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            
+    <div class="cover-page">
+        <div class="cover-title">اقتصاد إداري</div>
+        <div class="cover-subtitle">ملخص الأسبوع الثاني</div>
+        <div style="margin-top: 50px; font-size: 1.5em;">سلوك المستهلك، تقدير الطلب، والمرونة</div>
+    </div>
+    <section class='chapter'><h1>نظرية سلوك المستهلك (Consumer Behavior)</h1>
+<h2>مقدمة</h2>
+<p><img alt="Original Slide 1" src="extracted/images/PPTX_COM/Consumer Behavior/Slide_1_Full.png" /></p>
+<h2>مشكلة المستهلك</h2>
+<p><img alt="Original Slide 2" src="extracted/images/PPTX_COM/Consumer Behavior/Slide_2_Full.png" />
+<strong>النقاط الرئيسية:</strong></p>
+<ul>
+<li><strong>الربح والمستهلك:</strong> الربح يتطلب مبيعات، والمبيعات تعتمد كلياً على المستهلكين. لذا، فهم سلوك المستهلك هو حجر الزاوية لاتخاذ قرارات إدارية مربحة.</li>
+<li><strong>مشكلة تعظيم المستهلك (Consumer Optimization Problem):</strong><ul>
+<li>الهدف: تعظيم الرضا (أو المنفعة) من الاستهلاك.</li>
+<li>القيد: يخضع هذا التعظيم لقيد الميزانية، حيث يجب أن يكون الإنفاق على السلع مساوياً للدخل.</li>
+</ul>
+</li>
+</ul>
+<h2>المنفعة ومنحنيات السواء</h2>
+<p><img alt="Original Slide 3" src="extracted/images/PPTX_COM/Consumer Behavior/Slide_3_Full.png" />
+<strong>المنفعة (Utility):</strong></p>
+<ul>
+<li>يستخدم الاقتصاديون مفهوم "المنفعة" لترتيب تفضيلات المستهلكين.</li>
+<li>تعبر عن الفوائد أو الرضا الذي يحصل عليه المستهلك من استهلاك السلع والخدمات.</li>
+</ul>
+<p><strong>منحنيات السواء (Indifference Curves):</strong></p>
+<ul>
+<li>هي مجموعة من النقاط التي تمثل توليفات مختلفة من السلع تعطي جميعها <strong>نفس مستوى المنفعة</strong>.</li>
+<li>على هذا المنحنى، يكون المستهلك "غير مبالٍ" (Indifferent) بين أي من هذه الخيارات، لأنها جميعاً ترضيه بنفس القدر.</li>
+</ul>
+<h2>شكل منحنيات السواء</h2>
+<p><img alt="Original Slide 4" src="extracted/images/PPTX_COM/Consumer Behavior/Slide_4_Full.png" />
+<strong>الخصائص:</strong></p>
+<ul>
+<li><strong>ميل سالب (Negatively Sloped):</strong> ينحدر لأسفل من اليسار لليمين. يعني أن الحصول على المزيد من سلعة يتطلب التخلي عن سلعة أخرى.</li>
+<li><strong>محدب تجاه نقطة الأصل (Convex):</strong> بسبب تناقص المعدل الحدي للإحلال.</li>
+<li><strong>توجد منحنيات متعددة:</strong> كل منحنى أعلى يمثل مستوى منفعة أعلى.</li>
+</ul>
+<h2>المعدل الحدي للإحلال (MRS)</h2>
+<p><img alt="Original Slide 5" src="extracted/images/PPTX_COM/Consumer Behavior/Slide_5_Full.png" />
+<strong>التعريف:</strong></p>
+<ul>
+<li>هو المعدل الذي يتم به استبدال سلعة بأخرى مع الحفاظ على <strong>نفس مستوى المنفعة</strong>.</li>
+<li>يساوي القيمة المطلقة لميل منحنى السواء.</li>
+<li><strong>يتناقص</strong> كلما تحركنا لأسفل على منحنى السواء.</li>
+<li>مستعد للتخلي عن الكثير من Y للحصول على وحدة واحدة من X عندما يكون لديك القليل من X.</li>
+</ul>
+<p><strong>المعادلة:</strong>
+$$MRS = - \frac{\Delta Y}{\Delta X} = \frac{MU_X}{MU_Y}$$</p>
+<h2>المنفعة الحدية (Marginal Utility)</h2>
+<p><img alt="Original Slide 6" src="extracted/images/PPTX_COM/Consumer Behavior/Slide_6_Full.png" />
+<strong>التعريف:</strong></p>
+<ul>
+<li>الإضافة إلى المنفعة الكلية الناتجة عن استهلاك <strong>وحدة إضافية واحدة</strong> من السلعة.</li>
+<li><strong>تناقص المنفعة الحدية:</strong> كلما زاد استهلاك السلعة، تقل المنفعة التي نحصل عليها من كل وحدة إضافية.</li>
+</ul>
+<p><strong>المعادلة:</strong>
+$$MU = \frac{\Delta U}{\Delta X}$$</p>
+<h2>خط ميزانية المستهلك (Budget Line)</h2>
+<p><img alt="Original Slide 7" src="extracted/images/PPTX_COM/Consumer Behavior/Slide_7_Full.png" />
+<strong>التعريف:</strong></p>
+<ul>
+<li>يوضح الحزم الممكنة للشراء عند أسعار معينة ودخل ثابت.</li>
+</ul>
+<p><strong>المعادلة:</strong>
+$$M = P_X X + P_Y Y$$
+أو بصيغة الميل والتقاطع:
+$$Y = \frac{M}{P_Y} - \frac{P_X}{P_Y} X$$</p>
+<h2>تحولات خط الميزانية</h2>
+<p><img alt="Original Slide 8" src="extracted/images/PPTX_COM/Consumer Behavior/Slide_8_Full.png" />
+<strong>أنواع التحولات:</strong></p>
+<ol>
+<li><strong>تغير الدخل (Changes in Income):</strong> انتقال موازٍ لخط الميزانية (Panel A). زيادة الدخل تنقله للخارج، والنقصان للداخل.</li>
+<li><strong>تغير سعر X (Changes in Price of X):</strong> دوران الخط حول نقطة تقاطع المحور الصادي (Panel B). انخفاض سعر X يجعله أكثر انبساطاً (يسمح بشراء المزيد من X).</li>
+</ol>
+<h2>تعظيم المنفعة (Utility Maximization)</h2>
+<p><img alt="Original Slide 9" src="extracted/images/PPTX_COM/Consumer Behavior/Slide_9_Full.png" />
+<strong>المفهوم:</strong></p>
+<ul>
+<li>يسعى المستهلك للوصول إلى <strong>أعلى منحنى سواء ممكن</strong> في حدود قيد الميزانية.</li>
+<li>يحدث هذا عند النقطة التي يكون فيها منحنى السواء <strong>تماس (Tangent)</strong> مع خط الميزانية.</li>
+</ul>
+<h2>شرط تعظيم المنفعة</h2>
+<p><img alt="Original Slide 10" src="extracted/images/PPTX_COM/Consumer Behavior/Slide_10_Full.png" />
+<strong>عند نقطة التماس:</strong></p>
+<ul>
+<li>ميل منحنى السواء (MRS) يساوي ميل خط الميزانية ($P_X/P_Y$).</li>
+<li>
+<p><strong>المعادلة:</strong>
+$$MRS = \frac{MU_X}{MU_Y} = \frac{P_X}{P_Y}$$</p>
+</li>
+<li>
+<p><strong>الشرط الاقتصادي:</strong> أن تتساوى المنفعة الحدية للدولار المنفق على كل سلعة:
+$$\frac{MU_X}{P_X} = \frac{MU_Y}{P_Y}$$</p>
+</li>
+</ul>
+<h2>مثال: تعظيم المنفعة</h2>
+<p><img alt="Original Slide 11" src="extracted/images/PPTX_COM/Consumer Behavior/Slide_11_Full.png" />
+<strong>المعطيات:</strong></p>
+<ul>
+<li>الميزانية = 40 دولار.</li>
+<li>سعر البرجر = 5 دولار، سعر الكولا = 4 دولار.</li>
+<li><strong>الحل الأمثل:</strong> 4 برجر و 5 كولا.</li>
+<li><strong>لماذا؟</strong> لأن عند هذه الكميات، المنفعة الحدية لكل دولار متساوية (4 وحدات منفعة لكل دولار).</li>
+</ul>
+<h2>طلب المستهلك الفردي</h2>
+<p><img alt="Original Slide 12" src="extracted/images/PPTX_COM/Consumer Behavior/Slide_12_Full.png" />
+<strong>الاشتقاق:</strong></p>
+<ul>
+<li>يربط بين الكميات التي تعظم المنفعة ومستويات الأسعار المختلفة.</li>
+<li>نجد نقطة التوازن المثلى لكل خط ميزانية جديد ناتج عن تغير سعر X (مع ثبات الدخل وسعر Y).</li>
+<li>ميل منحنى الطلب يوضح قانون الطلب (علاقة عكسية بين السعر والكمية).</li>
+</ul>
+<h2>طلب السوق والمنفعة الحدية</h2>
+<p><img alt="Original Slide 13" src="extracted/images/PPTX_COM/Consumer Behavior/Slide_13_Full.png" />
+<strong>طلب السوق:</strong></p>
+<ul>
+<li>يتم اشتقاقه عن طريق <strong>الجمع الأفقي</strong> لمنحنيات طلب جميع الأفراد في السوق.</li>
+<li>الأسعار على طول منحنى طلب السوق تقيس <strong>القيمة الاقتصادية</strong> لكل وحدة.</li>
+<li>منحنى الطلب يوضح <strong>المنفعة الحدية (MB)</strong> التي يضعها المستهلكون على آخر وحدة تم استهلاكها.</li>
+</ul>
+<h2>اشتقاق طلب السوق (مثال)</h2>
+<p><img alt="Original Slide 14" src="extracted/images/PPTX_COM/Consumer Behavior/Slide_14_Full.png" />
+<strong>الجدول يوضح:</strong></p>
+<ul>
+<li>كيفية جمع الكميات المطلوبة لكل مستهلك (1، 2، 3) عند كل مستوى سعري للحصول على طلب السوق الكلي.</li>
+<li>مثال: عند السعر 4، الكمية المطلوبة = 8 + 3 + 1 = 12.</li>
+</ul>
+<h2>أثر الإحلال وأثر الدخل (Substitution &amp; Income Effects)</h2>
+<p><img alt="Original Slide 15" src="extracted/images/PPTX_COM/Consumer Behavior/Slide_15_Full.png" />
+<img alt="Original Slide 16" src="extracted/images/PPTX_COM/Consumer Behavior/Slide_16_Full.png" />
+عندما يتغير السعر، ينقسم التأثير الكلي على الكمية المطلوبة إلى جزأين:</p>
+<ol>
+<li><strong>أثر الإحلال (Substitution Effect):</strong><ul>
+<li>التغير في الاستهلاك نتيجة لتغير الأسعار النسبية فقط (بافتراض نفس مستوى المنفعة).</li>
+<li>دائماً سالب (عكسي مع السعر): ارتفاع السعر يقلل الكمية المطلوبة (بسبب التحول لسلع أخرى أرخص).</li>
+</ul>
+</li>
+<li><strong>أثر الدخل (Income Effect):</strong><ul>
+<li>التغير في الاستهلاك الناتج عن التغير في القوة الشرائية للدخل الحقيقي.</li>
+<li><strong>للسلع العادية (Normal Goods):</strong> يعزز أثر الإحلال (انخفاض السعر -&gt; زيادة القوة الشرائية -&gt; شراء المزيد).</li>
+<li><strong>للسلع الرديئة (Inferior Goods):</strong> يعاكس أثر الإحلال.</li>
+</ul>
+</li>
+</ol>
+<h2>التحليل البياني لانخفاض سعر X</h2>
+<p><img alt="Original Slide 17" src="extracted/images/PPTX_COM/Consumer Behavior/Slide_17_Full.png" />
+<strong>يوضح الشكل:</strong></p>
+<ul>
+<li><strong>Panel A (سلعة عادية):</strong> أثر الدخل وأثر الإحلال يعملان في نفس الاتجاه (زيادة الكمية).</li>
+<li><strong>Panel B (سلعة رديئة):</strong> أثر الدخل يعمل عكس أثر الإحلال، لكن أثر الإحلال (في الغالب) يكون أقوى، فتظل العلاقة عكسية بين السعر والكمية.</li>
+</ul></section><div style='page-break-after: always;'></div><section class='chapter'><h1>تقدير الطلب والتنبؤ به (Demand Estimation &amp; Forecasting)</h1>
+<h2>طرق تقدير الطلب المباشرة</h2>
+<p><img alt="Original Slide 2" src="extracted/images/PPTX_COM/Demand Estimation/Slide_2_Full.png" />
+<img alt="Original Slide 3" src="extracted/images/PPTX_COM/Demand Estimation/Slide_3_Full.png" />
+<strong>1. مقابلات المستهلكين (Consumer Interviews):</strong></p>
+<ul>
+<li>تتراوح بين التحدث مع المتسوقين وتوجيه استبيانات مفصلة.</li>
+<li><strong>المشاكل المحتملة:</strong> اختيار عينة ممثلة، وتحيز الاستجابة (الفرق بين ما يقوله المستهلك وما يفعله).</li>
+</ul>
+<p><strong>2. دراسات السوق (Market Studies):</strong></p>
+<ul>
+<li>محاولة تثبيت العوامل الأخرى وتغيير السعر فقط ومراقبة الطلب.</li>
+</ul>
+<p><strong>3. التجارب (Experiments):</strong></p>
+<ul>
+<li><strong>تجارب معملية:</strong> استخدام متطوعين لمحاكاة ظروف الشراء.</li>
+<li><strong>تجارب ميدانية:</strong> مراقبة السلوك الفعلي للمستهلكين في السوق.</li>
+</ul>
+<h2>دوال الطلب التجريبية (Empirical Demand Functions)</h2>
+<p><img alt="Original Slide 4" src="extracted/images/PPTX_COM/Demand Estimation/Slide_4_Full.png" /></p>
+<ul>
+<li>شكل الدالة الخطية:
+$$Q = a + bP + cM + dP_R + eN$$
+حيث: $Q$ الكمية، $P$ السعر، $M$ الدخل، $P_R$ سعر السلعة المرتبطة، $N$ عدد المشترين.</li>
+</ul>
+<h2>إشارات المعاملات والمرونات المتوقعة</h2>
+<p><img alt="Original Slide 5" src="extracted/images/PPTX_COM/Demand Estimation/Slide_5_Full.png" />
+<strong>توقع الإشارات:</strong></p>
+<ul>
+<li><strong>b (معامل السعر):</strong> سالب (قانون الطلب).</li>
+<li><strong>c (معامل الدخل):</strong> موجب للسلع العادية، وسالب للسلع الرديئة.</li>
+<li><strong>d (معامل السلعة المرتبطة):</strong> موجب للسلع البديلة (Substitutes)، وسالب للسلع المكملة (Complements).</li>
+</ul>
+<p><strong>حساب المرونات:</strong>
+$$\hat{E} = \hat{b} \frac{P}{Q}, \quad \hat{E}<em>M = \hat{c} \frac{M}{Q}, \quad \hat{E}</em>{XR} = \hat{d} \frac{P_R}{Q}$$</p>
+<h2>التنبؤ الخطي (Linear Forecasting)</h2>
+<p><img alt="Original Slide 6" src="extracted/images/PPTX_COM/Demand Estimation/Slide_6_Full.png" /></p>
+<ul>
+<li>استخدام <strong>تحليل الانحدار (Regression Analysis)</strong> لتقدير قيم المعاملات.</li>
+<li>يتم تحديد <strong>الدلالة الإحصائية (Statistical Significance)</strong> عن طريق مقارنة t-value بالقيم الحرجة أو فحص p-value.</li>
+</ul>
+<h2>مثال تطبيقي: Checkers Pizza</h2>
+<p><img alt="Original Slide 7" src="extracted/images/PPTX_COM/Demand Estimation/Slide_7_Full.png" />
+<img alt="Original Slide 8" src="extracted/images/PPTX_COM/Demand Estimation/Slide_8_Full.png" />
+<strong>نتائج الانحدار:</strong></p>
+<ul>
+<li>R-Square = 0.9555 (النموذج يفسر 95.5% من التغيرات).</li>
+<li>معامل السعر (P) = -213.422 (سالب كما هو متوقع، وذو دلالة إحصائية لأن P-value صغير جداً).</li>
+<li>معامل الدخل (M) = 0.09109 (موجب -&gt; سلعة عادية).</li>
+</ul>
+<p><strong>التنبؤ بالكمية:</strong>
+عند الأسعار والدخل المعطى، نتنبأ بأن الكمية المطلوبة $Q = 2,784.4$.</p>
+<p><strong>حساب المرونات للمثال:</strong></p>
+<ul>
+<li>مرونة الطلب السعرية $\hat{E} = -0.694$ (طلب غير مرن).</li>
+<li>مرونة الدخل $\hat{E}_M = 0.871$ (سلعة ضرورية).</li>
+<li>مرونة التقاطع مع المنافس (Al) = 0.368 (سلعة بديلة).</li>
+</ul></section><div style='page-break-after: always;'></div><section class='chapter'><h1>المرونة والطلب (Elasticity and Demand)</h1>
+<h2>مرونة الطلب السعرية (Price Elasticity of Demand - E)</h2>
+<p><img alt="Original Slide 2" src="extracted/images/PPTX_COM/Elasticity and Demand/Slide_2_Full.png" />
+<strong>المفهوم:</strong></p>
+<ul>
+<li>مقياس لمدى حساسية المستهلكين للتغيرات في سعر السلعة.</li>
+<li><strong>قانون الطلب:</strong> يضمن أن تكون الإشارة سالبة دائماً (علاقة عكسية بين السعر والكمية).</li>
+<li><strong>القيمة:</strong> عادة ما يتم التعبير عنها كقيمة مطلقة (موجبة).</li>
+</ul>
+<p><strong>المعادلة الأساسية:</strong>
+$$E = \frac{\%\Delta Q}{\%\Delta P}$$</p>
+<h2>قياس المرونة وتصنيفها</h2>
+<p><img alt="Original Slide 3" src="extracted/images/PPTX_COM/Elasticity and Demand/Slide_3_Full.png" />
+كلما زادت القيمة المطلقة للمرونة، زادت حساسية المستهلكين لتغير السعر.</p>
+<p>| نوع المرونة (Elasticity Type) | القيمة ($|E|$) | الوصف |
+| :--- | :--- | :--- |
+| <strong>مرن (Elastic)</strong> | $|E| &gt; 1$ | نسبة التغير في الكمية أكبر من نسبة التغير في السعر. |
+| <strong>أحادي المرونة (Unitary Elastic)</strong> | $|E| = 1$ | نسبة التغير في الكمية تساوي نسبة التغير في السعر. |
+| <strong>غير مرن (Inelastic)</strong> | $|E| &lt; 1$ | نسبة التغير في الكمية أقل من نسبة التغير في السعر. |</p>
+<h2>حساب مرونة الطلب السعرية</h2>
+<p><img alt="Original Slide 4" src="extracted/images/PPTX_COM/Elasticity and Demand/Slide_4_Full.png" />
+<strong>1. عند نقطة محددة (Point Elasticity):</strong>
+$$E = \frac{\Delta Q}{\Delta P} \times \frac{P}{Q}$$</p>
+<p><strong>2. عند فترة أو قوس (Arc Elasticity):</strong>
+يستخدم عند حساب المرونة بين نقطتين، باستخدام المتوسط.
+$$E = \frac{\Delta Q}{\Delta P} \times \frac{\text{Average } P}{\text{Average } Q}$$</p>
+<h2>مثال حسابي (Arc Elasticity)</h2>
+<p><img alt="Original Slide 5" src="extracted/images/PPTX_COM/Elasticity and Demand/Slide_5_Full.png" />
+<strong>بين النقطتين A و B:</strong></p>
+<ul>
+<li>النقطة A: السعر = 20، الكمية = 14.</li>
+<li>النقطة B: السعر = 26، الكمية = 10.</li>
+<li>
+<p><strong>الحساب:</strong>
+$$E = \frac{10 - 14}{(10 + 14)/2} \div \frac{26 - 20}{(26 + 20)/2} = \frac{-4}{12} \div \frac{6}{23} = |-1.27| = 1.27$$</p>
+</li>
+<li>
+<p><strong>النتيجة:</strong> الطلب مرن (لأن 1.27 &gt; 1).</p>
+</li>
+</ul>
+<h2>المرونة على طول منحنى الطلب الخطي</h2>
+<p><img alt="Original Slide 6" src="extracted/images/PPTX_COM/Elasticity and Demand/Slide_6_Full.png" />
+<img alt="Original Slide 10" src="extracted/images/PPTX_COM/Elasticity and Demand/Slide_10_Full.png" /></p>
+<ul>
+<li>على منحنى الطلب المستقيم، <strong>الميل ثابت</strong> لكن <strong>المرونة تتغير</strong>.</li>
+<li><strong>تتناقص</strong> المرونة كلما تحركنا لأسفل المنحنى (من اليسار لليمين):<ul>
+<li>عند أعلى نقطة (تقاطع السعر): $E = \infty$.</li>
+<li>النصف العلوي: مرن ($|E| &gt; 1$).</li>
+<li>نقطة المنتصف: أحادي المرونة ($|E| = 1$).</li>
+<li>النصف السفلي: غير مرن ($|E| &lt; 1$).</li>
+<li>عند أدنى نقطة (تقاطع الكمية): $E = 0$.</li>
+</ul>
+</li>
+</ul>
+<h2>المرونة والإيراد الكلي (Total Revenue)</h2>
+<p><img alt="Original Slide 7" src="extracted/images/PPTX_COM/Elasticity and Demand/Slide_7_Full.png" />
+<img alt="Original Slide 8" src="extracted/images/PPTX_COM/Elasticity and Demand/Slide_8_Full.png" />
+<img alt="Original Slide 9" src="extracted/images/PPTX_COM/Elasticity and Demand/Slide_9_Full.png" />
+الإيراد الكلي ($TR$) يساوي السعر مضروباً في الكمية ($P \times Q$). العلاقة بين تغير السعر وتغير الإيراد تعتمد على المرونة:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">نوع المرونة</th>
+<th style="text-align: left;">أثر ارتفاع السعر على TR</th>
+<th style="text-align: left;">أثر انخفاض السعر على TR</th>
+<th style="text-align: left;">السبب</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>مرن (Elastic)</strong></td>
+<td style="text-align: left;"><strong>ينخفض</strong> الإيراد</td>
+<td style="text-align: left;"><strong>يزداد</strong> الإيراد</td>
+<td style="text-align: left;">تأثير الكمية (الكبير) يطغى على تأثير السعر.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>أحادي (Unitary)</strong></td>
+<td style="text-align: left;">لا يتغير</td>
+<td style="text-align: left;">لا يتغير</td>
+<td style="text-align: left;">الإيراد الكلي عند <strong>أقصى قيمة (Maximized)</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>غير مرن (Inelastic)</strong></td>
+<td style="text-align: left;"><strong>يزداد</strong> الإيراد</td>
+<td style="text-align: left;"><strong>ينخفض</strong> الإيراد</td>
+<td style="text-align: left;">تأثير السعر يطغى على تأثير الكمية (الصغير).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>الخلاصة للمدراء:</strong></p>
+<ul>
+<li>لزيادة الإيراد في الجزء <strong>المرن</strong>، يجب <strong>خفض</strong> السعر.</li>
+<li>لزيادة الإيراد في الجزء <strong>غير المرن</strong>، يجب <strong>رفع</strong> السعر.</li>
+</ul>
+<h2>أمثلة رقمية على الإيراد والمرونة</h2>
+<p><img alt="Original Slide 11" src="extracted/images/PPTX_COM/Elasticity and Demand/Slide_11_Full.png" />
+<img alt="Original Slide 12" src="extracted/images/PPTX_COM/Elasticity and Demand/Slide_12_Full.png" /></p>
+<ul>
+<li><strong>طلب غير مرن ($E_D &lt; 1$):</strong><ul>
+<li>زيادة السعر من 1 إلى 2 دولار أدت لزيادة الإيراد من 9 إلى 16 دولار.</li>
+<li>(الزيادة في السعر تغلبت على الانخفاض في الكمية).</li>
+</ul>
+</li>
+<li><strong>طلب مرن ($E_D &gt; 1$):</strong><ul>
+<li>زيادة السعر من 8 إلى 9 دولار أدت لانخفاض الإيراد من 16 إلى 9 دولار.</li>
+<li>(الانخفاض الكبير في الكمية تغلب على الزيادة في السعر).</li>
+</ul>
+</li>
+</ul>
+<h2>الإيراد الحدي (Marginal Revenue - MR)</h2>
+<p><img alt="Original Slide 13" src="extracted/images/PPTX_COM/Elasticity and Demand/Slide_13_Full.png" />
+<img alt="Original Slide 14" src="extracted/images/PPTX_COM/Elasticity and Demand/Slide_14_Full.png" />
+<img alt="Original Slide 15" src="extracted/images/PPTX_COM/Elasticity and Demand/Slide_15_Full.png" />
+<strong>التعريف:</strong></p>
+<ul>
+<li>هو التغير في الإيراد الكلي الناتج عن بيع وحدة إضافية واحدة.</li>
+<li>يمثل ميل منحنى الإيراد الكلي (TR).</li>
+<li><strong>المعادلة:</strong>
+$$MR = \frac{\Delta TR}{\Delta Q}$$</li>
+</ul>
+<p><strong>العلاقة بين Demand, MR, TR:</strong></p>
+<ul>
+<li><strong>عندما يكون MR &gt; 0:</strong> الإيراد الكلي (TR) يتزايد (الطلب مرن).</li>
+<li><strong>عندما يكون MR = 0:</strong> الإيراد الكلي (TR) عند قيمته العظمى (الطلب أحادي المرونة).</li>
+<li><strong>عندما يكون MR &lt; 0:</strong> الإيراد الكلي (TR) يتناقص (الطلب غير مرن).</li>
+<li>منحنى MR يقع دائماً أسفل منحنى الطلب (Demand Curve) وينحدر بسرعة أكبر (يقطع المسافة الأفقية في المنتصف للدالة الخطية).</li>
+</ul>
+<h2>ملخص العلاقات (MR, TR, Elasticity)</h2>
+<p><img alt="Original Slide 16" src="extracted/images/PPTX_COM/Elasticity and Demand/Slide_16_Full.png" />
+<img alt="Original Slide 17" src="extracted/images/PPTX_COM/Elasticity and Demand/Slide_17_Full.png" />
+يلخص الجدول التالي العلاقة الحيوية للمدراء:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">الإيراد الحدي ($MR$)</th>
+<th style="text-align: left;">الإيراد الكلي ($TR$)</th>
+<th style="text-align: left;">مرونة الطلب ($E$)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>موجب ($MR &gt; 0$)</strong></td>
+<td style="text-align: left;">يتزايد (مع انخفاض السعر وزيادة الكمية)</td>
+<td style="text-align: left;"><strong>مرن (Elastic)</strong> ($</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>صفر ($MR = 0$)</strong></td>
+<td style="text-align: left;">عند الحد الأقصى (Maximized)</td>
+<td style="text-align: left;"><strong>أحادي المرونة (Unitary)</strong> ($</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>سالب ($MR &lt; 0$)</strong></td>
+<td style="text-align: left;">يتناقص (مع انخفاض السعر وزيادة الكمية)</td>
+<td style="text-align: left;"><strong>غير مرن (Inelastic)</strong> ($</td>
+</tr>
+</tbody>
+</table>
+<h2>العوامل المؤثرة على مرونة الطلب السعرية</h2>
+<p><img alt="Original Slide 18" src="extracted/images/PPTX_COM/Elasticity and Demand/Slide_18_Full.png" /></p>
+<ol>
+<li><strong>توفر البدائل (Availability of Substitutes):</strong> كلما زاد عدد البدائل وجودتها، زادت المرونة (أصبح المستهلك أكثر حساسية للسعر).</li>
+<li><strong>نسبة الإنفاق من الميزانية (Share of Budget):</strong> كلما شكلت السلعة نسبة أكبر من ميزانية المستهلك، زادت المرونة.</li>
+<li><strong>الفترة الزمنية (Time Period):</strong> كلما كانت الفترة الزمنية للتكيف أطول، زادت المرونة (يجد المستهلكون بدائل مع مرور الوقت).</li>
+</ol>
+<h2>مرونات أخرى</h2>
+<h3>1. مرونة الطلب الدخلية (Income Elasticity - $E_M$)</h3>
+<p><img alt="Original Slide 19" src="extracted/images/PPTX_COM/Elasticity and Demand/Slide_19_Full.png" /></p>
+<ul>
+<li>تقيس استجابة الكمية المطلوبة للتغير في الدخل.</li>
+<li>
+<p><strong>المعادلة:</strong>
+$$E_M = \frac{\%\Delta Q}{\%\Delta M}$$</p>
+</li>
+<li>
+<p><strong>التصنيف:</strong></p>
+<ul>
+<li><strong>موجبة (+):</strong> سلع عادية (Normal Good).</li>
+<li><strong>سالبة (-):</strong> سلع رديئة (Inferior Good).</li>
+</ul>
+</li>
+</ul>
+<h3>2. مرونة الطلب المتقاطعة (Cross-Price Elasticity - $E_{XY}$)</h3>
+<p><img alt="Original Slide 20" src="extracted/images/PPTX_COM/Elasticity and Demand/Slide_20_Full.png" /></p>
+<ul>
+<li>تقيس استجابة الكمية المطلوبة من السلعة X للتغير في سعر السلعة Y.</li>
+<li>
+<p><strong>المعادلة:</strong>
+$$E_{XY} = \frac{\%\Delta Q_X}{\%\Delta P_Y}$$</p>
+</li>
+<li>
+<p><strong>التصنيف:</strong></p>
+<ul>
+<li><strong>موجبة (+):</strong> السلعتان بديلتان (Substitutes).</li>
+<li><strong>سالبة (-):</strong> السلعتان مكملتان (Complements).</li>
+</ul>
+</li>
+</ul></section><div style='page-break-after: always;'></div><section class='chapter'><h1>تمارين عملية (الأسبوع الثاني)</h1>
+<h2>السؤال الأول: قيد الميزانية (Budget Constraint)</h2>
+<p><strong>لنفترض أن سعر السلعة X هو \$20 وسعر السلعة Y هو \$40.</strong></p>
+<h3>1) حساب الدخل</h3>
+<ul>
+<li><strong>السؤال:</strong> إذا كان U1 هو أعلى مستوى منفعة يمكن للمستهلك تحقيقه، فما هو دخل المستهلك؟</li>
+<li><strong>الإجابة:</strong> يمكن حساب الدخل عند النقاط الطرفية (عندما يستهلك الصفر من إحدى السلع).<ul>
+<li>الدخل = (40 وحدة من X) × (\$20 للوحدة) = <strong>\$800</strong>.</li>
+<li>أو الدخل at point A = (20 وحدة من Y) × (\$40 للوحدة) = <strong>\$800</strong>.</li>
+</ul>
+</li>
+</ul>
+<h3>2) اختيار الكميات (تعظيم المنفعة)</h3>
+<ul>
+<li><strong>السؤال:</strong> كم عدد وحدات السلعة X التي سيختارها المستهلك إذا كانت النقطة B هي الخيار الأمثل لتعظيم المنفعة؟</li>
+<li><strong>الحل:</strong> الدخل عند النقطة B هو \$1200 (مثال افتراضي في الحلول، يبدو أن هناك رسم بياني غير موجود، لكن سنعتمد على الأرقام).<ul>
+<li>المعادلة: $1200 = (\$20 \times X) + (\$40 \times 14)$</li>
+<li>$1200 = 20X + 560$</li>
+<li>$640 = 20X$</li>
+<li>$X = 32$ وحدة.</li>
+</ul>
+</li>
+</ul>
+<h3>3) التغير في الدخل</h3>
+<ul>
+<li><strong>السؤال:</strong> إذا كان الدخل \$800، كم عدد وحدات السلعة Y التي سيختارها المستهلك؟</li>
+<li><strong>الحل:</strong><ul>
+<li>عند النقطة A، الدخل \$800.</li>
+<li>المعادلة: $800 = (\$20 \times 24) + (\$40 \times Y)$</li>
+<li>$800 = 480 + 40Y$</li>
+<li>$320 = 40Y$</li>
+<li>$Y = 8$ وحدات.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2>السؤال الثاني: الإيراد الكلي والمرونة (TR &amp; Elasticity)</h2>
+<p><strong>أجب عن الأسئلة التالية بناءً على البيانات:</strong></p>
+<h3>1) السعر لبيع 100 وحدة</h3>
+<ul>
+<li><strong>السؤال:</strong> ما هو السعر الذي يمكن عنده بيع 100 وحدة؟</li>
+<li><strong>الحل:</strong><ul>
+<li>عند 100 وحدة، الإيراد الكلي $TR = \$4,500$.</li>
+<li>$TR = P \times Q \Rightarrow 4500 = P \times 100$</li>
+<li>$P = \$45$.</li>
+</ul>
+</li>
+</ul>
+<h3>2) تعظيم الإيراد الكلي</h3>
+<ul>
+<li><strong>السؤال:</strong> عند أي سعر يتم تعظيم الإيراد الكلي؟</li>
+<li><strong>الحل:</strong><ul>
+<li>على منحنى الطلب الخطي، يتم تعظيم $TR$ عند نقطة المنتصف (Midpoint).</li>
+<li>السعر = <strong>\$25</strong>.</li>
+</ul>
+</li>
+</ul>
+<h3>3) الإيراد الحدي (MR)</h3>
+<ul>
+<li><strong>السؤال:</strong> ما هو الإيراد الحدي للوحدة رقم 100؟</li>
+<li><strong>الحل:</strong> MR هو ميل منحنى TR. من الرسم البياني (أو البيانات) = <strong>40.0</strong>.</li>
+</ul>
+<h3>4) نوع المرونة</h3>
+<ul>
+<li><strong>السؤال:</strong> عند الوحدة 700، هل الطلب مرن أم غير مرن؟</li>
+<li><strong>الحل:</strong> عند 700 وحدة، $MR$ سالب (في النصف السفلي من منحنى الطلب).<ul>
+<li>الطلب <strong>غير مرن (Inelastic)</strong>.</li>
+</ul>
+</li>
+</ul>
+<h3>5) أقصى إيراد كلي ممكن</h3>
+<ul>
+<li><strong>السؤال:</strong> ما هو الحد الأقصى للإيراد الكلي؟</li>
+<li><strong>الحل:</strong> عند نقطة المنتصف (حيث $P=\$25$ و $Q=500$).<ul>
+<li>$TR = 25 \times 500 = \mathbf{\$12,500}$.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2>السؤال الثالث: حساب المرونة (Elasticity Calculation)</h2>
+<p><strong>البيانات:</strong>
+| السعر (Price) | الكمية المطلوبة (Qd) |
+| :--- | :--- |
+| 200 | 1000 |
+| 150 | 1400 |
+| 100 | 1800 |</p>
+<h3>1) مرونة القوس (Arc Elasticity) - الحالة الأولى</h3>
+<ul>
+<li><strong>السؤال:</strong> إذا انخفض السعر من \$200 إلى \$150، ما هي مرونة الطلب السعرية؟</li>
+<li><strong>الحل:</strong><ul>
+<li>$E = \frac{\Delta Q / Average Q}{\Delta P / Average P}$</li>
+<li>$E = \frac{(1400 - 1000) / 1200}{(200 - 150) / 175} = \frac{400/1200}{50/175} = \frac{0.333}{0.286} \approx \mathbf{1.17}$</li>
+</ul>
+</li>
+</ul>
+<h3>2) التصنيف</h3>
+<ul>
+<li><strong>السؤال:</strong> هل الطلب مرن أم غير مرن؟</li>
+<li><strong>الحل:</strong> بما أن $|E| &gt; 1$، فالطلب <strong>مرن (Elastic)</strong>.</li>
+</ul>
+<h3>3) الإيراد الحدي (MR)</h3>
+<ul>
+<li><strong>السؤال:</strong> مع زيادة الإنتاج من 1000 إلى 1400 وحدة، ما هو $MR$؟</li>
+<li><strong>الحل:</strong><ul>
+<li>$MR = \frac{\Delta TR}{\Delta Q}$</li>
+<li>$TR_1 = 200 \times 1000 = 200,000$</li>
+<li>$TR_2 = 150 \times 1400 = 210,000$</li>
+<li>$\Delta TR = 10,000$</li>
+<li>$\Delta Q = 400$</li>
+<li>$MR = 10,000 / 400 = \mathbf{\$25}$ لكل وحدة.</li>
+</ul>
+</li>
+</ul>
+<h3>4) مرونة القوس - الحالة الثانية</h3>
+<ul>
+<li><strong>السؤال:</strong> إذا انخفض السعر من \$150 إلى \$100، ما هي المرونة؟</li>
+<li><strong>الحل:</strong><ul>
+<li>$E = \frac{(1800 - 1400) / 1600}{(150 - 100) / 125} = \frac{400/1600}{50/125} = \frac{0.25}{0.4} = \mathbf{0.625}$</li>
+<li>الطلب <strong>غير مرن (Inelastic)</strong> لأن $|E| &lt; 1$.</li>
+</ul>
+</li>
+</ul>
+<h3>5) العلاقة مع الإيراد الكلي</h3>
+<ul>
+<li><strong>السؤال:</strong> إذا ارتفع السعر من \$100 إلى \$150، ماذا سيحدث للإيراد الكلي؟</li>
+<li><strong>الحل:</strong> في الجزء غير المرن، رفع السعر يؤدي إلى <strong>زيادة</strong> الإيراد الكلي (تأثير السعر يطغى).</li>
+</ul>
+<hr />
+<h2>السؤال الرابع: تقدير دالة الطلب</h2>
+<p><strong>لدينا دالة الطلب المقدرة (مثال):</strong>
+$$Q = a - bP + cM + dP_R$$
+حيث $P$ هو السعر، $M$ هو الدخل، و $P_R$ سعر سلعة مرتبطة.</p>
+<h3>1) إشارة معامل السعر (P)</h3>
+<ul>
+<li><strong>السؤال:</strong> هل معامل $P$ له الإشارة المتوقعة؟</li>
+<li><strong>الحل:</strong> <strong>نعم</strong>. قانون الطلب يتطلب علاقة عكسية، لذا يجب أن يكون المعامل <strong>سالباً</strong>.</li>
+</ul>
+<h3>2) معامل الدخل (M)</h3>
+<ul>
+<li><strong>السؤال:</strong> ماذا يخبرنا معامل $M$؟</li>
+<li><strong>الحل:</strong> المعامل موجب (+0.32 في المثال)، مما يعني أنه مع زيادة الدخل، تزداد الكمية المطلوبة. إذن السلعة <strong>عادية (Normal Good)</strong>.</li>
+</ul>
+<h3>3) السلعة المرتبطة ($P_R$)</h3>
+<ul>
+<li><strong>السؤال:</strong> ماذا نستنتج عن العلاقة بين السلعتين؟</li>
+<li><strong>الحل:</strong> معامل $P_R$ موجب، مما يعني أنه مع ارتفاع سعر السلعة المرتبطة، يزداد الطلب على سلعتنا. إذن السلعتان <strong>بدائل (Substitutes)</strong>.</li>
+</ul>
+<h3>4) التنبؤ بالكمية (تغير الدخل)</h3>
+<ul>
+<li><strong>السؤال:</strong> إذا انخفض الدخل بمقدار \$1000، ماذا يحدث للكمية؟</li>
+<li><strong>الحل:</strong> $\Delta Q = \Delta M \times \text{Coeff}_M$<ul>
+<li>$\Delta Q = -1000 \times 0.32 = \mathbf{-320}$ وحدة (انخفاض).</li>
+</ul>
+</li>
+</ul>
+<h3>5) التنبؤ بالكمية (تغير السعر)</h3>
+<ul>
+<li><strong>السؤال:</strong> إذا انخفض سعر السلعة بمقدار \$4، ماذا يحدث للكمية؟</li>
+<li><strong>الحل:</strong> $\Delta Q = \Delta P \times \text{Coeff}_P$<ul>
+<li>لنفرض أن معامل السعر هو -5 (من الحلول).</li>
+<li>$\Delta Q = -4 \times (-5) = \mathbf{+20}$ وحدة (زيادة).</li>
+</ul>
+</li>
+</ul></section><div style='page-break-after: always;'></div>
+        </div>
+    </body>
+    </html>
+    
