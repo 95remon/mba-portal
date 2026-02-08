@@ -170,6 +170,7 @@ header {
   align-items: center;
   gap: 0.5rem;
   border: 1px solid transparent;
+  cursor: pointer;
 }
 
 .btn-primary {
@@ -200,19 +201,6 @@ body.rtl {
   font-family: var(--font-ar);
 }
 
-body.rtl .card-actions {
-  flex-direction: row-reverse; /* Or just normally align right because of direction: rtl */
-}
-
-/* Make sure text aligns correctly in RTL */
-body.rtl header {
-  flex-direction: row-reverse; /* If we want logo on right in RTL, actually header flex logic might need tweaking */
-}
-
-/* In RTL, logo should be on right, toggle on left usually? Or keep layout consistent?
-   Let's just let direction: rtl handle the flow.
-*/
-
 /* Footer */
 footer {
   margin-top: 4rem;
@@ -237,3 +225,78 @@ footer {
 .card:nth-child(2) { animation-delay: 0.2s; }
 .card:nth-child(3) { animation-delay: 0.3s; }
 .card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Subject Detail View Styles */
+.subject-detail {
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+.back-btn {
+    margin-bottom: 2rem;
+}
+
+.subject-header {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 2rem;
+}
+
+.subject-header h1 {
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+    color: var(--primary);
+}
+
+.week-section {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.week-section h3 {
+    margin: 0 0 1rem 0;
+    color: var(--accent);
+    font-size: 1.4rem;
+}
+
+.resources-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.resource-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-main);
+    transition: background 0.2s;
+}
+
+.resource-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.res-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+body.rtl .res-icon {
+    margin-right: 0;
+    margin-left: 1rem;
+}
+
+.res-label {
+    font-size: 1.05rem;
+}
+
+.no-resources {
+    color: var(--text-muted);
+    font-style: italic;
+}

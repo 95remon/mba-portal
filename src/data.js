@@ -11,11 +11,23 @@ export const subjects = [
             ar: "تحليل قرارات الأعمال باستخدام النظريات الاقتصادية."
         },
         notebookLink: "#",
-        resources: [
-            { type: "summary", label: { en: "Week 1 Summary (Arabic)", ar: "ملخص الأسبوع الأول (عربي)" }, url: "./courses/managerial-economics/week1/" },
-            { type: "summary", label: { en: "Week 1 Summary (English)", ar: "ملخص الأسبوع الأول (إنجليزي)" }, url: "./courses/managerial-economics/week1/english/" },
-            { type: "summary", label: { en: "Week 2 Summary (Arabic)", ar: "ملخص الأسبوع الثاني (عربي)" }, url: "./courses/managerial-economics/week2/" },
-            { type: "summary", label: { en: "Week 2 Summary (English)", ar: "ملخص الأسبوع الثاني (إنجليزي)" }, url: "./courses/managerial-economics/week2/english/" }
+        weeks: [
+            {
+                id: "week1",
+                title: { en: "Week 1", ar: "الأسبوع الأول" },
+                resources: [
+                    { type: "summary", label: { en: "Summary (Arabic)", ar: "ملخص (عربي)" }, url: "./courses/managerial-economics/week1/" },
+                    { type: "summary", label: { en: "Summary (English)", ar: "ملخص (إنجليزي)" }, url: "./courses/managerial-economics/week1/english/" }
+                ]
+            },
+            {
+                id: "week2",
+                title: { en: "Week 2", ar: "الأسبوع الثاني" },
+                resources: [
+                    { type: "summary", label: { en: "Summary (Arabic)", ar: "ملخص (عربي)" }, url: "./courses/managerial-economics/week2/" },
+                    { type: "summary", label: { en: "Summary (English)", ar: "ملخص (إنجليزي)" }, url: "./courses/managerial-economics/week2/english/" }
+                ]
+            }
         ]
     },
     {
@@ -30,8 +42,14 @@ export const subjects = [
             ar: "استراتيجيات تطوير المنتجات وتمركز العلامة التجارية."
         },
         notebookLink: "#",
-        resources: [
-            { type: "report", label: { en: "Case Study", ar: "دراسة حالة" }, url: "#" }
+        weeks: [
+            {
+                id: "week1",
+                title: { en: "Week 1", ar: "الأسبوع الأول" },
+                resources: [
+                    { type: "report", label: { en: "Case Study", ar: "دراسة حالة" }, url: "#" }
+                ]
+            }
         ]
     },
     {
@@ -46,7 +64,7 @@ export const subjects = [
             ar: "فهم القوائم المالية والتقارير."
         },
         notebookLink: "#",
-        resources: []
+        weeks: []
     },
     {
         id: "strategic-management",
@@ -60,6 +78,6 @@ export const subjects = [
             ar: "التخيط طويل المدى والميزة التنافسية."
         },
         notebookLink: "#",
-        resources: []
+        weeks: []
     }
 ];

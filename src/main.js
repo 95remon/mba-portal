@@ -3,6 +3,8 @@ import { subjects } from './data.js'
 import { config } from './config.js'
 
 let currentLang = 'en'; // Default language
+let currentView = 'dashboard';
+let selectedSubjectId = null;
 
 const app = document.querySelector('#app');
 
@@ -32,33 +34,73 @@ function render() {
     </header>
   `;
 
-  // Grid
-  const gridHTML = `
-    <div class="subjects-grid">
-      ${publishedSubjects.map(sub => `
-        <div class="card">
-          <div class="card-image" style="background-image: url('${sub.image}')"></div>
-          <div class="card-content">
-            <h2>${sub.title[currentLang]}</h2>
-            <p>${sub.description[currentLang]}</p>
-            <div class="card-actions">
-              ${sub.notebookLink && sub.notebookLink !== '#' ?
-      `<a href="${sub.notebookLink}" target="_blank" class="btn btn-primary">
-                   <span>NotebookLM</span>
-                   <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                 </a>` : ''
-    }
-              ${sub.resources.map(res => `
-                <a href="${res.url}" class="btn btn-secondary">
-                  ${res.label[currentLang]}
-                </a>
-              `).join('')}
+  let contentHTML = '';
+
+  if (currentView === 'dashboard') {
+    // Grid
+    contentHTML = `
+        <div class="subjects-grid">
+          ${publishedSubjects.map(sub => `
+            <div class="card subject-card" data-id="${sub.id}">
+              <div class="card-image" style="background-image: url('${sub.image}')"></div>
+              <div class="card-content">
+                <h2>${sub.title[currentLang]}</h2>
+                <p>${sub.description[currentLang]}</p>
+                <div class="card-actions">
+                  <button class="btn btn-primary" onclick="window.viewSubject('${sub.id}')">
+                    ${currentLang === 'en' ? 'View Course' : 'عرض المقرر'}
+                  </button>
+                </div>
+              </div>
             </div>
-          </div>
+          `).join('')}
         </div>
-      `).join('')}
-    </div>
-  `;
+      `;
+  } else if (currentView === 'subject') {
+    const sub = subjects.find(s => s.id === selectedSubjectId);
+    if (sub) {
+      contentHTML = `
+            <div class="subject-detail fadeIn">
+                <button class="btn btn-secondary back-btn" onclick="window.viewDashboard()">
+                    ${currentLang === 'en' ? '&larr; Back to Dashboard' : '&rarr; العودة للرئيسية'}
+                </button>
+                
+                <div class="subject-header">
+                    <h1>${sub.title[currentLang]}</h1>
+                    <p class="subtitle">${sub.description[currentLang]}</p>
+                    <div class="headers-actions" style="margin-top: 2rem;">
+                        ${sub.notebookLink && sub.notebookLink !== '#' ?
+          `<a href="${sub.notebookLink}" target="_blank" class="btn btn-primary">
+                                <span>NotebookLM</span>
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                             </a>` : ''
+        }
+                    </div>
+                </div>
+
+                <div class="weeks-list">
+                    ${sub.weeks && sub.weeks.length > 0 ? sub.weeks.map(week => `
+                        <div class="week-section">
+                            <h3>${week.title[currentLang]}</h3>
+                            <div class="resources-list">
+                                ${week.resources.map(res => `
+                                    <a href="${res.url}" class="resource-item">
+                                        <span class="res-icon">📄</span>
+                                        <div style="display: flex; flex-direction: column;">
+                                            <span class="res-label" style="font-weight: bold;">${res.label[currentLang]}</span>
+                                            <span style="font-size: 0.8rem; color: var(--text-muted);">${res.type ? res.type.toUpperCase() : 'FILE'}</span>
+                                        </div>
+                                    </a>
+                                `).join('')}
+                                ${week.resources.length === 0 ? `<p class="no-resources">${currentLang === 'en' ? 'No resources yet.' : 'لا توجد مصادر بعد.'}</p>` : ''}
+                            </div>
+                        </div>
+                    `).join('') : `<p style="text-align: center; color: var(--text-muted); font-size: 1.2rem;">${currentLang === 'en' ? 'No content available yet.' : 'لا يوجد محتوى متاح بعد.'}</p>`}
+                </div>
+            </div>
+          `;
+    }
+  }
 
   // Footer
   const footerHTML = `
@@ -67,11 +109,26 @@ function render() {
     </footer>
   `;
 
-  app.innerHTML = headerHTML + gridHTML + footerHTML;
+  app.innerHTML = headerHTML + contentHTML + footerHTML;
 
   // Re-attach listeners
   attachListeners();
 }
+
+// Global functions for inline onclicks
+window.viewSubject = (id) => {
+  selectedSubjectId = id;
+  currentView = 'subject';
+  render();
+  window.scrollTo(0, 0);
+};
+
+window.viewDashboard = () => {
+  selectedSubjectId = null;
+  currentView = 'dashboard';
+  render();
+  window.scrollTo(0, 0);
+};
 
 function attachListeners() {
   const toggle = document.getElementById('lang-toggle');
