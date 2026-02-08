@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-    base: '/mba-portal/',
+    base: './', // Use relative paths for maximum compatibility
     build: {
         outDir: 'dist',
     }
