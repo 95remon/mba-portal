@@ -12,8 +12,7 @@ export const subjects = [
         },
         notebookLink: "#",
         resources: [
-            { type: "quiz", label: { en: "Practice Quiz", ar: "اختبار تدريبي" }, url: "#" },
-            { type: "summary", label: { en: "Lecture Notes", ar: "ملاحظات المحاضرة" }, url: "#" }
+            { type: "summary", label: { en: "Week 1 Summary (Arabic)", ar: "ملخص الأسبوع الأول" }, url: "/courses/managerial-economics/week1/" }
         ]
     },
     {
