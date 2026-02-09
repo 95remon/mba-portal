@@ -7,6 +7,16 @@
         <title>Managerial Economics - Week 2 Summary (Arabic)</title>
         <style>
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+/* Universal box-sizing for better mobile handling */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
 body {
     direction: rtl;
     font-family: 'Cairo', sans-serif;
@@ -15,9 +25,12 @@ body {
     line-height: 1.8;
     margin: 0;
     padding: 20px;
+    overflow-x: hidden;
+    max-width: 100vw;
 }
 .container {
     max-width: 900px;
+    width: 100%;
     margin: 0 auto;
     background: #fff;
     padding: 50px;
@@ -180,20 +193,25 @@ hr {
 
 @media (max-width: 480px) {
     body {
-        padding: 5px;
+        padding: 8px;
     }
     .container {
-        padding: 15px;
+        padding: 12px;
         border-radius: 5px;
+        overflow-x: hidden;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
     h1 {
-        font-size: 1.6em;
+        font-size: 1.5em;
         padding-bottom: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
+        word-wrap: break-word;
     }
     h2 {
         font-size: 1.1em;
         padding: 10px 12px;
+        word-wrap: break-word;
     }
     h3 {
         font-size: 1em;
@@ -201,32 +219,35 @@ hr {
     p, li {
         font-size: 0.95em;
         line-height: 1.6;
+        word-wrap: break-word;
     }
     table {
-        font-size: 0.8em;
+        font-size: 0.75em;
         display: block;
         overflow-x: auto;
         white-space: nowrap;
+        max-width: 100%;
     }
     th, td {
-        padding: 8px 5px;
+        padding: 6px 4px;
     }
     blockquote {
-        padding: 8px 12px;
+        padding: 8px 10px;
         margin: 10px 0;
+        font-size: 0.9em;
     }
     .cover-page {
-        padding: 30px 0;
+        padding: 25px 0;
     }
     .cover-title {
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
     .cover-subtitle {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
     ul, ol {
-        margin-right: 15px;
-        padding-right: 15px;
+        margin-right: 10px;
+        padding-right: 10px;
     }
 }
 </style>
