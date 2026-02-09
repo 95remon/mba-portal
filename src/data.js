@@ -28,7 +28,8 @@ export const subjects = [
                     { type: "summary", label: { en: "Summary (Arabic)", ar: "ملخص (عربي)" }, url: "./courses/managerial-economics/week2/" },
                     { type: "summary", label: { en: "Summary (English)", ar: "ملخص (إنجليزي)" }, url: "./courses/managerial-economics/week2/english/" },
                     { type: "quiz", label: { en: "Practice Problems (Egyptian Arabic)", ar: "تمارين عملية (عامية مصرية)" }, url: "./courses/managerial-economics/week2/quiz.html" },
-                    { type: "visual", label: { en: "Visual Study Guide 📊", ar: "الملخص المرئي 📊" }, url: "./courses/managerial-economics/week2/visual-guide.html" }
+                    { type: "visual", label: { en: "Visual Study Guide 📊", ar: "الملخص المرئي 📊" }, url: "./courses/managerial-economics/week2/visual-guide.html" },
+                    { type: "quiz", label: { en: "Quiz Solutions ✅", ar: "حلول الكويز ✅" }, url: "./courses/managerial-economics/week2/quiz-solutions.html" }
                 ]
             }
         ]
