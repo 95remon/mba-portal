@@ -172,6 +172,45 @@ mjx-container, .MathJax {
     display: inline-block !important;
 }
 
+/* Fix numbers and formulas in RTL */
+.number, .formula {
+    direction: ltr;
+    unicode-bidi: embed;
+    display: inline-block;
+}
+
+/* Tables should be LTR for numbers */
+table {
+    direction: ltr;
+}
+
+/* But keep headers readable */
+th, td {
+    unicode-bidi: plaintext;
+}
+
+/* Fix list items with numbers */
+ol {
+    direction: ltr;
+    text-align: right;
+}
+
+ol li {
+    direction: rtl;
+}
+
+/* Answer results - ensure proper display */
+p strong {
+    unicode-bidi: isolate;
+}
+
+/* Equation blocks */
+p:has(mjx-container), p:has(.MathJax) {
+    direction: ltr;
+    text-align: center;
+}
+
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .container {
@@ -421,10 +460,15 @@ $$P_Y = \frac{600}{100} = \$6$$</p>
 </tr>
 </tbody>
 </table>
-<p><strong>النتيجة: 4 Steak + 4 Chicken = $40 + $20 = $60</strong> ✓</p>
-<p><strong>الشرح بالمصري:</strong>
-بنشتري من اللي يدينا أعلى منفعة لكل جنيه. نفضل نختار الأعلى لحد ما الفلوس تخلص.
-في الآخر: 4 ستيك × $10 = $40 + 4 فراخ × $5 = $20 = <strong>$60 بالظبط</strong></p>
+<p><strong>النتيجة:</strong></p>
+<p><code>4 Steak + 4 Chicken = $40 + $20 = $60</code> ✓</p>
+<p><strong>الشرح بالمصري:</strong></p>
+<p>بنشتري من اللي يدينا أعلى منفعة لكل جنيه. نفضل نختار الأعلى لحد ما الفلوس تخلص.</p>
+<ul>
+<li>٤ ستيك × ١٠$ = ٤٠$</li>
+<li>٤ فراخ × ٥$ = ٢٠$</li>
+<li>المجموع = <strong>٦٠$ بالظبط</strong></li>
+</ul>
 <hr />
 <h3>السؤال 4: لو سعر الستيك نزل لـ $8؟</h3>
 <p><strong>الخيارات:</strong> 4S,4C | 5S,3C | 5S,4C | 6S,2C | None</p>
@@ -474,9 +518,15 @@ $$P_Y = \frac{600}{100} = \$6$$</p>
 6. Chicken 3 (6) → $39
 7. Steak 4 (5) → $47
 8. Chicken 4 (4) &amp; Steak 5 (4) → $52 + $8 = $60 ✓</p>
-<p><strong>النتيجة: 5 Steak + 4 Chicken = $40 + $20 = $60</strong> ✓</p>
-<p><strong>الشرح بالمصري:</strong>
-لما الستيك رخص، بقى أحسن نشتري منه أكتر. دلوقتي بنشتري 5 ستيك بدل 4.</p>
+<p><strong>النتيجة:</strong></p>
+<p><code>5 Steak + 4 Chicken = $40 + $20 = $60</code> ✓</p>
+<p><strong>الشرح بالمصري:</strong></p>
+<p>لما الستيك رخص، بقى أحسن نشتري منه أكتر.</p>
+<ul>
+<li>٥ ستيك × ٨$ = ٤٠$</li>
+<li>٤ فراخ × ٥$ = ٢٠$</li>
+<li>المجموع = <strong>٦٠$</strong></li>
+</ul>
 <hr />
 <h2>الأسئلة 5-6: المرونة السعرية (Demand Curve)</h2>
 <p><img alt="Q5-Q6 Demand Curve" src="./quiz_images/full_page_7.png" /></p>
