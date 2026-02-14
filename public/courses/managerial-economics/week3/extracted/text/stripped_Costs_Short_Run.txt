@@ -1,0 +1,362 @@
+--- Slide 1 ---
+Chapter 8
+Production &amp; Cost in the Short Run
+--- Slide 2 ---
+Production Theory
+Production function
+Shows maximum potential output from a given set of inputs and existing technology
+Technical efficiency
+Achieved when maximum output is produced with a given set of inputs
+Economic efficiency
+Achieved when firm produces a given output at the lowest possible total cost
+--- Slide 3 ---
+Inputs
+Variable input
+Level of usage may be changed readily
+Fixed input
+Level of usage
+cannot
+readily be changed
+Must be paid even if no output produced
+Quasi-fixed input
+Input used in fixed amount (“lumpy”) for any positive level of output but not paid if output is zero
+--- Slide 4 ---
+Production Theory
+Short run
+At least one input is fixed
+All changes in output achieved by usage changes of variable inputs
+Long run
+All inputs are variable
+Output changed by varying usage of all inputs
+--- Slide 5 ---
+Short Run Production
+In the
+short
+run,
+capital is fixed
+Only changes in the variable
+labor
+input can change the level of output
+Average product of labor
+AP = Q/L
+Marginal product of labor
+MP =
+Q/L
+--- Slide 6 ---
+A Production Table
+{85BE263C-DBD7-4A20-BB59-AAB30ACAA65A}# of workers
+Total Output
+Marginal
+Product
+Average Product
+0
+0
+4
+6
+7
+6
+5
+3
+1
+0
+-2
+-5
+---
+1
+4
+4
+2
+10
+5
+3
+17
+5.7
+4
+23
+5.8
+5
+28
+5.6
+6
+31
+5.2
+7
+32
+4.6
+8
+32
+4.0
+9
+30
+3.3
+10
+25
+2.5
+Marginal product
+-additional output that will be forthcoming from an additional worker, other inputs constant
+Average product
+- output per worker
+Shows output resulting from combinations of factors or inputs
+--- Slide 7 ---
+Average &amp; Marginal Products
+Relationship between
+AP
+and
+MP
+:
+When
+AP
+is rising,
+MP
+&gt;
+AP
+When
+AP
+is falling,
+MP
+&lt;
+AP
+When
+AP
+reaches maximum,
+AP = MP
+Law of diminishing marginal product
+At some point while increasing the usage of a variable input, its marginal product
+decreases
+--- Slide 8 ---
+Production Graphs
+Variable Labor input
+(holding capital constant)
+0
+Total product
+Average product
+Marginal product
+Total product (
+TP
+)
+Average product (
+AP
+L
+)
+Marginal product (
+MP
+L
+)
+Increasing
+marginal
+returns to labor
+Negative
+marginal
+returns to labor
+Decreasing
+marginal
+returns to labor
+--- Slide 9 ---
+Total, Average, &amp; Marginal Products of Labor, K = 2
+Number of workers (L)
+Total product (Q)
+Average product (AP=Q/L)
+Marginal product (MP=
+Q/L)
+0
+0
+1
+52
+2
+112
+3
+170
+4
+220
+5
+258
+6
+286
+7
+304
+8
+314
+9
+318
+10
+314
+--
+55
+51.6
+52
+56
+56.7
+47.7
+43.4
+39.3
+35.3
+31.4
+--
+50
+38
+52
+60
+58
+28
+18
+10
+4
+-4
+--- Slide 10 ---
+Total, Average &amp; Marginal Products, K = 2
+--- Slide 11 ---
+Short Run Production Costs
+Total variable cost
+(TVC)
+Increases as output increases
+Total fixed cost
+(TFC)
+Does
+not
+vary with output
+Total cost
+(TC)
+TC = TVC + TFC
+--- Slide 12 ---
+Example: Short-Run Total Cost Schedule
+--- Slide 13 ---
+Example: Total Cost Curves
+--- Slide 14 ---
+Average Costs
+Average variable cost
+Average fixed cost
+Average total cost
+Short-run marginal cost
+--- Slide 15 ---
+Average &amp; Marginal Cost Example
+Output (Q)
+Average fixed cost (AFC=TFC/Q)
+Average variable cost (AVC=TVC/Q)
+Average total cost (ATC=TC/Q= AFC+AVC)
+Short-run marginal cost (SMC=
+TC/Q
+)
+0
+100
+200
+300
+400
+500
+600
+$60
+--
+15
+12
+30
+20
+10
+--
+35
+44
+$40
+30
+30
+56.7
+--
+50
+56
+$100
+60
+50
+66.7
+--
+50
+80
+$40
+20
+30
+120
+--- Slide 16 ---
+Average &amp; Marginal Cost Curves
+--- Slide 17 ---
+Short Run Cost Curve Relations
+AFC
+decreases as output increases
+Equals distance between
+ATC
+&amp;
+AVC
+AVC
+and
+ATC
+are
+U
+-shaped
+AVC
+approaches
+ATC
+as
+Q
+increases
+SMC
+is
+U
+-shaped
+Intersects
+AVC
+&amp;
+ATC
+at minimum points
+SMC
+is below
+AVC
+&amp;
+ATC
+when they are falling, and above when they are rising
+--- Slide 18 ---
+AVC
+MC
+Q
+Costs per unit
+ATC
+The marginal cost curve goes through the minimum point of both the ATC and AVC curves
+Marginal Cost and Average Cost
+--- Slide 19 ---
+Short-Run Production &amp; Cost Relations
+When
+MP
+increases,
+SMC
+decreases
+Same holds for
+AP
+and
+AVC
+When
+MP
+decreases,
+SMC
+increases
+Same holds for
+AP
+and
+AVC
+When
+MP
+=
+AP
+at maximum
+AP
+:
+SMC
+intersects
+AVC
+at minimum
+AVC
+--- Slide 20 ---
+AVC
+Q
+MC
+Q
+Output    per worker
+Costs per unit
+If marginal productivity is rising, marginal costs are falling
+If average productivity is falling, average costs are rising
+MP of workers
+AP of workers
+Marginal Productivity and Marginal Costs

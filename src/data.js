@@ -33,5 +33,6 @@ export const subjects = [
                 ]
             }
         ]
-    }
-];
+    },
+    { id: 'week3', title: 'Costs - Short and Long Run', path: '/courses/managerial-economics/week3/index.html' }
+  ]
