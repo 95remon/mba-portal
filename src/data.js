@@ -37,7 +37,9 @@ export const subjects = [
                 title: { en: "Week 3", ar: "الأسبوع الثالث" },
                 resources: [
                     { type: "summary", label: { en: "Summary (Arabic)", ar: "ملخص (عربي)" }, url: "./courses/managerial-economics/week3/index.html" },
-                    { type: "summary", label: { en: "Summary (English)", ar: "ملخص (إنجليزي)" }, url: "./courses/managerial-economics/week3/english/index.html" }
+                    { type: "summary", label: { en: "Summary (English)", ar: "ملخص (إنجليزي)" }, url: "./courses/managerial-economics/week3/english/index.html" },
+                    { type: "quiz", label: { en: "Quiz (Arabic)", ar: "اختبار (عربي)" }, url: "./courses/managerial-economics/week3/quiz.html" },
+                    { type: "quiz", label: { en: "Quiz (English)", ar: "اختبار (إنجليزي)" }, url: "./courses/managerial-economics/week3/english/quiz.html" }
                 ]
             }
         ]
