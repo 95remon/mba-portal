@@ -31,8 +31,14 @@ export const subjects = [
                     { type: "visual", label: { en: "Visual Study Guide 📊", ar: "الملخص المرئي 📊" }, url: "./courses/managerial-economics/week2/visual-guide.html" },
                     { type: "quiz", label: { en: "Quiz Solutions ✅", ar: "حلول الكويز ✅" }, url: "./courses/managerial-economics/week2/quiz-solutions.html" }
                 ]
+            },
+            {
+                id: "week3",
+                title: { en: "Week 3", ar: "الأسبوع الثالث" },
+                resources: [
+                    { type: "summary", label: { en: "Costs - Short and Long Run", ar: "تحليل التكاليف" }, url: "./courses/managerial-economics/week3/index.html" }
+                ]
             }
         ]
-    },
-    { id: 'week3', title: 'Costs - Short and Long Run', path: '/courses/managerial-economics/week3/index.html' }
-  ]
+    }
+]
