@@ -1,0 +1,874 @@
+
+    <!DOCTYPE html>
+    <html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week 2 Quiz Solutions - حلول الكويز</title>
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+/* Universal box-sizing for better mobile handling */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    line-height: 1.9;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden;
+    max-width: 100vw;
+    min-height: 100vh;
+}
+.container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+h1 {
+    text-align: center;
+    color: #667eea;
+    font-size: 2.5em;
+    border-bottom: 4px solid #764ba2;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+h2 {
+    color: white;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 18px 25px;
+    border-radius: 12px;
+    margin-top: 50px;
+    font-size: 1.4em;
+    box-shadow: 0 5px 15px rgba(102,126,234,0.4);
+}
+h3 {
+    color: #764ba2;
+    border-right: 5px solid #667eea;
+    padding-right: 15px;
+    margin-top: 30px;
+    font-size: 1.2em;
+}
+p {
+    margin-bottom: 1.2em;
+    font-size: 1.1em;
+}
+
+/* Answer Box */
+strong {
+    color: #27ae60;
+}
+
+/* List Styling */
+ul, ol {
+    margin: 0;
+    padding: 0;
+    margin-right: 2rem;
+    margin-bottom: 1.5em;
+    list-style: none;
+}
+
+li {
+    margin-bottom: 0.8rem;
+    line-height: 1.8;
+    position: relative;
+    padding-right: 2rem;
+}
+
+ul > li::before {
+    content: "•";
+    color: #667eea;
+    font-weight: bold;
+    font-size: 1.5em;
+    position: absolute;
+    right: 0;
+    top: -0.2em;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+th, td {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+}
+th {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-weight: 600;
+}
+tr:nth-child(even) {
+    background-color: #f8f9ff;
+}
+tr:hover {
+    background-color: #f0f2ff;
+}
+
+/* Code/Answer highlight */
+code {
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-family: 'Cairo', sans-serif;
+    color: #27ae60;
+    font-weight: bold;
+    direction: ltr; 
+    display: inline-block;
+}
+
+/* Blockquote for options */
+blockquote {
+    border-right: 5px solid #667eea;
+    margin: 20px 0;
+    padding: 15px 25px;
+    background: linear-gradient(135deg, #f8f9ff, #ede7f6);
+    border-radius: 0 10px 10px 0;
+    color: #5e35b1;
+    font-style: normal;
+}
+
+hr {
+    border: 0;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #667eea, #764ba2, transparent);
+    margin: 40px 0;
+}
+
+/* Image styling */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 25px auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* MathJax */
+mjx-container, .MathJax {
+    direction: ltr !important;
+    text-align: left !important;
+    display: inline-block !important;
+}
+
+/* Fix numbers and formulas in RTL */
+.number, .formula {
+    direction: ltr;
+    unicode-bidi: embed;
+    display: inline-block;
+}
+
+/* Tables should be LTR for numbers */
+table {
+    direction: ltr;
+}
+
+/* But keep headers readable */
+th, td {
+    unicode-bidi: plaintext;
+}
+
+/* Fix list items with numbers */
+ol {
+    direction: ltr;
+    text-align: right;
+}
+
+ol li {
+    direction: rtl;
+}
+
+/* Answer results - ensure proper display */
+p strong {
+    unicode-bidi: isolate;
+}
+
+/* Equation blocks */
+p:has(mjx-container), p:has(.MathJax) {
+    direction: ltr;
+    text-align: center;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 20px;
+        border-radius: 15px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    h2 {
+        font-size: 1.2em;
+        padding: 12px 15px;
+    }
+    h3 {
+        font-size: 1.1em;
+    }
+    table {
+        font-size: 0.9em;
+    }
+    th, td {
+        padding: 10px 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 8px;
+    }
+    .container {
+        padding: 15px;
+        border-radius: 10px;
+        overflow-x: hidden;
+        word-wrap: break-word;
+    }
+    h1 {
+        font-size: 1.4em;
+    }
+    h2 {
+        font-size: 1em;
+        padding: 10px 12px;
+    }
+    h3 {
+        font-size: 0.95em;
+    }
+    p, li {
+        font-size: 0.95em;
+    }
+    table {
+        font-size: 0.75em;
+        display: block;
+        overflow-x: auto;
+    }
+    th, td {
+        padding: 6px 4px;
+    }
+    ul, ol {
+        margin-right: 1rem;
+    }
+    li {
+        padding-right: 1.2rem;
+    }
+}
+</style>
+         <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['$', '$']],
+                    displayMath: [['$$', '$$']],
+                    processEscapes: true
+                },
+                options: {
+                    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Week 2 Quiz - Consumer Behavior &amp; Elasticity</h1>
+<h1>أسئلة الأسبوع الثاني - سلوك المستهلك والمرونة</h1>
+<hr />
+<h2>الأسئلة 1-2: قيد الميزانية ومنحنى السواء</h2>
+<p><img alt="Q1-Q2 Budget Constraint" src="./quiz_images/full_page_1.png" /></p>
+<p><strong>المعطيات:</strong>
+- دخل المستهلك = $600
+- من الرسم البياني: عند X=0، Y=100 (تقاطع مع محور Y)
+- عند Y=0، X=80 (تقاطع مع محور X)</p>
+<hr />
+<h3>السؤال 1: ما هو سعر السلعة Y؟</h3>
+<p><strong>الخيارات:</strong> $0.25 | $4 | $6 | $8 | None</p>
+<p><strong>الحل:</strong>
+من معادلة الميزانية: Income = Px·X + Py·Y</p>
+<p>عند نقطة تقاطع محور Y (X = 0, Y = 100):
+$$600 = P_Y \times 100$$
+$$P_Y = \frac{600}{100} = \$6$$</p>
+<p><strong>الإجابة: $6</strong> ✓</p>
+<p><strong>الشرح بالمصري:</strong>
+بنروح للنقطة اللي المستهلك بيشتري فيها Y بس من غير X. لو Y = 100 والفلوس = 600$:
+سعر Y = 600 ÷ 100 = <strong>$6</strong></p>
+<hr />
+<h3>السؤال 2: لو سعر X = $7.50، كام وحدة من X هيشتري؟</h3>
+<p><strong>الخيارات:</strong> 25 | 30 | 35 | 50 | None</p>
+<p><strong>الحل:</strong>
+من الرسم البياني، نقطة التوازن (tangency point) بين خط الميزانية ومنحنى السواء عند X ≈ 35.</p>
+<p>نتحقق: عند Px = $7.50, Py = $6:
+- لو X = 35: الفاضل من الميزانية = 600 - (7.50 × 35) = 600 - 262.5 = $337.5
+- Y = 337.5 ÷ 6 = 56.25 وحدة</p>
+<p>من الرسم، النقطة (35, ~56) هي نقطة التماس مع منحنى السواء.</p>
+<p><strong>الإجابة: 35 units</strong> ✓</p>
+<p><strong>الشرح بالمصري:</strong>
+نقطة التوازن هي اللي منحنى السواء بيمس فيها خط الميزانية. من الرسم، النقطة دي عند X = 35 وحدة تقريباً.</p>
+<hr />
+<h2>الأسئلة 3-4: تعظيم المنفعة (Steak &amp; Chicken)</h2>
+<p><img alt="Q3-Q4 Utility Table" src="./quiz_images/full_page_4.png" /></p>
+<p><strong>المعطيات:</strong>
+- دخل كريس الأسبوعي = $60
+- سعر الستيك = $10
+- سعر الفراخ = $5</p>
+<p><strong>جدول المنفعة الحدية:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">الكمية</th>
+<th style="text-align: center;">MU Steak</th>
+<th style="text-align: center;">MU Chicken</th>
+<th style="text-align: center;">MU/P Steak (/10)</th>
+<th style="text-align: center;">MU/P Chicken (/5)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">70</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">40</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">40</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">32</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">3.2</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1.6</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>السؤال 3: ما الكميات لتعظيم المنفعة؟</h3>
+<p><strong>الخيارات:</strong> 2S,5C | 3S,2C | 4S,4C | 5S,2C | None</p>
+<p><strong>الحل:</strong>
+نشتري بترتيب أعلى MU/P:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">الخطوة</th>
+<th style="text-align: center;">السلعة</th>
+<th style="text-align: center;">MU/P</th>
+<th style="text-align: center;">التكلفة التراكمية</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">Chicken 1</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">$5</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">Chicken 2</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">$10</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">Steak 1</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">$20</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">Chicken 3</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">$25</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">Steak 2</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">$35</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">Steak 3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">$45</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">Chicken 4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">$50</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">Steak 4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">$60 ✓</td>
+</tr>
+</tbody>
+</table>
+<p><strong>النتيجة:</strong></p>
+<p><code>4 Steak + 4 Chicken = $40 + $20 = $60</code> ✓</p>
+<p><strong>الشرح بالمصري:</strong></p>
+<p>بنشتري من اللي يدينا أعلى منفعة لكل جنيه. نفضل نختار الأعلى لحد ما الفلوس تخلص.</p>
+<ul>
+<li>٤ ستيك × ١٠$ = ٤٠$</li>
+<li>٤ فراخ × ٥$ = ٢٠$</li>
+<li>المجموع = <strong>٦٠$ بالظبط</strong></li>
+</ul>
+<hr />
+<h3>السؤال 4: لو سعر الستيك نزل لـ $8؟</h3>
+<p><strong>الخيارات:</strong> 4S,4C | 5S,3C | 5S,4C | 6S,2C | None</p>
+<p><strong>الحل مع السعر الجديد:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">الكمية</th>
+<th style="text-align: center;">MU Steak</th>
+<th style="text-align: center;">MU/P (/8)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">70</td>
+<td style="text-align: center;">8.75</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">7.5</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">6.25</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">40</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">32</td>
+<td style="text-align: center;">4</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ترتيب الشراء الجديد:</strong>
+1. Chicken 1 (10) → $5
+2. Steak 1 (8.75) → $13
+3. Chicken 2 (8) → $18
+4. Steak 2 (7.5) → $26
+5. Steak 3 (6.25) → $34
+6. Chicken 3 (6) → $39
+7. Steak 4 (5) → $47
+8. Chicken 4 (4) &amp; Steak 5 (4) → $52 + $8 = $60 ✓</p>
+<p><strong>النتيجة:</strong></p>
+<p><code>5 Steak + 4 Chicken = $40 + $20 = $60</code> ✓</p>
+<p><strong>الشرح بالمصري:</strong></p>
+<p>لما الستيك رخص، بقى أحسن نشتري منه أكتر.</p>
+<ul>
+<li>٥ ستيك × ٨$ = ٤٠$</li>
+<li>٤ فراخ × ٥$ = ٢٠$</li>
+<li>المجموع = <strong>٦٠$</strong></li>
+</ul>
+<hr />
+<h2>الأسئلة 5-6: المرونة السعرية (Demand Curve)</h2>
+<p><img alt="Q5-Q6 Demand Curve" src="./quiz_images/full_page_7.png" /></p>
+<p><strong>من الرسم البياني:</strong>
+- عند P = $110، Q = 400
+- عند P = $90، Q = 600</p>
+<hr />
+<h3>السؤال 5: ما هي المرونة السعرية بين $90 و $110؟</h3>
+<p><strong>الخيارات المعروضة:</strong> 0.4 | 0.5 | 1.0 | 1.5</p>
+<p><strong>⚠️ ملاحظة: الخيار 2 ناقص وهو الإجابة الصحيحة!</strong></p>
+<p><strong>الحل:</strong>
+$$E_d = \frac{\Delta Q / \bar{Q}}{\Delta P / \bar{P}}$$</p>
+<ul>
+<li>$\Delta Q = 600 - 400 = 200$</li>
+<li>$\bar{Q} = (400 + 600) / 2 = 500$</li>
+<li>$\Delta P = 110 - 90 = 20$</li>
+<li>$\bar{P} = (90 + 110) / 2 = 100$</li>
+</ul>
+<p>$$E_d = \frac{200/500}{20/100} = \frac{0.4}{0.2} = 2$$</p>
+<p><strong>الإجابة: 2</strong> (الخيار الناقص!) ✓</p>
+<p><strong>الشرح بالمصري:</strong>
+لما السعر اتغير 20%، الكمية اتغيرت 40%. المرونة = 40% ÷ 20% = <strong>2</strong>
+يعني الطلب مرن جداً - الناس حساسة للسعر.</p>
+<hr />
+<h3>السؤال 6: MR والطلب من $90 لـ $100</h3>
+<p><strong>الخيارات:</strong> greater than one; inelastic | positive; elastic | negative; inelastic | negative; elastic | None</p>
+<p><strong>الحل:</strong>
+- P = $90, Q = 600 → TR = $54,000
+- P = $100, Q = 500 → TR = $50,000</p>
+<p>$$MR = \frac{\Delta TR}{\Delta Q} = \frac{54,000 - 50,000}{600 - 500} = \frac{4,000}{100} = +40$$</p>
+<p>MR موجب → TR بتزيد لما ننتج أكتر (أو تقل لما السعر يزيد)
+لما السعر زاد وTR قلت → الطلب <strong>مرن (Elastic)</strong></p>
+<p><strong>الإجابة: positive; elastic</strong> ✓</p>
+<p><strong>الشرح بالمصري:</strong>
+- MR موجب = كل وحدة زيادة بتزود الإيراد
+- السعر زاد والإيراد قل = الطلب مرن (الناس هربت)</p>
+<hr />
+<h2>الأسئلة 7-8: مرونة التعليم البريطاني</h2>
+<p><img alt="Q7-Q8 British Education" src="./quiz_images/full_page_10.png" /></p>
+<p><strong>المعطيات:</strong>
+- الحكومة ضاعفت الرسوم 3 مرات (tripled)
+- نص الطلاب سابوا (half left)</p>
+<hr />
+<h3>السؤال 7: المرونة السعرية للتعليم البريطاني؟</h3>
+<p><strong>الخيارات:</strong> less than 1 | equal to 1 | between 1 and 1.5 | greater than 1.5 | Cannot be determined</p>
+<p><strong>الحل:</strong>
+باستخدام Arc Elasticity:
+- السعر من 1 لـ 3 (زيادة 200%)
+- الكمية من 1 لـ 0.5 (نقص 50%)</p>
+<p>$$E_d = \frac{(0.5-1)/0.75}{(3-1)/2} = \frac{-0.667}{1} = 0.667$$</p>
+<p>$|E_d| = 0.67 &lt; 1$</p>
+<p><strong>الإجابة: less than 1</strong> ✓</p>
+<p><strong>الشرح بالمصري:</strong>
+السعر اتضاعف 3 مرات بس نص الطلبة بس مشيوا. يعني الطلب مش حساس قوي للسعر = <strong>غير مرن</strong>.</p>
+<hr />
+<h3>السؤال 8: إيه اللي هيحصل لإيرادات الجامعات؟</h3>
+<p><strong>الخيارات:</strong> decrease | not change | increase | cannot determine</p>
+<p><strong>الحل:</strong>
+في الطلب غير المرن (E &lt; 1):
+- لما السعر يزيد، الإيراد <strong>يزيد</strong>
+- السعر × 3، الطلاب × 0.5
+- الإيراد الجديد = 3 × 0.5 = 1.5 × الإيراد القديم</p>
+<p><strong>الإجابة: increase</strong> ✓</p>
+<p><strong>الشرح بالمصري:</strong>
+الطلب غير مرن يعني لما السعر يغلى، الإيراد يزيد. ضربنا السعر × 3 وقسمنا الطلبة ÷ 2 = الإيراد زاد 50%!</p>
+<hr />
+<h2>الأسئلة 9-10: مرونة الدخل</h2>
+<p><img alt="Q9-Q10 Income Elasticity" src="./quiz_images/full_page_13.png" /></p>
+<p><strong>من الرسم البياني:</strong>
+- عند M = $25,000، Q = 900
+- عند M = $30,000، Q = 1,100</p>
+<hr />
+<h3>السؤال 9: مرونة الدخل؟</h3>
+<p><strong>الخيارات:</strong> -1.10 | -0.10 | 0.18 | 0.20 | 1.10</p>
+<p><strong>الحل:</strong>
+$$E_M = \frac{\Delta Q / \bar{Q}}{\Delta M / \bar{M}}$$</p>
+<ul>
+<li>$\Delta Q = 1100 - 900 = 200$</li>
+<li>$\bar{Q} = (900 + 1100) / 2 = 1000$</li>
+<li>$\Delta M = 30,000 - 25,000 = 5,000$</li>
+<li>$\bar{M} = (25,000 + 30,000) / 2 = 27,500$</li>
+</ul>
+<p>$$E_M = \frac{200/1000}{5,000/27,500} = \frac{0.2}{0.182} = 1.10$$</p>
+<p><strong>الإجابة: 1.10</strong> ✓</p>
+<hr />
+<h3>السؤال 10: نوع السلعة؟</h3>
+<p><strong>الخيارات:</strong> Normal good | Inferior good | Giffen good | No close substitutes</p>
+<p><strong>الحل:</strong>
+- مرونة الدخل = +1.10 &gt; 0
+- لما الدخل زاد، الطلب زاد
+- السلعة <strong>عادية (Normal Good)</strong></p>
+<p><strong>الإجابة: It is a normal good</strong> ✓</p>
+<p><strong>الشرح بالمصري:</strong>
+لما الناس بتاخد فلوس أكتر، بتشتري من السلعة دي أكتر = سلعة عادية.
+لو كانت سلعة رديئة، كان الناس هتبطل تشتريها لما دخلها يزيد.</p>
+<hr />
+<h2>السؤال 11: المرونة السعرية التقاطعية (Cross-Price Elasticity)</h2>
+<p><img alt="Q11 Cross-Price Elasticity" src="./quiz_images/full_page_15.png" /></p>
+<p><strong>السؤال:</strong> المرونة السعرية التقاطعية بين السلعتين X و Y...</p>
+<p><strong>الخيارات:</strong>
+- measures the responsiveness of quantity of X demanded to changes in the price of Y
+- is the percentage change in the price of Y divided by the percentage change in the quantity of X demanded
+- is negative if X and Y are substitutes
+- All of the above are true</p>
+<p><strong>الحل:</strong></p>
+<p>المرونة السعرية التقاطعية تُعرَّف كالتالي:</p>
+<p>$$E_{XY} = \frac{\% \Delta Q_X}{\% \Delta P_Y}$$</p>
+<ul>
+<li>✅ تقيس استجابة الكمية المطلوبة من X لتغير سعر Y</li>
+<li>❌ الخيار الثاني مقلوب (العكس)</li>
+<li>❌ المرونة التقاطعية <strong>موجبة</strong> للبدائل، و<strong>سالبة</strong> للمتكاملات</li>
+</ul>
+<p><strong>الإجابة: measures the responsiveness of quantity of X demanded to changes in the price of Y</strong> ✓</p>
+<p><strong>الشرح بالمصري:</strong>
+المرونة التقاطعية بتقيس: لو سعر Y اتغير، الكمية اللي هتشتريها من X هتتأثر قد إيه؟
+- لو البضاعتين بدائل (زي بيبسي وكوكاكولا): سعر واحدة يغلى → الناس تشتري التانية = مرونة <strong>موجبة</strong>
+- لو متكاملات (زي عربية وبنزين): سعر واحدة يغلى → الناس تشتري التانية أقل = مرونة <strong>سالبة</strong></p>
+<hr />
+<h2>الأسئلة 12-15: تقدير الطلب (Demand Estimation)</h2>
+<p><img alt="Q12-Q15 Regression" src="./quiz_images/full_page_16.png" /></p>
+<p><strong>معادلة الطلب:</strong>
+$$Q = a + bP + cM + dP_R$$</p>
+<p><strong>نتائج الانحدار (Regression Results) لشركة Spiker Drones:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">المتغير</th>
+<th style="text-align: center;">Parameter Estimate</th>
+<th style="text-align: center;">Standard Error</th>
+<th style="text-align: center;">T-Ratio</th>
+<th style="text-align: center;">P-Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">INTERCEPT</td>
+<td style="text-align: center;">846.30</td>
+<td style="text-align: center;">76.70</td>
+<td style="text-align: center;">11.03</td>
+<td style="text-align: center;">0.0001</td>
+</tr>
+<tr>
+<td style="text-align: center;">P (السعر)</td>
+<td style="text-align: center;">-8.60</td>
+<td style="text-align: center;">2.60</td>
+<td style="text-align: center;">-3.31</td>
+<td style="text-align: center;">0.0026</td>
+</tr>
+<tr>
+<td style="text-align: center;">M (الدخل)</td>
+<td style="text-align: center;">0.0184</td>
+<td style="text-align: center;">0.0048</td>
+<td style="text-align: center;">3.83</td>
+<td style="text-align: center;">0.0007</td>
+</tr>
+<tr>
+<td style="text-align: center;">PR (سعر المنافس)</td>
+<td style="text-align: center;">-4.3075</td>
+<td style="text-align: center;">1.230</td>
+<td style="text-align: center;">-3.50</td>
+<td style="text-align: center;">0.0016</td>
+</tr>
+</tbody>
+</table>
+<p><strong>معادلة الطلب المقدرة:</strong>
+$$Q = 846.30 - 8.60P + 0.0184M - 4.3075P_R$$</p>
+<hr />
+<h3>السؤال 12: بناءً على معاملات الانحدار، أي العبارات صحيحة؟</h3>
+<p><strong>الخيارات:</strong>
+- this good is a normal good
+- this good is an inferior good
+- the related good is a substitute
+- the coefficient on the Price variable is inconsistent with the Law of Demand</p>
+<p><strong>الحل:</strong></p>
+<p><strong>تحليل المعاملات:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">المعامل</th>
+<th style="text-align: center;">القيمة</th>
+<th style="text-align: left;">التفسير</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">معامل P</td>
+<td style="text-align: center;"><strong>-8.60</strong> (سالب)</td>
+<td style="text-align: left;">✅ متسق مع قانون الطلب (السعر ↑ = الكمية ↓)</td>
+</tr>
+<tr>
+<td style="text-align: center;">معامل M</td>
+<td style="text-align: center;"><strong>+0.0184</strong> (موجب)</td>
+<td style="text-align: left;">✅ سلعة <strong>عادية</strong> (الدخل ↑ = الطلب ↑)</td>
+</tr>
+<tr>
+<td style="text-align: center;">معامل PR</td>
+<td style="text-align: center;"><strong>-4.3075</strong> (سالب)</td>
+<td style="text-align: left;">سلعة <strong>متكاملة</strong> وليست بديلة</td>
+</tr>
+</tbody>
+</table>
+<p><strong>الإجابة: this good is a normal good</strong> ✓</p>
+<p><strong>الشرح بالمصري:</strong>
+- معامل الدخل M = +0.0184 (موجب) → يعني لما دخل الناس يزيد، بيشتروا أكتر = <strong>سلعة عادية</strong>
+- معامل السعر = -8.60 (سالب) → طبيعي، ده قانون الطلب
+- معامل سعر المنافس = -4.3075 (سالب) → السلعتين <strong>متكاملين</strong> مش بدائل</p>
+<hr />
+<h3>السؤال 13: كام وحدة الشركة هتبيع؟</h3>
+<p><strong>المعطيات:</strong>
+- M (الدخل) = $10,000
+- PR (سعر المنافس) = $40
+- P (السعر) = $30</p>
+<p><strong>الحل:</strong></p>
+<p>$$Q = 846.30 - 8.60(30) + 0.0184(10,000) - 4.3075(40)$$</p>
+<p>$$Q = 846.30 - 258 + 184 - 172.30$$</p>
+<p>$$Q = 846.30 - 246.30 = 600$$</p>
+<p><strong>الإجابة: 600 units</strong> ✓</p>
+<p><strong>الشرح بالمصري:</strong>
+نعوض في المعادلة:
+- 846.30 (الثابت)
+- ناقص 8.60 × 30 = 258
+- زائد 0.0184 × 10,000 = 184
+- ناقص 4.3075 × 40 = 172.30</p>
+<p>المجموع = <strong>600 وحدة</strong></p>
+<hr />
+<h3>السؤال 14: المرونة السعرية للطلب؟</h3>
+<p><strong>المعطيات:</strong> P = $30, Q = 600</p>
+<p><strong>الخيارات:</strong> 0.43 | 0.86 | 1.00 | 1.43 | None</p>
+<p><strong>الحل:</strong></p>
+<p>صيغة المرونة النقطية:
+$$E_P = \frac{\partial Q}{\partial P} \times \frac{P}{Q}$$</p>
+<p>من المعادلة: $\frac{\partial Q}{\partial P} = -8.60$</p>
+<p>$$E_P = -8.60 \times \frac{30}{600} = -8.60 \times 0.05 = -0.43$$</p>
+<p>القيمة المطلقة: $|E_P| = 0.43$</p>
+<p><strong>الإجابة: 0.43</strong> ✓</p>
+<p><strong>الشرح بالمصري:</strong>
+المرونة = معامل السعر × (السعر ÷ الكمية)
+= -8.60 × (30 ÷ 600) = -8.60 × 0.05 = <strong>-0.43</strong></p>
+<p>بالقيمة المطلقة = <strong>0.43</strong> (أقل من 1 = طلب غير مرن)</p>
+<hr />
+<h3>السؤال 15: مرونة الدخل؟</h3>
+<p><strong>المعطيات:</strong> M = $10,000, Q = 600</p>
+<p><strong>الخيارات:</strong> -1.62 | -0.87 | 0.21 | 0.31 | None</p>
+<p><strong>الحل:</strong></p>
+<p>صيغة مرونة الدخل:
+$$E_M = \frac{\partial Q}{\partial M} \times \frac{M}{Q}$$</p>
+<p>من المعادلة: $\frac{\partial Q}{\partial M} = 0.0184$</p>
+<p>$$E_M = 0.0184 \times \frac{10,000}{600} = 0.0184 \times 16.67 = 0.307 \approx 0.31$$</p>
+<p><strong>الإجابة: 0.31</strong> ✓</p>
+<p><strong>الشرح بالمصري:</strong>
+مرونة الدخل = معامل الدخل × (الدخل ÷ الكمية)
+= 0.0184 × (10,000 ÷ 600) = 0.0184 × 16.67 = <strong>0.31</strong></p>
+<p>لأن المرونة موجبة = سلعة عادية ✓</p>
+<hr />
+<h2>📊 ملخص الإجابات</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">السؤال</th>
+<th style="text-align: left;">الموضوع</th>
+<th style="text-align: center;">الإجابة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">سعر السلعة Y</td>
+<td style="text-align: center;"><strong>$6</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">وحدات X عند $7.50</td>
+<td style="text-align: center;"><strong>35 units</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">تعظيم المنفعة (Steak/Chicken)</td>
+<td style="text-align: center;"><strong>4 steak, 4 chicken</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">التعظيم بعد تخفيض السعر</td>
+<td style="text-align: center;"><strong>5 steak, 4 chicken</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">المرونة السعرية $90→$110</td>
+<td style="text-align: center;"><strong>2</strong> ⚠️</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">MR والطلب $90→$100</td>
+<td style="text-align: center;"><strong>positive; elastic</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: left;">مرونة التعليم البريطاني</td>
+<td style="text-align: center;"><strong>less than 1</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: left;">إيرادات الجامعات</td>
+<td style="text-align: center;"><strong>increase</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td style="text-align: left;">مرونة الدخل</td>
+<td style="text-align: center;"><strong>1.10</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: left;">نوع السلعة</td>
+<td style="text-align: center;"><strong>Normal good</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td style="text-align: left;">تعريف المرونة التقاطعية</td>
+<td style="text-align: center;"><strong>responsiveness of Qx to Py</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
+<td style="text-align: left;">تحليل معاملات الانحدار</td>
+<td style="text-align: center;"><strong>Normal good</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">13</td>
+<td style="text-align: left;">الكمية المتوقعة</td>
+<td style="text-align: center;"><strong>600 units</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">14</td>
+<td style="text-align: left;">المرونة السعرية</td>
+<td style="text-align: center;"><strong>0.43</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">15</td>
+<td style="text-align: left;">مرونة الدخل</td>
+<td style="text-align: center;"><strong>0.31</strong></td>
+</tr>
+</tbody>
+</table>
+        </div>
+    </body>
+    </html>
+    
