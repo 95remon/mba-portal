@@ -1,0 +1,148 @@
+﻿--- Sheet: Q1 ---
+							Assume that Fixed Costs =			
+								Output	Variable Costs	
+	Answer the following questions:									
+	1) 	What is Total Cost at 5 units?						1	10	
+		What is ATC at 5 units?						2	18	
+								3	30	
+	2)	What is Marginal Cost at 5 units?						4	45	
+								5	65	
+	3)	How much is ATC at its minimum value?								
+		How much output does that amount correspond to?								
+
+--- Sheet: A1 ---
+							Assume that Fixed Costs =				20		
+								Output	Variable Costs				
+	Answer the following questions:												
+	1) 	What is Total Cost at 5 units?						1	10				
+		What is ATC at 5 units?						2	18				
+								3	30				
+	2)	What is Marginal Cost at 5 units?						4	45				
+								5	65				
+	3)	How much is ATC at its minimum value?											
+		How much output does that amount correspond to?											
+								Output	Variable Costs		Fixed Cost	Total Cost	Marginal Cost
+	1)	TC = VC + FC									20	20	
+		At 5 units, VC = $65 and FC = $20. 						1	10		20	30	10
+		So, TC = $65 + $20 =		85				2	18		20	38	8
+		ATC = TC / Q = 		17				3	30		20	50	12
+								4	45		20	65	15
+								5	65		20	85	20
+	2)	MC = change in TC / change in Q											
+		At 5 units, MC = ($85 - $65) / (5-4) =				20							
+	3)	Minimum ATC =		16.25									
+		Occurs at	4	units									
+
+--- Sheet: Q2 ---
+						Use the following table to answer the question below:				
+	Answer the following questions:									
+	1) 	If the capital stock is fixed at one unit, how much does							The amount of total output produced from various combinations of labor and capital.	
+		the third unit of labor add to total output?						Units of Capital		
+								1	2	3
+	2)	If the capital stock is fixed at one unit, at what point do					1	50	120	160
+		diminishing returns occur?				Units	2	110	260	360
+						of	3	150	360	510
+	3)	If the capital stock is fixed at 4 units and there are 				Labor	4	170	430	630
+		2 units of labor, what is the average product of labor?					5	160	480	710
+	4)	If labor is fixed at three units, how much does the 								
+		second unit of capital add to total output? 								
+
+--- Sheet: A2 ---
+						Use the following table to answer the question below:						
+	Answer the following questions:											
+	1) 	If the capital stock is fixed at one unit, how much does							The amount of total output produced from various combinations of labor and capital.			
+		the third unit of labor add to total output?						Units of Capital				
+								1	2	3	4	
+	2)	If the capital stock is fixed at one unit, at what point do					1	50	120	160	180	
+		diminishing returns occur?				Units	2	110	260	360	390	
+						of	3	150	360	510	560	
+	3)	If the capital stock is fixed at 4 units and there are 				Labor	4	170	430	630	690	
+		2 units of labor, what is the average product of labor?					5	160	480	710	790	
+	4)	If labor is fixed at three units, how much does the 										
+		second unit of capital add to total output? 										
+	1)	Go down column for 1 unit of capital										
+		150 units - 110 units =		40	units							
+	2)	Go down 1st column and calculate MP for each worker										
+		At what point does the next worker yield less than the prior worker?										
+		1st worker --> +50 units		3rd	unit of labor							
+		2nd worker --> +60 units										
+		3rd worker --> +40 units										
+	3)	Use 4th column, at 2nd worker output is 390.										
+		AP = output / # workers										
+		AP = 390 / 2		AP =	195	units						
+	4)	Go across 3rd row										
+		360 units - 150 units =		210	units							
+
+--- Sheet: Q3 ---
+	Assume labor—the only variable input of a firm—has average and marginal product curves shown below. The price of labor is $1,000 per unit (i.e., w = $1,000). 					
+	Answer the following questions:					
+	1) 	How many workers are employed at minimum AVC?				
+		How much output does that amount correspond to?				
+	2)	How much is AVC at its minimum value?				
+	3)	How many workers will yield minimum MC?				
+		How much output does that amount correspond to?				
+	4)	How much is MC at its minimum value?				
+
+--- Sheet: A3 ---
+	Assume labor—the only variable input of a firm—has average and marginal product curves shown below. The price of labor is $1,000 per unit (i.e., w = $1,000). 					
+	Answer the following questions:					
+	1) 	How many workers are employed at minimum AVC?				
+		How much output does that amount correspond to?				
+	2)	How much is AVC at its minimum value?				
+	3)	How many workers will yield minimum MC?				
+		How much output does that amount correspond to?				
+	4)	How much is MC at its minimum value?				
+	1)	Min AVC occurs at Max AP				
+				450	workers	
+		AP = Q / L, so Q = AP x L and thus Q = 2025 x 450				
+				Q =	911250	units
+	2)	AVC = w / AP				
+				AVC =	0.493827160493827	per unit
+	3)	Min MC occurs at Max MP				
+				300	workers	
+		Q = AP x L = 1800 x 300				
+				Q =	540000	units
+	4)	MC = w / MP = $1000 / 2700				
+				MC =	0.37037037037037	per unit
+
+--- Sheet: Q4 ---
+						The price of capital (r) is $20.	
+	Answer the following questions:						
+	1) 	What is the price of labor (w)?					
+	2)	What combination of labor (L) and capital (K) can					
+		produce 5,000 units of output at lowest cost?					
+	3)	What is the lowest possible cost of producing 					
+		5,000 units of output?					
+	4)	What is the lowest possible cost at which 					
+		14,000 units of output can be produced?					
+	5)	At the optimal combination of inputs for producing 					
+		14,000 units of output, what is the MRTS?					
+
+--- Sheet: A4 ---
+						The price of capital (r) is $20.			
+	Answer the following questions:								
+	1) 	What is the price of labor (w)?							
+	2)	What combination of labor (L) and capital (K) can							
+		produce 5,000 units of output at lowest cost?							
+	3)	What is the lowest possible cost of producing 							
+		5,000 units of output?							
+	4)	What is the lowest possible cost at which 							
+		14,000 units of output can be produced?							
+	5)	At the optimal combination of inputs for producing 							
+		14,000 units of output, what is the MRTS?							
+	1)	Determine amount along an isocost and divide by units of labor to get cost of labor.							
+		At endpoint of first isocost, units of capital is 90 and price of capital is $20.							
+		Thus, first isocost value is (90 x $20) or				1800			
+		At labor endpoint, units of labor are				60			
+		Cost of labor = $1800 / 60 =				30	per unit		
+	2)	Lowest cost point will be tangency to isocost.							
+		Coordinates for point of tangency are				60	units of capital		
+						20	units of labor		
+	3)	Tangency point lies on isocost which was already 							
+		determined to be 		1800					
+	4)	Lowest cost point will be tangency to isocost.							
+		Tangency point lies on isocost which has same cost throughout.							
+		At endpoint, isocost = (180 x $20) =				3600			
+	5)	MRTS is the slope of the isocost (absolute value)							
+		Slope = MPL / MPK = w / r = ($30 / $20) =				1.5			
+

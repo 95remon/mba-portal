@@ -1,0 +1,137 @@
+--- Slide 1 ---
+Chapter 9
+Production &amp; Cost in the Long Run
+--- Slide 2 ---
+Production in the Long Run
+In the long run, all inputs are variable
+Isoquants
+used to study long-run production decisions
+Role of Manager
+Produce output on production function by aligning incentives to induce maximum worker effort
+Use the right mix of inputs (labor and capital) to maximize profit
+--- Slide 3 ---
+Production Isoquants
+Isoquant
+Curve showing all possible input combinations capable of producing a given level of output
+Downward sloping
+: if more labor is used, less capital is required to produce a given output
+--- Slide 4 ---
+Marginal Rate of Technical Substitution
+MRTS
+Measures rate at which two inputs can be substituted for one another while maintaining a constant level of output
+Slope of an isoquant
+--- Slide 5 ---
+Marginal Rate of Technical Substitution
+MRTS
+can also be expressed as the ratio of the two marginal products:
+--- Slide 6 ---
+Isocost Curves
+Show combinations of inputs that may be purchased for a given cost
+Input prices fixed at w (labor) and r (capital) for each
+isocost
+(C =
+wL
++
+rK
+)
+Changes in
+isocosts
+For given input prices,
+isocosts
+farther from the origin are associated with higher costs
+Changes in input prices change the slopes of
+isocost
+lines
+--- Slide 7 ---
+Isocost
+Curves
+--- Slide 8 ---
+Optimal Input Combination
+Cost is minimized for Q* where isoquant is tangent to
+isocost
+Optimal combination of inputs for Q*
+Implies MP per $ spent on last unit of each input is the same
+--- Slide 9 ---
+Optimal Input Combination to Minimize Cost
+--- Slide 10 ---
+Optimization &amp; Cost
+Expansion path
+Provides efficient (least-cost) input combinations for every level of output
+Derived for a specific set of input prices
+Along expansion path, input-price ratio is constant &amp; equal to the
+MRTS
+--- Slide 11 ---
+Expansion Path
+--- Slide 12 ---
+Returns to Scale
+If inputs are increased, by how much will output increase?
+Increasing returns to scale
+– output goes up by more than increase in inputs
+Decreasing returns to scale
+– output goes up by less than increase in inputs
+Constant returns to scale
+– same increase
+--- Slide 13 ---
+Long-Run Average Cost
+Long-run average cost
+(LAC)
+Measures cost per unit of output when optimal amount of each input is used
+LAC
+is
+U-shaped
+Falling
+LAC
+indicates
+economies of scale
+Rising
+LAC
+indicates
+diseconomies of scale
+--- Slide 14 ---
+Long-Run Marginal Cost
+Long-run marginal cost
+(LMC)
+Measures rate of change in LR total cost as output changes along expansion path
+LMC
+is
+U-shaped
+LMC
+lies below
+LAC
+when
+LAC
+is falling
+LMC
+lies above
+LAC
+when
+LAC
+is rising
+LMC = LAC
+at the minimum value of
+LAC
+--- Slide 15 ---
+Long-Run Average &amp; Marginal Cost Curves
+--- Slide 16 ---
+Economies of Scale
+Economies of Scale
+Declining portion of the LAC as output increases
+Diseconomies of scale
+Rising portion of the LAC as output increases
+--- Slide 17 ---
+Various Shapes of LAC
+--- Slide 18 ---
+Economies of Scope
+Economies of Scope
+Exist when joint cost of producing two or more goods is less than the sum of the separate costs of producing the goods
+For two goods,
+X
+&amp;
+Y
+, economies of scope exist when:
+C(X, Y) &lt; C(X) + C(Y)
+--- Slide 19 ---
+Relations Between SR and LR Costs
+Tangency
+At each output where an ATC is tangent to LAC, the relevant
+SMC=LMC

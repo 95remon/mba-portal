@@ -36,7 +36,8 @@ export const subjects = [
                 id: "week3",
                 title: { en: "Week 3", ar: "الأسبوع الثالث" },
                 resources: [
-                    { type: "summary", label: { en: "Costs - Short and Long Run", ar: "تحليل التكاليف" }, url: "./courses/managerial-economics/week3/index.html" }
+                    { type: "summary", label: { en: "Summary (Arabic)", ar: "ملخص (عربي)" }, url: "./courses/managerial-economics/week3/index.html" },
+                    { type: "summary", label: { en: "Summary (English)", ar: "ملخص (إنجليزي)" }, url: "./courses/managerial-economics/week3/english/index.html" }
                 ]
             }
         ]
