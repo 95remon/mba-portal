@@ -1,0 +1,1610 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اقتصاد إداري - امتحان الأسبوع الرابع</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+            max-width: 100vw;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            background: #fff;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2980b9;
+            font-size: 2.8em;
+            border-bottom: 3px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #d35400;
+            background: #fdf2e9;
+            padding: 15px 20px;
+            border-radius: 4px;
+            border-right: 6px solid #d35400;
+            margin-top: 1.5em;
+            font-weight: 700;
+        }
+
+        h3 {
+            color: #2c3e50;
+            font-size: 1.5em;
+            padding-bottom: 5px;
+            margin-top: 1.5em;
+            font-weight: 700;
+        }
+
+        h4 {
+            color: #2c3e50;
+            margin-top: 1em;
+        }
+
+        p {
+            margin-bottom: 1.2em;
+            font-size: 1.1em;
+        }
+
+        ul,
+        ol {
+            list-style-position: outside;
+            margin-bottom: 1.2em;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 30px auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            border: 1px solid #eee;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background-color: #2980b9;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .cover-page {
+            text-align: center;
+            padding: 100px 0;
+            page-break-after: always;
+        }
+
+        .cover-title {
+            font-size: 4em;
+            color: #2980b9;
+            margin-bottom: 20px;
+        }
+
+        .cover-subtitle {
+            font-size: 2em;
+            color: #7f8c8d;
+        }
+
+        .correct-answer {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin: 15px 0;
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #2e7d32;
+        }
+
+        .options-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+
+        .options-list li {
+            padding: 10px 15px;
+            margin: 5px 0;
+            background: #f9f9f9;
+            border-radius: 6px;
+            border: 1px solid #eee;
+        }
+
+        .options-list li.correct {
+            background: #e8f5e9;
+            border-color: #4caf50;
+            font-weight: 700;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px dashed #ddd;
+            margin: 40px 0;
+        }
+
+        .context-box {
+            background: #fff3e0;
+            border: 2px solid #ff9800;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        /* === Question Wrapper Styles === */
+        .question-wrapper {
+            margin-bottom: 30px;
+        }
+
+        .question-image {
+            margin: 15px 0 20px 0;
+        }
+
+        .question-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            border: 1px solid #eee;
+        }
+
+        .question-block {
+            direction: ltr;
+            text-align: left;
+        }
+
+        .question-block .options-list {
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .question-block ul,
+        .question-block ol {
+            margin-left: 20px;
+            padding-left: 25px;
+            margin-right: 0;
+            padding-right: 0;
+        }
+
+        .explanation-block {
+            direction: rtl;
+            text-align: right;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            margin-top: 15px;
+        }
+
+        .explanation-block p,
+        .explanation-block li {
+            unicode-bidi: plaintext;
+        }
+
+        .explanation-block ul,
+        .explanation-block ol {
+            margin-right: 20px;
+            padding-right: 25px;
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            table {
+                font-size: 0.9em;
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+    <script>
+        MathJax = {
+            tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']], processEscapes: true },
+            options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'], ignoreHtmlClass: 'explanation-block' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="cover-page">
+            <div class="cover-title">اقتصاد إداري</div>
+            <div class="cover-subtitle">امتحان الأسبوع الرابع - Exam No.01</div>
+            <div style="margin-top: 50px; font-size: 1.5em;">50 سؤال - 100 نقطة</div>
+        </div>
+
+        <h1>امتحان الأسبوع الرابع: الاقتصاد الإداري</h1>
+
+        <!-- ===== Q1 ===== -->
+        <div class="question-wrapper">
+            <h2>السؤال 1 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_01.png" alt="Question 1" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> Suppose Chris Piker, the owner-manager of Piker's Blueberry Farm, earned
+                    $82,000 in revenue last year. Piker's explicit costs of operation totaled $36,000. Chris has
+                    a
+                    degree in mechanical engineering and could be earning $40,000 annually as an engineer.</p>
+                <ul class="options-list">
+                    <li>Piker's implicit cost of using owner-supplied resources is $36,000.</li>
+                    <li>Piker's economic profit is $46,000.</li>
+                    <li>Piker's implicit cost of using owner-supplied resources is $46,000.</li>
+                    <li class="correct">✅ Piker's economic profit is $6,000.</li>
+                </ul>
+                <div class="correct-answer">Answer: Piker's economic profit is $6,000.</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>بص يا سيدي، Chris عنده مزرعة توت وجاب منها إيرادات $82,000 في السنة. التكاليف الصريحة (اللي دفعها
+                    فعلاً زي إيجار وخامات) = $36,000.</p>
+                <p>بس في حاجة تانية مهمة: Chris ممكن كان يشتغل مهندس ويجيب $40,000! ده بنسميه <strong>التكلفة
+                        الضمنية
+                        (Implicit Cost)</strong> - يعني الفرصة اللي ضاعت عليه.</p>
+                <ul>
+                    <li>التكلفة الضمنية = $40,000 (مرتب المهندس اللي ساب)</li>
+                    <li>إجمالي التكاليف الاقتصادية = $36,000 + $40,000 = $76,000</li>
+                    <li>الربح الاقتصادي = $82,000 - $76,000 = <strong>$6,000</strong></li>
+                </ul>
+                <p>تخيل إنك فاتح كشك كشري وبتجيب 10,000 جنيه في الشهر، بس لو كنت اشتغلت موظف كنت هتجيب 7,000، والمصاريف
+                    2,000. الربح الاقتصادي = 10,000 - 2,000 - 7,000 = 1,000 جنيه بس!</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- ===== Q2 ===== -->
+        <div class="question-wrapper">
+            <h2>السؤال 2 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_02.png" alt="Question 2" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> Which of the following is a common mistake made by managers?</p>
+                <ul class="options-list">
+                    <li>Using marginal analysis to make output decisions.</li>
+                    <li>Treating implicit opportunity costs as part of the total cost of using resources.</li>
+                    <li class="correct">✅ Increasing the rate of production in order to reduce unit costs of production.
+                    </li>
+                    <li>All of the above are common mistakes made by managers.</li>
+                </ul>
+                <div class="correct-answer">Answer: Increasing the rate of production in order to reduce unit costs of
+                    production.</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>بص يا سيدي، المديرين بيغلطوا غلطة شائعة: بيفتكروا إن لو زودوا الإنتاج، تكلفة الوحدة هتقل. ده مش
+                    دايماً صح!</p>
+                <p>الاختيار (a) مش غلط لأن التحليل الحدي (Marginal Analysis) هو الطريقة الصح لاتخاذ قرارات الإنتاج.</p>
+                <p>الاختيار (b) مش غلط لأن احتساب تكلفة الفرصة البديلة كجزء من التكاليف ده الصح.</p>
+                <p>لكن الاختيار (c) هو الغلط الشائع: إن المدير يزود الإنتاج عشان يقلل تكلفة الوحدة. ليه؟ لأن بعد نقطة
+                    معينة، بيحصل تناقص عوائد (Diminishing Returns) والتكلفة الحدية بتزيد!</p>
+                <p>تخيل معايا: عندك مصنع فيه 5 ماكينات وزودت العمال من 10 لـ 50 - في الأول الإنتاج هيزيد بسرعة، بس بعد
+                    كده العمال هيتزاحموا والإنتاجية تقل.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- ===== Q3 ===== -->
+        <div class="question-wrapper">
+            <h2>السؤال 3 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_03.png" alt="Question 3" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> Which of the following would increase (and shift) the demand for tennis
+                    balls?</p>
+                <ul class="options-list">
+                    <li>A decrease in the price of tennis balls</li>
+                    <li>An increase in the price of tennis rackets</li>
+                    <li>A decrease in the cost of producing tennis balls</li>
+                    <li class="correct">✅ An increase in average household income (and tennis balls are a normal good)
+                    </li>
+                </ul>
+                <div class="correct-answer">Answer: An increase in average household income (and tennis balls are a
+                    normal good)</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>السؤال بيقول إيه اللي يخلي منحنى الطلب <strong>يتحرك (Shift)</strong> - مش حركة على المنحنى!</p>
+                <ul>
+                    <li>(a) نقص سعر كرات التنس = حركة على المنحنى مش تحريك ليه ❌</li>
+                    <li>(b) زيادة سعر مضارب التنس = المضارب سلعة مكملة، لو غليت الناس هتلعب تنس أقل فالطلب على الكرات
+                        هيقل ❌</li>
+                    <li>(c) نقص تكلفة إنتاج كرات التنس = ده بيأثر على العرض مش الطلب ❌</li>
+                    <li>(d) زيادة دخل الأسر + كرات التنس سلعة عادية = الناس دخلها زاد يبقى هتشتري أكتر ✅</li>
+                </ul>
+                <p>ببساطة: لو مرتبك زاد، هتروح الجيم أكتر وتشتري أدوات رياضة أكتر. ده بيحرك منحنى الطلب لليمين!</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- ===== Q4 ===== -->
+        <div class="question-wrapper">
+            <h2>السؤال 4 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_04.png" alt="Question 4" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> Suppose that the market for diamond rings is in equilibrium until
+                    political unrest in South Africa shuts down the diamond mines there. South Africa is the world's
+                    primary supplier of diamonds. What will happen?</p>
+                <ul class="options-list">
+                    <li class="correct">✅ The equilibrium quantity of diamond rings will decrease.</li>
+                    <li>The equilibrium price of diamond rings will decrease.</li>
+                    <li>The demand for diamond rings will decrease.</li>
+                    <li>The supply of diamond rings will increase.</li>
+                </ul>
+                <div class="correct-answer">Answer: The equilibrium quantity of diamond rings will decrease.</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>جنوب أفريقيا هي أكبر مورد الماس في العالم. لو حصلت اضطرابات سياسية وقفلوا المناجم، يبقى العرض هيقل
+                    (منحنى العرض هيتحرك لليسار).</p>
+                <p>لما العرض يقل:</p>
+                <ul>
+                    <li>السعر هيزيد (مش هيقل) ❌ يبقى (b) غلط</li>
+                    <li>الطلب مش هيقل من نفسه ❌ يبقى (c) غلط</li>
+                    <li>العرض هيقل مش هيزيد ❌ يبقى (d) غلط</li>
+                    <li>الكمية التوازنية هتقل ✅ يبقى (a) صح</li>
+                </ul>
+                <p>تخيل إن مصنع السكر الوحيد في مصر اتقفل - السكر هيغلى والكمية المتاحة في السوق هتقل!</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- ===== Q5-Q9: S/D Graph Context ===== -->
+        <div class="context-box">
+            <h3>📊 سياق الأسئلة 5-9</h3>
+            <p>استخدم منحنيات العرض والطلب الخطية الموضحة أدناه:</p>
+            <img src="images/page_05.png" alt="Supply and Demand Graph" />
+        </div>
+
+        <!-- Q5 -->
+        <div class="question-wrapper">
+            <h2>السؤال 5 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_06.png" alt="Question 5" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> What is the equilibrium market price?</p>
+                <ul class="options-list">
+                    <li>$2</li>
+                    <li class="correct">✅ $3</li>
+                    <li>$5</li>
+                    <li>$500</li>
+                </ul>
+                <div class="correct-answer">Answer: $3</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>سعر التوازن هو النقطة اللي فيها منحنى العرض بيقطع منحنى الطلب. من الرسمة، المنحنيين بيتقاطعوا عند سعر
+                    $3 تقريباً وكمية 500.</p>
+                <p>يعني زي ما بتروح سوق الخضار - السعر بيثبت عند النقطة اللي الكمية اللي البياعين عايزين يبيعوها =
+                    الكمية اللي الناس عايزة تشتريها!</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q6 -->
+        <div class="question-wrapper">
+            <h2>السؤال 6 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_07.png" alt="Question 6" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> What is the economic value of the 300th unit?</p>
+                <ul class="options-list">
+                    <li>$2</li>
+                    <li>$3</li>
+                    <li class="correct">✅ $5</li>
+                    <li>Cannot be determined.</li>
+                </ul>
+                <div class="correct-answer">Answer: $5</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>القيمة الاقتصادية (Economic Value) للوحدة هي أقصى سعر المستهلك مستعد يدفعه عشان يشتريها، وده بنقرأه
+                    من <strong>منحنى الطلب</strong>.</p>
+                <p>عند الكمية 300، بنروح على منحنى الطلب ونشوف السعر المقابل = $5.</p>
+                <p>يعني لو حد عطشان أوي في الصحرا، أول كوباية مية ممكن يدفع فيها 100 جنيه! ده القيمة الاقتصادية ليها.
+                </p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q7 -->
+        <div class="question-wrapper">
+            <h2>السؤال 7 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_08.png" alt="Question 7" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> How much are producers willing to accept to produce the 300th unit?</p>
+                <ul class="options-list">
+                    <li class="correct">✅ $2</li>
+                    <li>$3</li>
+                    <li>$5</li>
+                    <li>Cannot be determined.</li>
+                </ul>
+                <div class="correct-answer">Answer: $2</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>المبلغ اللي المنتج مستعد يقبله عشان ينتج وحدة معينة (Marginal Cost) بنقرأه من <strong>منحنى
+                        العرض</strong>.</p>
+                <p>عند الكمية 300، بنروح على منحنى العرض ونشوف السعر المقابل = $2.</p>
+                <p>يعني التكلفة الحدية لإنتاج الوحدة الـ 300 هي $2. المُنتج يقبل أي سعر أعلى من كده.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q8 -->
+        <div class="question-wrapper">
+            <h2>السؤال 8 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_09.png" alt="Question 8" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> In market equilibrium, what is total producer surplus?</p>
+                <ul class="options-list">
+                    <li>$225</li>
+                    <li class="correct">✅ $625</li>
+                    <li>$750</li>
+                    <li>$1250</li>
+                </ul>
+                <div class="correct-answer">Answer: $625</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>فائض المنتج (Producer Surplus) = المساحة بين سعر التوازن ومنحنى العرض (المثلث تحت خط السعر وفوق منحنى
+                    العرض).</p>
+                <ul>
+                    <li>سعر التوازن = $3</li>
+                    <li>منحنى العرض يبدأ من $0.5 تقريباً</li>
+                    <li>كمية التوازن = 500</li>
+                    <li>فائض المنتج = (1/2) × (3 - 0.5) × 500 = (1/2) × 2.5 × 500 =
+                        625 دولار</li>
+                </ul>
+                <p>يعني لو بتبيع برتقان وتكلفته عليك 0.5 جنيه بس بعته بـ 3 جنيه، فايدتك = 2.5 جنيه × عدد البرتقانات / 2
+                    (لأنها مثلث).</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q9 -->
+        <div class="question-wrapper">
+            <h2>السؤال 9 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_10.png" alt="Question 9" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> In market equilibrium, what is the overall net gain to society?</p>
+                <ul class="options-list">
+                    <li>$1250</li>
+                    <li>$1500</li>
+                    <li class="correct">✅ $1875</li>
+                    <li>$2000</li>
+                </ul>
+                <div class="correct-answer">Answer: $1,875</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>صافي المكسب الكلي للمجتمع = فائض المستهلك + فائض المنتج (Total Surplus).</p>
+                <ul>
+                    <li>فائض المنتج = $625 (حسبناه فوق)</li>
+                    <li>فائض المستهلك = (1/2) × (8 - 3) × 500 = (1/2) × 5 × 500 =
+                        1250
+                        دولار</li>
+                    <li>إجمالي الفائض = $625 + $1250 = <strong>$1,875</strong></li>
+                </ul>
+                <p>يعني لو السوق شغال صح من غير تدخل حكومي، الكل بيكسب: المشتري بيحس إنه أخد سعر أقل مما كان مستعد يدفع،
+                    والبياع بيبيع بسعر أعلى من تكلفته.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- ===== Q10-Q13: Gasoline Market Context ===== -->
+        <div class="context-box">
+            <h3>📊 سياق الأسئلة 10-13</h3>
+            <p>استخدم المعلومات التالية عن سوق البنزين:</p>
+            <img src="images/page_11.png" alt="Gasoline Market Context" />
+        </div>
+
+        <!-- Q10 -->
+        <div class="question-wrapper">
+            <h2>السؤال 10 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_12.png" alt="Question 10" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> As a result of Event A (alone), what will be the ultimate effect on price
+                    and quantity within the market for gasoline in the US?</p>
+                <p><em>Event A: July 4th holiday and a large number of drivers are traveling by car.</em></p>
+                <ul class="options-list">
+                    <li>Gasoline prices will decrease, and the quantity sold will decrease.</li>
+                    <li>Gasoline prices will decrease, and the quantity sold will increase.</li>
+                    <li class="correct">✅ Gasoline prices will increase, and the quantity sold will increase.</li>
+                    <li>Gasoline prices will increase, and the quantity sold will decrease.</li>
+                    <li>The quantity sold will increase, but the effect on price cannot be determined.</li>
+                </ul>
+                <div class="correct-answer">Answer: Gasoline prices will increase, and the quantity sold will increase.
+                </div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>Event A = ناس كتير بتسافر بالعربية في الأجازة. ده بيزود الطلب على البنزين (منحنى الطلب بيتحرك يمين).
+                </p>
+                <p>لما الطلب يزيد والعرض ثابت:</p>
+                <ul>
+                    <li>السعر هيزيد ✅</li>
+                    <li>الكمية المباعة هتزيد ✅</li>
+                </ul>
+                <p>تخيل في رمضان الطلب على الياميش بيزيد - السعر بيعلى والكمية المباعة بتزيد!</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q11 -->
+        <div class="question-wrapper">
+            <h2>السؤال 11 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_13.png" alt="Question 11" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> As a result of Event B (alone), what will be the ultimate effect on price
+                    and quantity within the market for gasoline in the US?</p>
+                <p><em>Event B: Refineries increase their capacity by 20%.</em></p>
+                <ul class="options-list">
+                    <li>Gasoline prices will decrease, and the quantity sold will decrease.</li>
+                    <li>Gasoline prices will increase, and the quantity sold will decrease.</li>
+                    <li>Gasoline prices will increase, and the quantity sold will increase.</li>
+                    <li class="correct">✅ Gasoline prices will decrease, and the quantity sold will increase.</li>
+                    <li>Gasoline prices will increase, but the effect on quantity sold cannot be determined.</li>
+                </ul>
+                <div class="correct-answer">Answer: Gasoline prices will decrease, and the quantity sold will increase.
+                </div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>Event B = المصافي زودت الإنتاج 20%. ده بيزود العرض (منحنى العرض بيتحرك يمين).</p>
+                <p>لما العرض يزيد والطلب ثابت:</p>
+                <ul>
+                    <li>السعر هينزل ✅</li>
+                    <li>الكمية المباعة هتزيد ✅</li>
+                </ul>
+                <p>زي لما موسم البرتقان ييجي والسوق يتملي برتقان - السعر بينزل والكمية بتزيد!</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q12 -->
+        <div class="question-wrapper">
+            <h2>السؤال 12 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_14.png" alt="Question 12" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> If Event A and Event B occur simultaneously, what will be the ultimate
+                    effect on price and quantity in the market for gasoline in the US?</p>
+                <ul class="options-list">
+                    <li>Gasoline prices will decrease, and the quantity sold will decrease.</li>
+                    <li>Gasoline prices will increase, and the quantity sold will decrease.</li>
+                    <li>Gasoline prices will increase, and the quantity sold will increase.</li>
+                    <li>Gasoline prices will decrease, and the quantity sold will increase.</li>
+                    <li class="correct">✅ The quantity sold will increase, but the effect on gasoline prices cannot be
+                        determined.</li>
+                </ul>
+                <div class="correct-answer">Answer: The quantity sold will increase, but the effect on gasoline prices
+                    cannot be determined.</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>لو الحدثين حصلوا مع بعض: الطلب زاد (Event A) والعرض زاد (Event B).</p>
+                <ul>
+                    <li>الكمية: الاتنين بيزودوا الكمية → الكمية <strong>أكيد هتزيد</strong> ✅</li>
+                    <li>السعر: Event A بيرفع السعر بس Event B بينزله → <strong>مش عارفين النتيجة النهائية</strong></li>
+                </ul>
+                <p>تخيل في رمضان الطلب على التمر زاد (سعر يعلى) بس في نفس الوقت موسم التمر جه وفي محصول كبير (سعر ينزل).
+                    الكمية أكيد هتزيد بس السعر مش عارفين!</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q13 -->
+        <div class="question-wrapper">
+            <h2>السؤال 13 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_15.png" alt="Question 13" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> Which of the following conditions would result in a shortage of gasoline
+                    in the US?</p>
+                <ul class="options-list">
+                    <li>The US government implements a price floor above the equilibrium price.</li>
+                    <li class="correct">✅ The US government implements a price ceiling below the equilibrium price.</li>
+                    <li>The supply curve for gasoline shifts to the left.</li>
+                    <li>The increased availability of electric vehicles decreases the demand for gasoline.</li>
+                </ul>
+                <div class="correct-answer">Answer: The US government implements a price ceiling below the equilibrium
+                    price.</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>العجز (Shortage) بيحصل لما الكمية المطلوبة أكبر من الكمية المعروضة. ده بيحصل لما الحكومة تحط
+                    <strong>سقف سعري (Price Ceiling)</strong> تحت سعر التوازن.
+                </p>
+                <ul>
+                    <li>(a) حد أدنى للسعر فوق التوازن = فائض (Surplus) مش عجز ❌</li>
+                    <li>(b) سقف سعري تحت التوازن = عجز ✅</li>
+                    <li>(c) نقص العرض = هيتكون توازن جديد مش عجز دائم ❌</li>
+                    <li>(d) نقص الطلب = فائض مش عجز ❌</li>
+                </ul>
+                <p>تخيل الحكومة قالت كيلو السكر بـ 5 جنيه بس التكلفة 8 جنيه - المصانع مش هتنتج كفاية والناس هتلاقي عجز!
+                </p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- ===== Q14-Q16: Pollution Table Context ===== -->
+        <div class="context-box">
+            <h3>📊 سياق الأسئلة 14-17</h3>
+            <p>استخدم الجدول التالي عن تكاليف وعوائد تقليل التلوث باستخدام أجهزة تنقية الهواء (Air Scrubbers):</p>
+            <img src="images/page_16.png" alt="Pollution Table" />
+        </div>
+
+        <!-- Q14 -->
+        <div class="question-wrapper">
+            <h2>السؤال 14 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_17.png" alt="Question 14" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> What is the financial impact of the first air scrubber on the total net
+                    benefit from pollution reduction for the company?</p>
+                <ul class="options-list">
+                    <li>Net savings of $70,000</li>
+                    <li>Net savings of $180,000</li>
+                    <li class="correct">✅ Net savings of $250,000</li>
+                    <li>Net savings of $320,000</li>
+                </ul>
+                <div class="correct-answer">Answer: Net savings of $250,000</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>صافي الفائدة من أول جهاز تنقية هواء:</p>
+                <ul>
+                    <li>من الجدول: MB للجهاز الأول = $320,000 و MC = $70,000</li>
+                    <li>صافي الفائدة = MB - MC = $320,000 - $70,000 = <strong>$250,000</strong></li>
+                </ul>
+                <p>يعني لو مصنع هيركب فلتر هوا وتكلفته 70 ألف بس هيوفر غرامات تلوث بـ 320 ألف - يبقى كسبان 250 ألف صافي!
+                </p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q15 -->
+        <div class="question-wrapper">
+            <h2>السؤال 15 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_18.png" alt="Question 15" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> How many air scrubbers should the company install to maximize net benefit?
+                </p>
+                <ul class="options-list">
+                    <li>1</li>
+                    <li>2</li>
+                    <li class="correct">✅ 3</li>
+                    <li>4</li>
+                </ul>
+                <div class="correct-answer">Answer: 3 scrubbers</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>القاعدة: نستمر في تركيب أجهزة طالما MB ≥ MC. نتوقف لما MC &gt; MB.</p>
+                <ul>
+                    <li>الجهاز 1: MB &gt; MC ✅ نركب</li>
+                    <li>الجهاز 2: MB &gt; MC ✅ نركب</li>
+                    <li>الجهاز 3: MB ≥ MC ✅ نركب</li>
+                    <li>الجهاز 4: MB &lt; MC ❌ نتوقف</li>
+                </ul>
+                <p>يعني زي لما بتوظف عمال - كل ما العامل يضيف أكتر من مرتبه تجيبه، لما تكلفته تزيد عن إنتاجيته توقف!</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q16 -->
+        <div class="question-wrapper">
+            <h2>السؤال 16 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_19.png" alt="Question 16" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> What is the maximum total net benefit from pollution reduction?</p>
+                <ul class="options-list">
+                    <li>$250,000</li>
+                    <li>$380,000</li>
+                    <li class="correct">✅ $430,000</li>
+                    <li>$440,000</li>
+                </ul>
+                <div class="correct-answer">Answer: $430,000</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>أقصى صافي فائدة = مجموع (MB - MC) لكل جهاز لحد ما نتوقف:</p>
+                <ul>
+                    <li>الجهاز 1: $320,000 - $70,000 = $250,000</li>
+                    <li>الجهاز 2: $280,000 - $150,000 = $130,000</li>
+                    <li>الجهاز 3: $200,000 - $150,000 = $50,000</li>
+                    <li>الإجمالي = $250,000 + $130,000 + $50,000 = <strong>$430,000</strong></li>
+                </ul>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q17 -->
+        <div class="question-wrapper">
+            <h2>السؤال 17 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_20.png" alt="Question 17" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> What is the net benefit from producing the fourth scrubber?</p>
+                <ul class="options-list">
+                    <li>Net savings of $70,000</li>
+                    <li>Net savings of $250,000</li>
+                    <li class="correct">✅ Net loss of $10,000</li>
+                    <li>Net savings of $430,000</li>
+                </ul>
+                <div class="correct-answer">Answer: Net loss of $10,000</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>الجهاز الرابع:</p>
+                <ul>
+                    <li>MB = $140,000</li>
+                    <li>MC = $150,000</li>
+                    <li>صافي الفائدة = $140,000 - $150,000 = <strong>-$10,000</strong> (خسارة!)</li>
+                </ul>
+                <p>عشان كده منركبوش الجهاز الرابع - تكلفته أكتر من فايدته!</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- ===== Q18-Q20: Displays Table Context ===== -->
+        <div class="context-box">
+            <h3>📊 سياق الأسئلة 18-20</h3>
+            <p>استخدم الجدول التالي عن عدد شاشات العرض في محل بيع بالتجزئة:</p>
+            <img src="images/page_21.png" alt="Displays Table" />
+        </div>
+
+        <!-- Q18 -->
+        <div class="question-wrapper">
+            <h2>السؤال 18 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_22.png" alt="Question 18" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> Based on the table, how many end-aisle displays should the manager set up
+                    to maximize net benefit?</p>
+                <ul class="options-list">
+                    <li>1</li>
+                    <li>2</li>
+                    <li class="correct">✅ 3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ul>
+                <div class="correct-answer">Answer: 3 displays</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>نفس القاعدة: نستمر طالما MB ≥ MC. من الجدول، عند 3 شاشات الفائدة الحدية لسه أكبر من أو تساوي التكلفة
+                    الحدية، وعند 4 التكلفة بتزيد عن الفائدة.</p>
+                <p>يعني لو عندك محل وبتحط عروض - كل عرض بيجيب زباين لكن بيكلفك وقت ومكان. لما تكلفة العرض تزيد عن مكسبه
+                    توقف!</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q19 -->
+        <div class="question-wrapper">
+            <h2>السؤال 19 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_23.png" alt="Question 19" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> What is the maximum total net benefit from the displays?</p>
+                <ul class="options-list">
+                    <li>$180</li>
+                    <li class="correct">✅ $310</li>
+                    <li>$360</li>
+                    <li>$400</li>
+                </ul>
+                <div class="correct-answer">Answer: $310</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>نحسب مجموع صافي الفائدة لأول 3 شاشات من الجدول. الإجمالي بيطلع $310.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q20 -->
+        <div class="question-wrapper">
+            <h2>السؤال 20 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_24.png" alt="Question 20" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> Now suppose the benefit per display increases by $40. How many
+                    displays
+                    should the manager set up?</p>
+                <ul class="options-list">
+                    <li>2</li>
+                    <li>3</li>
+                    <li class="correct">✅ 4</li>
+                    <li>5</li>
+                </ul>
+                <div class="correct-answer">Answer: 4 displays</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>لما الفائدة زادت $40 لكل شاشة، الشاشة الرابعة بقت مربحة (MB + 40 &gt; MC). بس الخامسة لسه مش
+                    مربحة.
+                </p>
+                <p>يعني لو المحل ده في موسم تخفيضات والعروض بقت تجيب فلوس أكتر - هتحط عروض أكتر!</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- ===== Q21-Q23: Utility Table Context ===== -->
+        <div class="context-box">
+            <h3>📊 سياق الأسئلة 21-23</h3>
+            <p>استخدم جدول المنفعة التالي:</p>
+            <img src="images/page_25.png" alt="Utility Table" />
+        </div>
+
+        <!-- Q21 -->
+        <div class="question-wrapper">
+            <h2>السؤال 21 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_26.png" alt="Question 21" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> What is the marginal utility of the 3rd unit?</p>
+                <ul class="options-list">
+                    <li>10</li>
+                    <li>15</li>
+                    <li class="correct">✅ 20</li>
+                    <li>30</li>
+                </ul>
+                <div class="correct-answer">Answer: 20</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>المنفعة الحدية = الفرق في المنفعة الكلية: MU_3 = TU_3 - TU_2. من الجدول الناتج =
+                    <strong>20</strong>.
+                </p>
+                <p>يعني أول ساندوتش كشري بيفرحك جداً، التاني كويس، التالت لسه مقبول. الفرق في السعادة هو المنفعة الحدية!
+                </p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q22 -->
+        <div class="question-wrapper">
+            <h2>السؤال 22 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_27.png" alt="Question 22" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> At what unit does diminishing marginal utility begin?</p>
+                <ul class="options-list">
+                    <li>1st unit</li>
+                    <li class="correct">✅ 2nd unit</li>
+                    <li>3rd unit</li>
+                    <li>4th unit</li>
+                </ul>
+                <div class="correct-answer">Answer: 2nd unit</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>تناقص المنفعة الحدية بيبدأ لما MU تبدأ تقل. من الجدول، MU للوحدة الأولى كانت الأعلى، والتانية بقت
+                    أقل. يبقى التناقص بدأ من الوحدة <strong>التانية</strong>.</p>
+                <p>زي أول كوباية شاي الصبح - أحلى حاجة. التانية كويسة بس مش زيها!</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q23 -->
+        <div class="question-wrapper">
+            <h2>السؤال 23 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_28.png" alt="Question 23" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> At what units does total utility decrease?</p>
+                <ul class="options-list">
+                    <li>After 2nd unit</li>
+                    <li>After 3rd unit</li>
+                    <li class="correct">✅ After 4th unit</li>
+                    <li>Total utility never decreases</li>
+                </ul>
+                <div class="correct-answer">Answer: After 4th unit</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>TU بتقل لما MU تبقى سالبة. بعد الوحدة الرابعة MU بتبقى سالبة.</p>
+                <p>تخيل أكلت 4 ساندوتشات وبطنك اتملت - الخامس هيوجعك! ساعتها المنفعة الكلية بتقل.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- ===== Q24-Q28: Demand Curve Graph Context ===== -->
+        <div class="context-box">
+            <h3>📊 سياق الأسئلة 24-28</h3>
+            <p>استخدم منحنى الطلب الخطي الموضح أدناه. المعادلة: P = 100 - 0.1Q.</p>
+            <img src="images/page_29.png" alt="Demand Curve Graph" />
+        </div>
+
+        <!-- Q24 -->
+        <div class="question-wrapper">
+            <h2>السؤال 24 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_30.png" alt="Question 24" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> What is total revenue at 200 units of output?</p>
+                <ul class="options-list">
+                    <li>$20,000</li>
+                    <li>$32,000</li>
+                    <li class="correct">✅ $16,000</li>
+                    <li>$40,000</li>
+                </ul>
+                <div class="correct-answer">Answer: $16,000</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>P = 100 - 0.1(200) = 80</p>
+                <p>TR = P × Q = 80 × 200 = 16,000</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q25 -->
+        <div class="question-wrapper">
+            <h2>السؤال 25 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_31.png" alt="Question 25" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> What is total revenue at 400 units of output?</p>
+                <ul class="options-list">
+                    <li>$16,000</li>
+                    <li class="correct">✅ $24,000</li>
+                    <li>$32,000</li>
+                    <li>$40,000</li>
+                </ul>
+                <div class="correct-answer">Answer: $24,000</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>P = 100 - 0.1(400) = 60. يبقى TR = 60 × 400 = 24,000</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q26 -->
+        <div class="question-wrapper">
+            <h2>السؤال 26 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_32.png" alt="Question 26" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> What is total revenue at 600 units of output?</p>
+                <ul class="options-list">
+                    <li>$16,000</li>
+                    <li class="correct">✅ $24,000</li>
+                    <li>$32,000</li>
+                    <li>$40,000</li>
+                </ul>
+                <div class="correct-answer">Answer: $24,000</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>P = 100 - 0.1(600) = 40. يبقى TR = 40 × 600 = 24,000</p>
+                <p>لاحظ إن TR عند 400 = TR عند 600! ده لأن الطلب مرن عند 400 وغير مرن عند 600.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q27 -->
+        <div class="question-wrapper">
+            <h2>السؤال 27 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_33.png" alt="Question 27" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> If output increases from 400 to 600 units, what happens to marginal
+                    revenue?</p>
+                <ul class="options-list">
+                    <li>MR increases by $20/unit</li>
+                    <li>MR increases by $4000/unit</li>
+                    <li>MR decreases by $20/unit</li>
+                    <li>MR decreases by $4000/unit</li>
+                    <li class="correct">✅ Marginal revenue stays the same.</li>
+                </ul>
+                <div class="correct-answer">Answer: MR stays the same (= 0)</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>MR = (Δ TR/Δ Q) = (24000 - 24000/600 - 400) = 0</p>
+                <p>الإيراد الحدي = صفر! ده النقطة اللي عندها المرونة = 1 (Unitary Elastic).</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q28 -->
+        <div class="question-wrapper">
+            <h2>السؤال 28 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_34.png" alt="Question 28" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> If output goes from 600 to 800 units, what happens to marginal revenue?
+                </p>
+                <ul class="options-list">
+                    <li class="correct">✅ MR decreases by $20 per unit.</li>
+                    <li>MR increases by $4000/unit</li>
+                    <li>MR decreases by $4000/unit</li>
+                    <li>MR stays the same.</li>
+                </ul>
+                <div class="correct-answer">Answer: MR decreases by $20 per unit</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>P_{800} = 100 - 0.1(800) = 20. TR_{800} = 20 × 800 = 16,000</p>
+                <p>MR = (16000 - 24000/800 - 600) = (-8000/200) = -40</p>
+                <p>الإيراد الحدي بقى سالب! كل ما بنزود الإنتاج بعد نقطة معينة، الإيراد الكلي بيقل.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- ===== Q29-Q31: Boeing Elasticity Context ===== -->
+        <div class="context-box">
+            <h3>📊 سياق الأسئلة 29-31</h3>
+            <p>سياق عن مرونة الطلب لشركة Boeing. المرونة السعرية |Ed| &gt; 1.</p>
+            <img src="images/page_35.png" alt="Boeing Elasticity" />
+        </div>
+
+        <!-- Q29 -->
+        <div class="question-wrapper">
+            <h2>السؤال 29 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_35.png" alt="Question 29" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> True or False: Boeing's demand is elastic.</p>
+                <ul class="options-list">
+                    <li class="correct">✅ True</li>
+                    <li>False</li>
+                </ul>
+                <div class="correct-answer">Answer: True</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>|Ed| &gt; 1 يبقى الطلب مرن. يعني لو Boeing رفعت السعر شوية، الشركات هتقلل طلباتها بنسبة أكبر لأن في
+                    منافسين زي Airbus!</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q30 -->
+        <div class="question-wrapper">
+            <h2>السؤال 30 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_36.png" alt="Question 30" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> True or False: If Boeing raises its price, total revenue will decrease.
+                </p>
+                <ul class="options-list">
+                    <li class="correct">✅ True</li>
+                    <li>False</li>
+                </ul>
+                <div class="correct-answer">Answer: True</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>القاعدة: <strong>طلب مرن + زيادة سعر = إيراد أقل</strong>.</p>
+                <p>زي لو صاحب محل رفع سعر الطماطم أوي - الناس هتروح المحل التاني وهيخسر!</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q31 -->
+        <div class="question-wrapper">
+            <h2>السؤال 31 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_36.png" alt="Question 31" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> What strategy should Boeing use to increase revenue?</p>
+                <ul class="options-list">
+                    <li class="correct">✅ Decrease price</li>
+                    <li>Increase price</li>
+                    <li>Keep price the same</li>
+                    <li>Cannot be determined</li>
+                </ul>
+                <div class="correct-answer">Answer: Decrease price</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p><strong>طلب مرن → نزل السعر عشان تكسب أكتر</strong>. زي التخفيضات - لما المحل ينزل الأسعار الناس
+                    بتشتري أكتر بكتير!</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- ===== Q32-Q36: Border Snacks Regression Context ===== -->
+        <div class="context-box">
+            <h3>📊 سياق الأسئلة 32-36</h3>
+            <p>تحليل انحدار لشركة Border Snacks (صلصة Picante):</p>
+            <img src="images/page_37.png" alt="Border Snacks Regression" />
+            <img src="images/page_38.png" alt="Border Snacks Regression Table" />
+        </div>
+
+        <!-- Q32 -->
+        <div class="question-wrapper">
+            <h2>السؤال 32 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_39.png" alt="Question 32" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> What is the estimated demand equation for Border Snacks' picante sauce?
+                </p>
+                <div class="correct-answer">Answer: The estimated demand equation from regression table coefficients
+                </div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>بنقرأ القيم من عمود "Parameter Estimate" في جدول الانحدار ونركبها في المعادلة. كل معامل بيقول لنا
+                    تأثير المتغير على الكمية المطلوبة.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q33 -->
+        <div class="question-wrapper">
+            <h2>السؤال 33 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_40.png" alt="Question 33" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> Are all the estimated coefficients statistically significant at the 5%
+                    level?</p>
+                <ul class="options-list">
+                    <li class="correct">✅ Yes, all are significant</li>
+                    <li>No, only some</li>
+                    <li>None are significant</li>
+                    <li>Cannot be determined</li>
+                </ul>
+                <div class="correct-answer">Answer: Yes, all are significant</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>لو p-value أقل من 0.05 أو |t| &gt; 2 تقريباً يبقى معنوي. من الجدول كل المعاملات p-value بتاعتها أقل
+                    من 0.05.</p>
+                <p>يعني كل المتغيرات دي فعلاً بتأثر على المبيعات ومش مجرد صدفة!</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q34 -->
+        <div class="question-wrapper">
+            <h2>السؤال 34 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_41.png" alt="Question 34" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> What is the own-price elasticity of demand for picante sauce?</p>
+                <ul class="options-list">
+                    <li>-0.75</li>
+                    <li class="correct">✅ -1.5</li>
+                    <li>-2.1</li>
+                    <li>-0.5</li>
+                </ul>
+                <div class="correct-answer">Answer: -1.5</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>E_d = b × (P/Q). النتيجة = <strong>-1.5</strong> (مرن). لو السعر زاد 1%، الكمية هتقل
+                    1.5%.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q35 -->
+        <div class="question-wrapper">
+            <h2>السؤال 35 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_42.png" alt="Question 35" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> What is the income elasticity of demand for picante sauce?</p>
+                <ul class="options-list">
+                    <li>-0.6</li>
+                    <li class="correct">✅ 0.6</li>
+                    <li>1.5</li>
+                    <li>-1.5</li>
+                </ul>
+                <div class="correct-answer">Answer: 0.6</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>E_M = c × (M/Q). النتيجة = <strong>0.6</strong> (موجبة = سلعة عادية Normal Good، أقل
+                    من
+                    1 = ضرورية Necessity).</p>
+                <p>لو دخل الناس زاد 10%، مبيعات الصلصة هتزيد 6% بس.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q36 -->
+        <div class="question-wrapper">
+            <h2>السؤال 36 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_43.png" alt="Question 36" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> If the price of nacho chips decreases by 2.4%, what is expected to happen
+                    to the sales of picante sauce?</p>
+                <ul class="options-list">
+                    <li>Sales increase by 0.74%</li>
+                    <li class="correct">✅ Sales increase by 1.5%</li>
+                    <li>Sales decrease by 2.1%</li>
+                    <li>Sales increase by 2.4%</li>
+                </ul>
+                <div class="correct-answer">Answer: Sales increase by 1.5%</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>الناتشو والصلصة سلع مكملة (Complements). لما سعر الناتشو ينزل، الناس تشتري ناتشو أكتر وبالتالي صلصة
+                    أكتر!</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- ===== Q37-Q39: Production Table Context ===== -->
+        <div class="context-box">
+            <h3>📊 سياق الأسئلة 37-39</h3>
+            <p>جدول الإنتاج:</p>
+            <img src="images/page_44.png" alt="Production Table" />
+        </div>
+
+        <!-- Q37 -->
+        <div class="question-wrapper">
+            <h2>السؤال 37 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_44.png" alt="Question 37" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> If capital is fixed at 2 units, what is the marginal product of the fourth
+                    unit of labor?</p>
+                <ul class="options-list">
+                    <li>70 units</li>
+                    <li>80 units</li>
+                    <li class="correct">✅ 90 units</li>
+                    <li>110 units</li>
+                </ul>
+                <div class="correct-answer">Answer: 90 units</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>MP_4 = TP(4,2) - TP(3,2) = 420 - 330 = 90 وحدة. يعني العامل الرابع أضاف 90 وحدة للإنتاج!</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q38 -->
+        <div class="question-wrapper">
+            <h2>السؤال 38 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_45.png" alt="Question 38" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> If capital is fixed at one unit, diminishing returns begin with the:</p>
+                <ul class="options-list">
+                    <li>first unit of labor</li>
+                    <li>second unit of labor</li>
+                    <li class="correct">✅ third unit of labor</li>
+                    <li>fourth unit of labor</li>
+                </ul>
+                <div class="correct-answer">Answer: third unit of labor</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>عند رأس مال = 1: MP1=80, MP2=100, MP3=90. MP3 &lt; MP2 → بدأ يقل! تناقص العوائد بيبدأ من العامل
+                    التالت.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q39 -->
+        <div class="question-wrapper">
+            <h2>السؤال 39 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_46.png" alt="Question 39" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> If the capital stock is fixed at 2 units and there are 4 units of labor,
+                    what is the average product of labor?</p>
+                <ul class="options-list">
+                    <li>85 units</li>
+                    <li>90 units</li>
+                    <li class="correct">✅ 105 units</li>
+                    <li>125 units</li>
+                </ul>
+                <div class="correct-answer">Answer: 105 units</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>AP = (TP/L) = (420/4) = 105 وحدة لكل عامل.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q40 -->
+        <div class="question-wrapper">
+            <h2>السؤال 40 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_47.png" alt="Question 40" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> Suppose you run a house-painting company with 2 workers painting 4
+                    houses/month. 3rd worker → 6, 4th → 9, 5th → 13, 6th → 15. Diminishing returns:</p>
+                <ul class="options-list">
+                    <li>begin when the fourth worker is hired</li>
+                    <li class="correct">✅ begin when the fifth worker is hired</li>
+                    <li>begin when the sixth worker is hired</li>
+                    <li>have not yet begun because output is still increasing</li>
+                </ul>
+                <div class="correct-answer">Answer: begin when the fifth worker is hired</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>MP: العامل 3=2, العامل 4=3, العامل 5=4, العامل 6=2. العامل 6 أقل من 5 ← تناقص عوائد.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q41 -->
+        <div class="question-wrapper">
+            <h2>السؤال 41 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_48.png" alt="Question 41" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> If a firm is producing in a technically efficient manner, then it must be
+                    the case that:</p>
+                <ul class="options-list">
+                    <li>this is the lowest cost method of producing that output</li>
+                    <li>each input is producing its maximum marginal product</li>
+                    <li class="correct">✅ this output level is the most that can be produced with the given level of
+                        inputs</li>
+                    <li>All of the above</li>
+                </ul>
+                <div class="correct-answer">Answer: this output level is the most that can be produced with the given
+                    level of inputs</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>الكفاءة الفنية (Technical Efficiency) معناها إنك بتطلع أقصى إنتاج ممكن من المدخلات المتاحة. مش معناها
+                    إنك بتنتج بأقل تكلفة (ده الكفاءة الاقتصادية).</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- ===== Q42-Q45: Cost Table Context ===== -->
+        <div class="context-box">
+            <h3>📊 سياق الأسئلة 42-45</h3>
+            <p>التكاليف الثابتة = $500. استخدم الجدول التالي:</p>
+            <img src="images/page_49.png" alt="Cost Table" />
+        </div>
+
+        <!-- Q42 -->
+        <div class="question-wrapper">
+            <h2>السؤال 42 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_50.png" alt="Question 42" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> At an output of 4 units, what is the average total cost?</p>
+                <ul class="options-list">
+                    <li>$1,050</li>
+                    <li class="correct">✅ $1,175</li>
+                    <li>$1,300</li>
+                    <li>$4,700</li>
+                </ul>
+                <div class="correct-answer">Answer: $1,175</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>ATC = (TC/Q) = (500 + 4200/4) = (4700/4) = 1175</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q43 -->
+        <div class="question-wrapper">
+            <h2>السؤال 43 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_51.png" alt="Question 43" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> What is the average fixed cost of the fourth unit?</p>
+                <ul class="options-list">
+                    <li class="correct">✅ $125</li>
+                    <li>$500</li>
+                    <li>$1,050</li>
+                    <li>None of the above</li>
+                </ul>
+                <div class="correct-answer">Answer: $125</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>AFC = (FC/Q) = (500/4) = 125. التكلفة الثابتة بتتوزع على عدد الوحدات.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q44 -->
+        <div class="question-wrapper">
+            <h2>السؤال 44 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_52.png" alt="Question 44" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> At an output of 4 units, what is the marginal cost?</p>
+                <ul class="options-list">
+                    <li>$1,100</li>
+                    <li class="correct">✅ $1,300</li>
+                    <li>$1,500</li>
+                    <li>$4,700</li>
+                </ul>
+                <div class="correct-answer">Answer: $1,300</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>MC = VC_4 - VC_3 = 4200 - 2900 = 1300. الوحدة الرابعة كلفتنا $1,300 إضافية.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q45 -->
+        <div class="question-wrapper">
+            <h2>السؤال 45 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_53.png" alt="Question 45" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> At an output of 4 units, what can be concluded about average product?</p>
+                <ul class="options-list">
+                    <li class="correct">✅ Average product is decreasing</li>
+                    <li>Average product is increasing</li>
+                    <li>Average product equals marginal product</li>
+                    <li>None of the above</li>
+                </ul>
+                <div class="correct-answer">Answer: Average product is decreasing</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>لما MC &gt; AVC، ده معناه إن AVC بيزيد، وبالتالي AP بيقل. MC=$1300 &gt; AVC=$1050 → AP بيقل.
+                </p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q46 -->
+        <div class="question-wrapper">
+            <h2>السؤال 46 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_54.png" alt="Question 46" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> At Huffy's bicycle factory, 1,700 employees currently produce 15,000
+                    bicycles a day. Five years ago, 2,200 workers made 10,000 bicycles daily. Which is true?</p>
+                <ul class="options-list">
+                    <li class="correct">✅ Currently, Huffy has an average product of labor ≈ 8.82 (increased from ≈
+                        4.55)</li>
+                    <li>Huffy's marginal cost has decreased over the past 5 years</li>
+                    <li>Huffy's marginal product of labor is 10 additional bicycles per employee</li>
+                    <li>Huffy's average variable cost has decreased</li>
+                </ul>
+                <div class="correct-answer">Answer: Average product increased from 4.55 to 8.82</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>5 سنين فاتوا: AP = 10,000 ÷ 2,200 = 4.55. دلوقتي: AP = 15,000 ÷ 1,700 = 8.82. الإنتاجية اتحسنت!</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- ===== Q47-Q50: Firm Production Context ===== -->
+        <div class="context-box">
+            <h3>📊 سياق الأسئلة 47-50</h3>
+            <p dir="ltr">A firm produces 1000 units with 40 labor units and 30 capital units. MP_L = 60, MP_K = 120.
+                Price of labor = $30, price of capital = $40.</p>
+            <img src="images/page_55.png" alt="Firm Production Context" />
+        </div>
+
+        <!-- Q47 -->
+        <div class="question-wrapper">
+            <h2>السؤال 47 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_55.png" alt="Question 47" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> What is the total cost of production?</p>
+                <ul class="options-list">
+                    <li class="correct">✅ $2,400</li>
+                    <li>$2,500</li>
+                    <li>$5,200</li>
+                    <li>$7,000</li>
+                </ul>
+                <div class="correct-answer">Answer: $2,400</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>TC = (w × L) + (r × K) = (30 × 40) + (40 × 30) = 1200 + 1200 = 2400</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q48 -->
+        <div class="question-wrapper">
+            <h2>السؤال 48 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_56.png" alt="Question 48" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> What is the marginal product per dollar of labor?</p>
+                <ul class="options-list">
+                    <li>1.2</li>
+                    <li>1.5</li>
+                    <li class="correct">✅ 2.0</li>
+                    <li>3.0</li>
+                </ul>
+                <div class="correct-answer">Answer: 2.0</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>(MP_L/w) = (60/30) = 2.0. كل دولار في العمالة بيجيبلك 2 وحدة إنتاج إضافية.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q49 -->
+        <div class="question-wrapper">
+            <h2>السؤال 49 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_57.png" alt="Question 49" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> What is the marginal product per dollar of capital?</p>
+                <ul class="options-list">
+                    <li>1.2</li>
+                    <li>1.5</li>
+                    <li>2.0</li>
+                    <li class="correct">✅ 3.0</li>
+                </ul>
+                <div class="correct-answer">Answer: 3.0</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>(MP_K/r) = (120/40) = 3.0. كل دولار في رأس المال بيجيبلك 3 وحدات إنتاج!</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q50 -->
+        <div class="question-wrapper">
+            <h2>السؤال 50 (2 نقاط)</h2>
+            <div class="question-image"><img src="images/page_58.png" alt="Question 50" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question:</strong> If the firm's manager wishes to maximize output at the given cost, what
+                    should be done to the usage of capital and labor?</p>
+                <ul class="options-list">
+                    <li>Increase capital and increase labor</li>
+                    <li class="correct">✅ Increase capital and decrease labor</li>
+                    <li>Decrease capital and decrease labor</li>
+                    <li>Decrease capital and increase labor</li>
+                </ul>
+                <div class="correct-answer">Answer: Increase capital and decrease labor</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p>لتعظيم الإنتاج: لازم (MP_L/w) = (MP_K/r). دلوقتي 2.0 ≠ 3.0. بما إن رأس المال بيدي
+                    عائد
+                    أعلى لكل دولار، يبقى <strong>نزود رأس المال ونقلل العمالة</strong>.</p>
+                <p>يعني لو كل جنيه في ماكينة بيجيب 3 وحدات بس في عامل بيجيب 2 - حول الفلوس للماكينات!</p>
+            </div>
+        </div>
+        <hr />
+
+        <div style="text-align:center; padding:50px; background:#e8f5e9; border-radius:12px; margin-top:40px;">
+            <h2 style="color:#2e7d32;">🎉 انتهى الامتحان - 50 سؤال مع الحلول الكاملة</h2>
+            <p>بالتوفيق والنجاح إن شاء الله!</p>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -43,6 +43,13 @@ export const subjects = [
                 ]
             },
             {
+                id: "week4",
+                title: { en: "Week 4", ar: "الأسبوع الرابع" },
+                resources: [
+                    { type: "quiz", label: { en: "Exam (Arabic) 📝", ar: "امتحان (عربي) 📝" }, url: "./courses/managerial-economics/week4/exam/exam-ar.html" }
+                ]
+            },
+            {
                 id: "week5",
                 title: { en: "Week 5", ar: "الأسبوع الخامس" },
                 resources: [
@@ -53,6 +60,5 @@ export const subjects = [
                 ]
             }
         ]
-    },
-    { id: '', title: '', path: '/courses/managerial-economics//index.html' }
-  ]
+    }
+]
