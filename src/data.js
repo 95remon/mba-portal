@@ -41,6 +41,14 @@ export const subjects = [
                     { type: "quiz", label: { en: "Quiz (Arabic)", ar: "اختبار (عربي)" }, url: "./courses/managerial-economics/week3/quiz.html" },
                     { type: "quiz", label: { en: "Quiz (English)", ar: "اختبار (إنجليزي)" }, url: "./courses/managerial-economics/week3/english/quiz.html" }
                 ]
+            },
+            {
+                id: "week5",
+                title: { en: "Week 5", ar: "الأسبوع الخامس" },
+                resources: [
+                    { type: "summary", label: { en: "Lecture (Arabic)", ar: "محاضرة (عربي)" }, url: "./courses/managerial-economics/week5/lecture-ar.html" },
+                    { type: "summary", label: { en: "Lecture (English)", ar: "محاضرة (إنجليزي)" }, url: "./courses/managerial-economics/week5/lecture-en.html" },
+                ]
             }
         ]
     }
