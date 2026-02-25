@@ -53,5 +53,6 @@ export const subjects = [
                 ]
             }
         ]
-    }
-]
+    },
+    { id: '', title: '', path: '/courses/managerial-economics//index.html' }
+  ]
