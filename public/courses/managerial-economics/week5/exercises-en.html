@@ -1,0 +1,312 @@
+
+    <!DOCTYPE html>
+    <html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Managerial Economics - Week 5 Practice Problems</title>
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+*, *::before, *::after { box-sizing: border-box; }
+html { overflow-x: hidden; }
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.8;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+body.ar { direction: rtl; }
+body.en { direction: ltr; }
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+h1, h2, h3 { color: #2c3e50; margin-top: 1.5em; font-weight: 700; }
+h1 {
+    text-align: center;
+    color: #2980b9;
+    font-size: 2.8em;
+    border-bottom: 3px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+h2, h3 {
+    color: #d35400;
+    background: #fdf2e9;
+    padding: 15px 20px;
+    border-radius: 4px;
+}
+body.ar h2, body.ar h3 { border-right: 6px solid #d35400; border-left: none; }
+body.en h2, body.en h3 { border-left: 6px solid #d35400; border-right: none; }
+
+p { margin-bottom: 1.2em; font-size: 1.1em; }
+ul, ol { list-style-position: outside; margin-bottom: 1.2em; }
+body.ar ul, body.ar ol { margin-right: 20px; padding-right: 25px; margin-left: 0; padding-left: 0; }
+body.en ul, body.en ol { margin-left: 20px; padding-left: 25px; margin-right: 0; padding-right: 0; }
+
+li { margin-bottom: 0.5em; }
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    border: 1px solid #eee;
+}
+table { width: 100%; border-collapse: collapse; margin: 30px 0; background: white; }
+th, td { padding: 15px; border: 1px solid #ddd; }
+body.ar th, body.ar td { text-align: right; }
+body.en th, body.en td { text-align: left; }
+
+th { background-color: #2980b9; color: white; }
+tr:nth-child(even) { background-color: #f8f9fa; }
+.cover-page { text-align: center; padding: 100px 0; page-break-after: always; }
+.cover-title { font-size: 4em; color: #2980b9; margin-bottom: 20px; }
+.cover-subtitle { font-size: 2em; color: #7f8c8d; }
+@media (max-width: 768px) {
+    body { padding: 10px; }
+    .container { padding: 20px; }
+    h1 { font-size: 2em; }
+    table { font-size: 0.9em; display: block; overflow-x: auto; }
+}
+</style>
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['$', '$']],
+                    displayMath: [['$$', '$$']],
+                    processEscapes: true
+                },
+                options: {
+                    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body class="en">
+        <div class="container">
+            
+    <div class="cover-page">
+        <div class="cover-title">Managerial Economics</div>
+        <div class="cover-subtitle">Week 5 Practice Problems</div>
+        <div style="margin-top: 50px; font-size: 1.5em;">Perfect Competition</div>
+    </div>
+    <section class='chapter'><h1>Week 5 Practice Problems: Perfect Competition</h1>
+<h2>Question 1</h2>
+<p>The total cost schedule for a competitive firm is given below. Fixed costs are $60.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Output (Q)</th>
+<th style="text-align: center;">Variable Cost (VC)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">15</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">30</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">60</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">105</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Questions:</strong></p>
+<ol>
+<li>If the market price is $15, how many units should the firm produce?</li>
+<li>What is the maximum profit that the firm can earn?</li>
+<li>What is the break-even price for the firm?</li>
+<li>What is the shut-down price for the firm?</li>
+</ol>
+<hr />
+<h3>Solution &amp; Explanation</h3>
+<p>To solve this, we must first calculate Total Cost (TC), Marginal Cost (MC), Average Total Cost (ATC), and Average Variable Cost (AVC) for each output level.</p>
+<ul>
+<li>$\text{TC} = \text{FC} + \text{VC}$</li>
+<li>$\text{MC} = \frac{\Delta \text{TC}}{\Delta \text{Q}}$</li>
+<li>$\text{ATC} = \frac{\text{TC}}{\text{Q}}$</li>
+<li>$\text{AVC} = \frac{\text{VC}}{\text{Q}}$</li>
+</ul>
+<p><strong>Completed Cost Schedule:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Q</th>
+<th style="text-align: center;">VC</th>
+<th style="text-align: center;">FC</th>
+<th style="text-align: center;">TC</th>
+<th style="text-align: center;">MC</th>
+<th style="text-align: center;">ATC</th>
+<th style="text-align: center;">AVC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">---</td>
+<td style="text-align: center;">---</td>
+<td style="text-align: center;">---</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">70</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">70</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">75</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">37.5</td>
+<td style="text-align: center;">7.5</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">90</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">120</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">15</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">105</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">165</td>
+<td style="text-align: center;">45</td>
+<td style="text-align: center;">33</td>
+<td style="text-align: center;">21</td>
+</tr>
+</tbody>
+</table>
+<h4>1) Optimal Output</h4>
+<p>A perfectly competitive firm maximizes profit by producing where Marginal Revenue equals Marginal Cost ($MR = MC$). Since the firm is a price taker, $P = MR = 15$.
+Looking at the schedule:</p>
+<ul>
+<li>At Q = 3, $MC = 15$.
+Therefore, the firm should produce <strong>3.0 units</strong>.
+<em>(Note: Choose Q such that MR &gt;= MC before MC exceeds MR).</em></li>
+</ul>
+<h4>2) Maximum Profit</h4>
+<p>Profit is calculated as Total Revenue minus Total Cost:
+$\text{Profit} = \text{TR} - \text{TC} = (P \times Q) - \text{TC}$</p>
+<ul>
+<li>$\text{TR} = \$15 \times 3 = \$45$</li>
+<li>$\text{TC}$ at Q=3 is $\$90$.</li>
+<li>$\text{Profit} = 45 - 90 = \mathbf{-\$45}$.
+The firm incurs a loss of $45, but this minimizes total losses compared to shutting down (which incurs a $60 fixed cost loss).</li>
+</ul>
+<h4>3) Break-Even Price</h4>
+<p>The Break-even Price is the absolute minimum value on the Average Total Cost (ATC) curve. 
+From the table, the lowest ATC is <strong>$30</strong> (occurring between Q=3 and Q=4). Therefore, the Break-Even Price is <strong>$30</strong>.</p>
+<h4>4) Shut-Down Price</h4>
+<p>The Shut-down Price is the absolute minimum value on the Average Variable Cost (AVC) curve.
+From the table, the lowest AVC is <strong>$7.5</strong> (occurring at Q=2). Therefore, the Shut-down Price is <strong>$7.5</strong>.</p>
+<hr />
+<h2>Question 2</h2>
+<p>The graph below depicts the cost curves for a perfectly competitive firm.
+<img alt="Question 2 Graph" src="extracted/graphs/Excel_Chart_image001.png" /></p>
+<p><strong>Questions:</strong></p>
+<ol>
+<li>If market price is $5, how much output should the firm produce?</li>
+<li>If market price is $5, how much profit will the firm earn?</li>
+<li>If market price is $3, how much profit will the firm earn?</li>
+<li>What is the expected long-run price in this industry?</li>
+</ol>
+<hr />
+<h3>Solution &amp; Explanation</h3>
+<h4>1) Optimal Output at P = $5</h4>
+<p>The profit-maximizing rule dictates choosing Q such that $MR (= P) = MC$.
+Locating $P = 5$ on the y-axis and tracing to the Marginal Cost (MC) curve yields an output of <strong>600 units</strong>.</p>
+<h4>2) Profit at P = $5</h4>
+<p>Profit can be calculated using per-unit margins: $\text{Profit} = (P - \text{ATC}) \times Q$
+At Q = 600:</p>
+<ul>
+<li>$P = \$5$</li>
+<li>$ATC = \$4$ (from the graph)</li>
+<li>$\text{Profit} = (\$5 - \$4) \times 600 = \mathbf{\$600}$.</li>
+</ul>
+<h4>3) Profit at P = $3</h4>
+<p>First, determine optimal output where $P = MC$. At $P = 3$, $MC$ intersects at Q = 400.
+At Q = 400:</p>
+<ul>
+<li>$P = \$3$</li>
+<li>$ATC = \$4$ </li>
+<li>$\text{Profit} = (\$3 - \$4) \times 400 = \mathbf{-\$400}$.
+The firm earns a negative profit (loss) of $400.</li>
+</ul>
+<h4>4) Expected Long-Run Price</h4>
+<p>In the long run, free entry and exit force economic profits to zero. This occurs at the Break-even Price, which is the intersection of MC and the minimum of the ATC curve.
+Observing the minimum of the ATC curve, $MC = ATC$ at approximately <strong>$3.9</strong>.</p>
+<hr />
+<h2>Question 3</h2>
+<p>The following graph presents a perfectly competitive firm utilizing a single variable input (labor).
+<img alt="Question 3 Graph" src="extracted/graphs/Excel_Chart_image005.png" /></p>
+<p><strong>Questions:</strong></p>
+<ol>
+<li>If the wage is $20, how many workers will the firm hire?</li>
+<li>If the wage is $15, how many workers will the firm hire?</li>
+<li>At what wage will the firm shut down and hire 0 workers in the short run?</li>
+</ol>
+<hr />
+<h3>Solution &amp; Explanation</h3>
+<h4>1) Workers Hired at Wage = $20</h4>
+<p>A profit-maximizing firm hires labor up to the point where the Wage rate equals the Marginal Revenue Product ($W = \text{MRP}$).
+Tracing the wage of $20 to the MRP curve reveals the firm will hire <strong>175 units of labor</strong>.</p>
+<h4>2) Workers Hired at Wage = $15</h4>
+<p>Repeating the optimal hiring rule ($W = \text{MRP}$), tracing $15 to the MRP curve dictates the firm will hire <strong>200 units of labor</strong>.</p>
+<h4>3) Shut-Down Wage</h4>
+<p>The firm will cease hiring completely in the short run when the wage exceeds the peak of the Average Revenue Product (ARP) curve. This critical threshold is identified where $MRP = ARP$.
+The intersection of MRP and ARP occurs at a wage of <strong>$34.0</strong>. Above this wage, the firm shuts down.</p></section>
+    
+        </div>
+    </body>
+    </html>
+    

@@ -1,0 +1,316 @@
+
+    <!DOCTYPE html>
+    <html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>اقتصاد إداري - تمارين عملية الأسبوع الخامس</title>
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+*, *::before, *::after { box-sizing: border-box; }
+html { overflow-x: hidden; }
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.8;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+body.ar { direction: rtl; }
+body.en { direction: ltr; }
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+h1, h2, h3 { color: #2c3e50; margin-top: 1.5em; font-weight: 700; }
+h1 {
+    text-align: center;
+    color: #2980b9;
+    font-size: 2.8em;
+    border-bottom: 3px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+h2, h3 {
+    color: #d35400;
+    background: #fdf2e9;
+    padding: 15px 20px;
+    border-radius: 4px;
+}
+body.ar h2, body.ar h3 { border-right: 6px solid #d35400; border-left: none; }
+body.en h2, body.en h3 { border-left: 6px solid #d35400; border-right: none; }
+
+p { margin-bottom: 1.2em; font-size: 1.1em; }
+ul, ol { list-style-position: outside; margin-bottom: 1.2em; }
+body.ar ul, body.ar ol { margin-right: 20px; padding-right: 25px; margin-left: 0; padding-left: 0; }
+body.en ul, body.en ol { margin-left: 20px; padding-left: 25px; margin-right: 0; padding-right: 0; }
+
+li { margin-bottom: 0.5em; }
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    border: 1px solid #eee;
+}
+table { width: 100%; border-collapse: collapse; margin: 30px 0; background: white; }
+th, td { padding: 15px; border: 1px solid #ddd; }
+body.ar th, body.ar td { text-align: right; }
+body.en th, body.en td { text-align: left; }
+
+th { background-color: #2980b9; color: white; }
+tr:nth-child(even) { background-color: #f8f9fa; }
+.cover-page { text-align: center; padding: 100px 0; page-break-after: always; }
+.cover-title { font-size: 4em; color: #2980b9; margin-bottom: 20px; }
+.cover-subtitle { font-size: 2em; color: #7f8c8d; }
+@media (max-width: 768px) {
+    body { padding: 10px; }
+    .container { padding: 20px; }
+    h1 { font-size: 2em; }
+    table { font-size: 0.9em; display: block; overflow-x: auto; }
+}
+</style>
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['$', '$']],
+                    displayMath: [['$$', '$$']],
+                    processEscapes: true
+                },
+                options: {
+                    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body class="ar">
+        <div class="container">
+            
+    <div class="cover-page">
+        <div class="cover-title">اقتصاد إداري</div>
+        <div class="cover-subtitle">تمارين عملية الأسبوع الخامس</div>
+        <div style="margin-top: 50px; font-size: 1.5em;">المنافسة الكاملة</div>
+    </div>
+    <section class='chapter'><h1>تمارين الأسبوع الخامس: المنافسة الكاملة (Perfect Competition)</h1>
+<h2>السؤال الأول (Question 1)</h2>
+<p>جدول التكاليف الكلية لشركة تعمل في سوق منافسة كاملة موضح أدناه. التكاليف الثابتة (Fixed Costs) للشركة هي $60.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Output (Q)</th>
+<th style="text-align: center;">Variable Cost (VC)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">15</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">30</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">60</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">105</td>
+</tr>
+</tbody>
+</table>
+<p><strong>المطلوب:</strong></p>
+<ol>
+<li>إذا كان سعر السوق $15، كم وحدة مفروض الشركة تنتجها؟</li>
+<li>إيه هو أقصى ربح ممكن الشركة تحققه؟</li>
+<li>إيه هو سعر التعادل (Break-even price) للشركة؟</li>
+<li>إيه هو سعر الإغلاق (Shut-down price) للشركة؟</li>
+</ol>
+<hr />
+<h3>الحل والشرح (Solution &amp; Explanation)</h3>
+<p>عشان نحل السؤال ده بسهولة، لازم نحسب التكلفة الكلية (TC)، والتكلفة الحدية (MC)، ومتوسط التكلفة الكلية (ATC)، ومتوسط التكلفة المتغيرة (AVC) لكل مستوى إنتاج. </p>
+<ul>
+<li>$\text{TC} = \text{FC} + \text{VC}$</li>
+<li>$\text{MC} = \frac{\Delta \text{TC}}{\Delta \text{Q}}$</li>
+<li>$\text{ATC} = \frac{\text{TC}}{\text{Q}}$</li>
+<li>$\text{AVC} = \frac{\text{VC}}{\text{Q}}$</li>
+</ul>
+<p><strong>الجدول بعد الحسابات:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Q</th>
+<th style="text-align: center;">VC</th>
+<th style="text-align: center;">FC</th>
+<th style="text-align: center;">TC</th>
+<th style="text-align: center;">MC</th>
+<th style="text-align: center;">ATC</th>
+<th style="text-align: center;">AVC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">---</td>
+<td style="text-align: center;">---</td>
+<td style="text-align: center;">---</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">70</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">70</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">75</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">37.5</td>
+<td style="text-align: center;">7.5</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">90</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">120</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">15</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">105</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">165</td>
+<td style="text-align: center;">45</td>
+<td style="text-align: center;">33</td>
+<td style="text-align: center;">21</td>
+</tr>
+</tbody>
+</table>
+<h4>1) كمية الإنتاج المثلى (Optimal Output)</h4>
+<p>بما إننا في سوق منافسة كاملة، الشركة بتفضل تزود الإنتاج لحد ما الإيراد الحدي يساوي التكلفة الحدية ($MR = MC$). وبما إن السعر ثابت، يبقى $P = MR = 15$. 
+لو بصينا في الجدول:</p>
+<ul>
+<li>عند Q = 3، الـ $MC = 15$.
+إذن، الشركة المفروض تنتج <strong>3 وحدات</strong>. 
+<em>(خد بالك: احنا بنختار الـ Q اللي عندها P &gt;= MC قبل ما الـ MC تزيد عن السعر).</em></li>
+</ul>
+<h4>2) أقصى ربح (Maximum Profit)</h4>
+<p>الربح بيتحسب بالمعادلة دي: 
+$\text{Profit} = \text{TR} - \text{TC} = (P \times Q) - \text{TC}$</p>
+<ul>
+<li>الإيراد الكلي (TR) = 15 × 3 = $45</li>
+<li>التكلفة الكلية (TC) عند Q=3 هي 90.</li>
+<li>الربح = 45 - 90 = <strong>-$45</strong>
+يعني الشركة بتخسر $45، بس دي أقل خسارة ممكنة مقارنة بإنها تقفل وتخسر التكاليف الثابتة كلها ($60).</li>
+</ul>
+<h4>3) سعر التعادل (Break-even price)</h4>
+<p>سعر التعادل هو أقل نقطة على منحنى متوسط التكلفة الكلية (ATC). لو السعر جاب النقطة دي، الشركة مش هتكسب ولا هتخسر.
+من الجدول، أقل ATC هو <strong>30</strong> (بيحصل عند Q=3 أو Q=4). إذن، Break-even price = $30.</p>
+<h4>4) سعر الإغلاق (Shut-down price)</h4>
+<p>سعر الإغلاق هو أقل نقطة على منحنى متوسط التكلفة المتغيرة (AVC). لو السعر نزل عنها، الشركة تقفل أحسن لها عشان مش هتقدر تغطي حتى تكاليف التشغيل.
+من الجدول، أقل AVC هو <strong>7.5</strong> (بيحصل عند Q=2). إذن، Shut-down price = $7.5.</p>
+<hr />
+<h2>السؤال الثاني (Question 2)</h2>
+<p>الرسم البياني أدناه بيوضح منحنيات التكلفة لشركة في سوق منافسة كاملة.
+<img alt="Question 2 Graph" src="extracted/graphs/Excel_Chart_image001.png" /></p>
+<p><strong>المطلوب:</strong></p>
+<ol>
+<li>لو سعر السوق $5، إيه هي كمية الإنتاج المثلى للشركة؟</li>
+<li>لو سعر السوق $5، إيه هو مقدار الربح للشركة؟</li>
+<li>لو سعر السوق $3، إيه هو مقدار الربح للشركة؟</li>
+<li>إيه هو السعر المتوقع في المدى الطويل (Long-run price) في الصناعة دي؟</li>
+</ol>
+<hr />
+<h3>الحل والشرح (Solution &amp; Explanation)</h3>
+<h4>1) كمية الإنتاج المثلى عند P = $5</h4>
+<p>القاعدة الذهبية: بننتج عند النقطة اللي فيها $MR = MC$. وبما إن السعر $5، بنمشي مع خط الـ 5 دولار لحد ما يقطع منحنى التكلفة الحدية (MC).
+من الرسمة، نقطة تقاطع السعر $5 مع منحنى MC بتحصل عند كمية <strong>600 وحدة</strong>.</p>
+<h4>2) مقدار الربح عند P = $5</h4>
+<p>عشان نحسب الربح، بنطرح متوسط التكلفة الكلية (ATC) من السعر، ونضرب في الكمية.
+$\text{Profit} = (P - \text{ATC}) \times Q$
+من الرسمة، عند الكمية 600:</p>
+<ul>
+<li>السعر $P = 5$</li>
+<li>منحنى $ATC$ عند 600 بيقرا $4</li>
+<li>الربح = (5 - 4) × 600 = <strong>600 دولار</strong>.</li>
+</ul>
+<h4>3) مقدار الربح عند P = $3</h4>
+<p>أولاً نجيب الكمية المثلى. تقاطع الـ $3 مع منحنى MC بيحصل عند Q = 400.
+عند الكمية 400:</p>
+<ul>
+<li>السعر $P = 3$</li>
+<li>منحنى $ATC$ عند 400 بيقرا برضه $4 (لأنه واخد شكل حرف U).</li>
+<li>الربح = (3 - 4) × 400 = <strong>-400 دولار</strong> (يعني خسارة 400 دولار).
+<em>(هنا الشركة بتكمل إنتاج لأن الـ $3 أعلى من منحنى הـ AVC اللي هو نقطة الإغلاق).</em></li>
+</ul>
+<h4>4) السعر المتوقع في المدى الطويل (Long-run price)</h4>
+<p>في المدى الطويل، الشركات بتدخل أو تخرج من السوق لحد ما الأرباح الاقتصادية تبقى صفر (Zero Economic Profit). ده بيحصل عند <strong>سعر التعادل</strong>، اللي هو نقطة تقاطع MC مع أدنى نقطة في منحنى ATC.
+من الرسمة، أقل نقطة لمنحنى ATC هي عند الكمية 500 تقريباً، والسعر عندها بيساوي <strong>3.9 دولار تقريباً</strong>. إذن السعر على المدى الطويل هينزل ويثبت عند $3.9.</p>
+<hr />
+<h2>السؤال الثالث (Question 3)</h2>
+<p>الرسم البياني ده لشركة في منافسة كاملة بتعتمد على مدخل متغير واحد وهو العمالة (Labor).
+<img alt="Question 3 Graph" src="extracted/graphs/Excel_Chart_image005.png" /></p>
+<p><strong>المطلوب:</strong></p>
+<ol>
+<li>لو الأجر (Wage) $20، الشركة هتعين كام عامل؟</li>
+<li>لو الأجر (Wage) $15، الشركة هتعين كام عامل؟</li>
+<li>إيه هو الأجر اللي عنده الشركة هتقفل وتعين صفر عمال في المدى القصير؟</li>
+</ol>
+<hr />
+<h3>الحل والشرح (Solution &amp; Explanation)</h3>
+<h4>1) عدد العمال عند Wage = $20</h4>
+<p>في سوق العمل، الشركة بتفضل تعين عمال لحد ما تكلفة العامل (Wage) تتساوى مع القيمة اللي بيضيفها العامل للإيرادات (MRP - Marginal Revenue Product).
+$\text{Rule: } W = \text{MRP}$
+بنبص على الرسمة، خط الأجر $20 بيقطع منحنى הـ MRP فين؟ 
+هنلاقيه بيقطعه عند <strong>175 عامل</strong>. إذن الشركة هتعين 175 عامل.</p>
+<h4>2) عدد العمال عند Wage = $15</h4>
+<p>بنفس الطريقة، هنمشي مع خط الأجر $15 وننزل عند نقطة تقاطعه مع منحنى الـ MRP (المنحنى الأزرق).
+هنلاقيه بيقطع عند <strong>200 عامل</strong>. إذن الشركة هتعين 200 تخفيض الأجر بيشجع الشركة تعين ناس أكتر عشان تزود الإنتاج.</p>
+<h4>3) نقطة الإغلاق بالنسبة للعمالة</h4>
+<p>الشركة بتقرر تقفل لما العامل مبيقدرش حتى يجيب متوسط الإيرادات اللي تغطي أجرته، ده بيحصل لما منحنى الـ MRP يقطع منحنى متوسط إيراد الناتج (ARP) عند أعلى نقطة فيه. دي بالظبط نقطة <strong>الـ Shutdown</strong>.
+من الرسمة، أعلى نقطة لمنحنى الـ ARP (المنحنى البرتقالي) واللي بيتقاطع عندها مع المنحنى الأزرق (MRP) موجودة عند أجر يساوي <strong>34 دولار تقريباً</strong>. لو الأجر زاد عن كده، الشركة استحالة تعين حد وهتقفل فوراً.</p></section>
+    
+        </div>
+    </body>
+    </html>
+    
