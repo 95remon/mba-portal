@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اقتصاد إداري - كويز الأسبوع الخامس</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .cover-page {
+            text-align: center;
+            padding: 50px 0;
+            margin-bottom: 40px;
+            border-bottom: 2px dashed #ccc;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .question-image {
+            width: 100%;
+            overflow: hidden;
+            box-sizing: border-box;
+            margin-bottom: 18px;
+            text-align: center;
+            background-color: #f0f4f8;
+            border-radius: 6px;
+            padding: 12px;
+        }
+
+        .question-image img {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #d0d7de;
+            border-radius: 5px;
+            object-fit: contain;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .question-wrapper {
+            margin-bottom: 48px;
+            padding: 24px 28px;
+            border: 1px solid #e0e4ea;
+            border-radius: 12px;
+            background-color: #fafbfc;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+            overflow: hidden;
+        }
+
+        .question-wrapper h2 {
+            font-size: 1.1rem;
+            color: #1a3a5c;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #d0e8fb;
+        }
+
+        .question-block {
+            background-color: #ffffff;
+            padding: 18px 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 18px;
+            line-height: 1.9;
+            box-shadow: 0 1px 4px rgba(52, 152, 219, 0.08);
+        }
+
+        .options-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 12px;
+        }
+
+        .options-list li {
+            padding: 10px 14px;
+            margin-bottom: 7px;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+            border: 1px solid #e7eaed;
+            line-height: 1.7;
+        }
+
+        .options-list li.correct {
+            background-color: #e9f7ef;
+            border-color: #2ecc71;
+            font-weight: bold;
+            color: #1a7a40;
+        }
+
+        .correct-answer {
+            color: #1e8449;
+            font-weight: bold;
+            margin-top: 14px;
+            padding: 10px 14px;
+            background-color: #eafaf1;
+            border-radius: 6px;
+            border-left: 3px solid #27ae60;
+        }
+
+        .explanation-block {
+            background-color: #fffdf0;
+            padding: 20px 22px;
+            border-radius: 8px;
+            border-right: 4px solid #f1c40f;
+            unicode-bidi: plaintext;
+            line-height: 2;
+            margin-top: 6px;
+            box-shadow: 0 1px 4px rgba(241, 196, 15, 0.1);
+        }
+
+        .explanation-block h3 {
+            color: #c0392b;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 1rem;
+            border-bottom: 1px solid #fce8b2;
+            padding-bottom: 6px;
+        }
+
+        .explanation-block p,
+        .explanation-block ul,
+        .explanation-block li {
+            line-height: 2;
+        }
+
+        .context-box {
+            background: linear-gradient(135deg, #e8f4fd 0%, #eafaf1 100%);
+            border: 1px solid #aed6f1;
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-bottom: 32px;
+            box-shadow: 0 2px 8px rgba(52, 152, 219, 0.1);
+            overflow: hidden;
+        }
+
+        .context-box h3 {
+            color: #1a5276;
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 1.05rem;
+        }
+
+        .context-box img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 12px auto;
+            border-radius: 6px;
+            border: 1px solid #aed6f1;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+        }
+
+        .context-box table {
+            width: 100%;
+            overflow-x: auto;
+            display: block;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px dashed #d5d8dc;
+            margin: 0 0 40px 0;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 16px;
+            }
+
+            .question-wrapper {
+                padding: 16px;
+            }
+
+            .question-block,
+            .explanation-block {
+                padding: 14px;
+            }
+
+            .question-image {
+                padding: 8px;
+            }
+        }
+    </style>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$']],
+                displayMath: [['$$', '$$']],
+                processEscapes: true
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cover-page">
+            <h1>📊 اقتصاد إداري — كويز الأسبوع الخامس</h1>
+            <p>المنافسة الكاملة — Perfect Competition</p>
+            <p>عدد الأسئلة: 15 سؤال | المجموع: 30 نقطة</p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- CONTEXT BOX 1: Q1-Q4 — Total Cost Table -->
+        <!-- ============================================================ -->
+        <div class="context-box">
+            <h3>📋 سياق الأسئلة 1-4 — جدول التكاليف الكلية (Competitive Firm)</h3>
+            <div class="question-image"><img src="1.png" alt="Context: Total Cost Schedule" /></div>
+            <p>شركة تنافسية (Competitive Firm) معطى جدول التكاليف الكلية الخاص بيها:</p>
+            <table style="width:100%;border-collapse:collapse;direction:ltr;margin:8px 0;">
+                <tr style="background:#d6eaf8;">
+                    <th style="padding:6px;border:1px solid #aed6f1;">Output (Q)</th>
+                    <th style="padding:6px;border:1px solid #aed6f1;">Total Cost (TC)</th>
+                    <th style="padding:6px;border:1px solid #aed6f1;">MC = ΔTC</th>
+                    <th style="padding:6px;border:1px solid #aed6f1;">ATC = TC/Q</th>
+                    <th style="padding:6px;border:1px solid #aed6f1;">AFC = FC/Q</th>
+                </tr>
+                <tr>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">0</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">$500</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">—</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">—</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">—</td>
+                </tr>
+                <tr>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">1</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">$600</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">$100</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">$600</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">$500</td>
+                </tr>
+                <tr>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">2</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">$650</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">$50</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">$325</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">$250</td>
+                </tr>
+                <tr>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">3</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">$800</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">$150</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">$267</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">$167</td>
+                </tr>
+                <tr style="background:#fffde7;">
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;"><strong>4</strong></td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;"><strong>$1050</strong></td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;"><strong>$250</strong></td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;"><strong>$262.50</strong></td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;"><strong>$125</strong></td>
+                </tr>
+                <tr>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">5</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">$1400</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">$350</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">$280</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">$100</td>
+                </tr>
+            </table>
+            <p><strong>ملاحظة:</strong> FC = $500 (التكلفة عند Q=0). Break-even عند أدنى ATC = <strong>$262.50</strong>
+                عند Q=4.</p>
+        </div>
+
+        <!-- Q1 -->
+        <div class="question-wrapper">
+            <h2>السؤال 1 (2 نقاط)</h2>
+            <div class="question-image"><img src="2.png" alt="Question 1" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question 1:</strong> If the market price is $300, how many units of output should the firm
+                    produce?</p>
+                <ul class="options-list">
+                    <li>1 unit</li>
+                    <li>2 units</li>
+                    <li>3 units</li>
+                    <li class="correct">✅ 4 units</li>
+                    <li>5 units</li>
+                </ul>
+                <div class="correct-answer">Answer: 4 units</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p><strong>القاعدة:</strong> الشركة التنافسية تنتج عند P = MC (السعر = التكلفة الحدية).</p>
+                <p>نقارن السعر ($300) بكل MC:</p>
+                <ul>
+                    <li>MC عند Q=1: $100 &lt; $300 → استمر في الإنتاج ✓</li>
+                    <li>MC عند Q=2: $50 &lt; $300 → استمر ✓</li>
+                    <li>MC عند Q=3: $150 &lt; $300 → استمر ✓</li>
+                    <li>MC عند Q=4: $250 &lt; $300 → استمر ✓ (الوحدة دي بتجيب ربح إضافي $50)</li>
+                    <li>MC عند Q=5: $350 &gt; $300 → وقف! (الوحدة دي بتخسرنا $50)</li>
+                </ul>
+                <p>إذن ننتج <strong>4 وحدات</strong>. زي بقالة صاحبك، كل ما تبيع صنف يغطي تكلفته بتاعته تزود — لما يبدأ
+                    يكلفك أكتر من سعر البيع، بقف.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q2 -->
+        <div class="question-wrapper">
+            <h2>السؤال 2 (2 نقاط)</h2>
+            <div class="question-image"><img src="3.png" alt="Question 2" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question 2:</strong> If the market price is $300, what is the maximum profit that the firm
+                    can earn?</p>
+                <ul class="options-list">
+                    <li>-$50</li>
+                    <li>-$200</li>
+                    <li>$100</li>
+                    <li class="correct">✅ $150</li>
+                    <li>None of the above.</li>
+                </ul>
+                <div class="correct-answer">Answer: $150</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p><strong>ننتج 4 وحدات</strong> (من السؤال الأول) عند P = $300:</p>
+                <p>TR (إيراد كلي) = P × Q = $300 × 4 = <strong>$1,200</strong></p>
+                <p>TC (تكلفة كلية) عند Q=4 = <strong>$1,050</strong></p>
+                <p>الربح (π) = TR - TC = $1,200 - $1,050 = <strong>$150</strong> ✅</p>
+                <p>يعني الشركة كسبت $150 صافي. زي محل بيبيع 4 قطع بـ$300 الحتة، إجمالي مبيعاته $1200، وكل تكاليف الشغل
+                    $1050، الربح $150.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q3 -->
+        <div class="question-wrapper">
+            <h2>السؤال 3 (2 نقاط)</h2>
+            <div class="question-image"><img src="4.png" alt="Question 3" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question 3:</strong> What is average fixed cost for the 5th unit of output?</p>
+                <ul class="options-list">
+                    <li>$500</li>
+                    <li class="correct">✅ $100</li>
+                    <li>$350</li>
+                    <li>$280</li>
+                    <li>None of the above.</li>
+                </ul>
+                <div class="correct-answer">Answer: $100</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p><strong>التكلفة الثابتة المتوسطة (AFC):</strong> = FC ÷ Q</p>
+                <p>FC = $500 (التكلفة عند صفر إنتاج)</p>
+                <p>AFC عند Q=5 = $500 ÷ 5 = <strong>$100</strong> ✅</p>
+                <p><strong>الفكرة:</strong> التكاليف الثابتة (الإيجار، الأجهزة...) بتتوزع على عدد أكبر من الوحدات —
+                    فكلما زدت الإنتاج، نصيب كل وحدة من التكاليف الثابتة بينزل. زي إيجار المصنع $500 في الشهر: لو نتجت
+                    وحدة واحدة، هي تشيل كل الـ$500. لو نتجت 5، كل واحدة تشيل $100 بس.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q4 -->
+        <div class="question-wrapper">
+            <h2>السؤال 4 (2 نقاط)</h2>
+            <div class="question-image"><img src="5.png" alt="Question 4" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question 4:</strong> At what price would this firm break even?</p>
+                <ul class="options-list">
+                    <li>$250</li>
+                    <li class="correct">✅ $262.50</li>
+                    <li>$280</li>
+                    <li>$325</li>
+                    <li>None of the above.</li>
+                </ul>
+                <div class="correct-answer">Answer: $262.50</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p><strong>نقطة التعادل (Break-Even):</strong> هي السعر اللي عنده الشركة ربحها = صفر. ده بيحصل عند أدنى
+                    ATC (متوسط التكلفة الكلية).</p>
+                <p>نقارن كل ATC:</p>
+                <ul>
+                    <li>Q=1: ATC = $600</li>
+                    <li>Q=2: ATC = $325</li>
+                    <li>Q=3: ATC = $267</li>
+                    <li>Q=4: ATC = $262.50 ← <strong>أدنى قيمة</strong></li>
+                    <li>Q=5: ATC = $280</li>
+                </ul>
+                <p>أدنى ATC = <strong>$262.50</strong> عند Q=4. لو السعر = $262.50 ← TR = TC ← ربح = صفر.</p>
+                <p>زي مطعم: لو كلفتك الوجبة $262.50 في أكفأ مستوى إنتاج، ده أقل سعر بتقدر تبيع بيه من غير ما تخسر.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- ============================================================ -->
+        <!-- CONTEXT BOX 2: Q5-Q8 — Cost Curves Graph -->
+        <!-- ============================================================ -->
+        <div class="context-box">
+            <h3>📈 سياق الأسئلة 5-8 — منحنيات التكلفة (Cost Curves Graph)</h3>
+            <div class="question-image"><img src="6.png" alt="Context: Cost Curves Graph — SMC, ATC, AVC, P=$2.60" />
+            </div>
+            <p>الرسم البياني يوضح منحنيات SMC و ATC و AVC لشركة تنافسية. <strong>سعر السوق P = $2.60</strong></p>
+            <p>من الرسم: الكميات الرئيسية عند 500 و 800 و 1100 وحدة. القيم المقروءة من الرسم:</p>
+            <ul>
+                <li>أدنى AVC = <strong>$0.80</strong> (عند q=500) ← نقطة الإغلاق (Shutdown Point)</li>
+                <li>ATC عند q=500 = <strong>$1.60</strong> → AFC = ATC - AVC = $1.60 - $0.80 = $0.80 → <strong>FC =
+                        $0.80 &times; 500 = $400</strong></li>
+                <li>أدنى ATC = <strong>$1.50</strong> (عند q=800) ← نقطة التعادل (Break-Even Point)</li>
+                <li>ATC عند q=1100 = $1.60 ← يُستخدم لحساب الربح عند نقطة تعظيمه</li>
+                <li>عند q=1100: SMC = P = $2.60 ← نقطة تعظيم الربح</li>
+            </ul>
+        </div>
+
+        <!-- Q5 -->
+        <div class="question-wrapper">
+            <h2>السؤال 5 (2 نقاط)</h2>
+            <div class="question-image"><img src="7.png" alt="Question 5" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question 5:</strong> A firm producing 800 units of output</p>
+                <ul class="options-list">
+                    <li>is earning the maximum amount of profit, $880.</li>
+                    <li>is earning the maximum amount of profit, $2,080.</li>
+                    <li>should instead produce 500 units of output in order to earn profits of $500.</li>
+                    <li class="correct">✅ should instead produce 1100 units of output in order to earn profits of
+                        $1,100.</li>
+                    <li>should shut down.</li>
+                </ul>
+                <div class="correct-answer">Answer: should instead produce 1100 units of output in order to earn profits
+                    of $1,100.</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p><strong>عند q=800:</strong> SMC ≈ $1.50 &lt; P = $2.60</p>
+                <p>ده معناه إن الوحدة الإضافية بتجيب $2.60 بـ$1.50 تكلفة الإنتاج → ربح إضافي $1.10 للوحدة. <strong>يجب
+                        زيادة الإنتاج!</strong></p>
+                <p>الشركة تستمر في الإنتاج لحد ما SMC = P = $2.60 → ده بيحصل عند q=1100.</p>
+                <p>الربح عند 1100 وحدة = (P - ATC) × q = ($2.60 - $1.60) × 1100 = $1.00 × 1100 = <strong>$1,100</strong>
+                    ✅</p>
+                <p>زي عامل نجار: طالما كل قطعة يبيعها بـ$2.60 وتكلفتها $1.50 — ينتج أكتر! يوقف لما تكلفة القطعة تساوي
+                    السعر.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q6 -->
+        <div class="question-wrapper">
+            <h2>السؤال 6 (2 نقاط)</h2>
+            <div class="question-image"><img src="8.png" alt="Question 6" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question 6:</strong> A profit-maximizing firm will break even when the market price is</p>
+                <ul class="options-list">
+                    <li>$0.60</li>
+                    <li>$0.80</li>
+                    <li class="correct">✅ $1.50</li>
+                    <li>$1.60</li>
+                    <li>None of the above.</li>
+                </ul>
+                <div class="correct-answer">Answer: $1.50</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p><strong>نقطة التعادل (Break-Even):</strong> هي لما P = أدنى ATC.</p>
+                <p>من الرسم البياني: أدنى نقطة على منحنى ATC تقع عند السعر <strong>$1.50</strong> (عند q=800).</p>
+                <p>يعني لو السعر = $1.50 → TR = TC → ربح = صفر (تعادل). لو السعر = $1.60 (عند q=1100) — ده السعر اللي
+                    بيجيب ربح $1,100 مش نقطة التعادل.</p>
+                <p>لو السعر أعلى من $1.50 → الشركة تربح. لو بين $0.80 و $1.50 → تخسر لكن تستمر. لو أقل من $0.80 → تُغلق.
+                </p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q7 -->
+        <div class="question-wrapper">
+            <h2>السؤال 7 (2 نقاط)</h2>
+            <div class="question-image"><img src="9.png" alt="Question 7" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question 7:</strong> If the market price declines to $0.70, a profit-maximizing firm will
+                    produce _____ units of output and earn profits of _____.</p>
+                <ul class="options-list">
+                    <li>500, -$450</li>
+                    <li>500, -$50</li>
+                    <li>zero, -$450</li>
+                    <li class="correct">✅ zero, -$400</li>
+                    <li>None of the above.</li>
+                </ul>
+                <div class="correct-answer">Answer: zero, -$400</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p><strong>أولاً — نحسب FC:</strong></p>
+                <ul>
+                    <li>ATC عند q=500 = $1.60، AVC عند q=500 = $0.80 (min AVC)</li>
+                    <li>AFC = ATC - AVC = $1.60 - $0.80 = $0.80</li>
+                    <li>FC = AFC &times; Q = $0.80 &times; 500 = <strong>$400</strong></li>
+                </ul>
+                <p><strong>ثانياً — قاعدة الإغلاق (Shutdown Rule):</strong> لو P &lt; أدنى AVC → الشركة تُغلق في الأجل
+                    القصير.</p>
+                <p>P = $0.70 &lt; $0.80 (AVC min) → <strong>الشركة تُغلق!</strong> → تنتج صفر وحدة.</p>
+                <p>الخسارة = التكاليف الثابتة فقط = <strong>-$400</strong> ✅</p>
+                <p>يعني حتى لو أغلقنا، هنخسر الإيجار والتكاليف الثابتة ($400). لكن لو استمرينا في الإنتاج عند $0.70
+                    سنخسر أكت— لأن كل وحدة بتكلف أكتر من سعر بيعها حتى بدون حساب التكاليف الثابتة. "سيب الخسارة الأقل!"
+                </p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q8 -->
+        <div class="question-wrapper">
+            <h2>السؤال 8 (2 نقاط)</h2>
+            <div class="question-image"><img src="10.png" alt="Question 8" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question 8:</strong> At the market price of $2.60, what can be expected to occur in this
+                    competitive industry over the long-run?</p>
+                <ul class="options-list">
+                    <li class="correct">✅ Industry supply will increase and the market price will decrease.</li>
+                    <li>Industry supply will decrease, and the market price will decrease.</li>
+                    <li>Industry demand for the product will increase, and the market price will increase.</li>
+                    <li>Industry demand for the product will decrease, and the market price will decrease.</li>
+                    <li>None of the above.</li>
+                </ul>
+                <div class="correct-answer">Answer: Industry supply will increase and the market price will decrease.
+                </div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p><strong>الأجل الطويل في المنافسة الكاملة:</strong></p>
+                <p>عند P = $2.60 > ATC min ($1.50) → الشركات بتحقق <strong>ربح اقتصادي موجب</strong> (+$1,100).</p>
+                <p>ده بيجذب شركات جديدة تدخل الصناعة (Free Entry) → <strong>العرض الكلي للسوق يزيد</strong> → السعر ينزل
+                    تلقائياً.</p>
+                <p>دي الحياة في المنافسة الكاملة: لما في فلوس، كل الناس تيجي تشتغل في نفس المجال → العرض يزيد → السعر
+                    ينزل → الربح يتآكل → نرجع للتوازن عند P = ATC min = $1.50.</p>
+                <p>مثال: لما تكاسي أوبر كانت بتكسب كتير → ناس تانية نزلت → العرض زاد → الأجور لسواق انخفضت.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- ============================================================ -->
+        <!-- CONTEXT BOX 3: Q9-Q11 — Production Function Table -->
+        <!-- ============================================================ -->
+        <div class="context-box">
+            <h3>🏭 سياق الأسئلة 9-11 — دالة الإنتاج (Production Function)</h3>
+            <div class="question-image"><img src="11.png" alt="Context: Production Function Table" /></div>
+            <p>دالة إنتاج شركة تنافسية في الأجل القصير. العمالة هي المدخل الوحيد المتغير. <strong>سعر السوق P = $2
+                    للوحدة.</strong></p>
+            <table style="width:100%;border-collapse:collapse;direction:ltr;margin:8px 0;">
+                <tr style="background:#d6eaf8;">
+                    <th style="padding:6px;border:1px solid #aed6f1;">Units of Labor (L)</th>
+                    <th style="padding:6px;border:1px solid #aed6f1;">Units of Output (Q)</th>
+                    <th style="padding:6px;border:1px solid #aed6f1;">MP = ΔQ</th>
+                    <th style="padding:6px;border:1px solid #aed6f1;">MRP = MP × P</th>
+                </tr>
+                <tr>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">3</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">370</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">—</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">—</td>
+                </tr>
+                <tr style="background:#fffde7;">
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;"><strong>4</strong></td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;"><strong>490</strong></td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;"><strong>120</strong></td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;"><strong>$240</strong></td>
+                </tr>
+                <tr style="background:#fef9e7;">
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;"><strong>5</strong></td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;"><strong>570</strong></td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;"><strong>80</strong></td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;"><strong>$160</strong></td>
+                </tr>
+                <tr>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">6</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">600</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">30</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">$60</td>
+                </tr>
+                <tr>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">7</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">620</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">20</td>
+                    <td style="padding:5px;border:1px solid #ccc;text-align:center;">$40</td>
+                </tr>
+            </table>
+            <p>MRP = Marginal Revenue Product = MP × P. الشركة تُوظّف عمالة عند MRP ≥ الأجر (w).</p>
+        </div>
+
+        <!-- Q9 -->
+        <div class="question-wrapper">
+            <h2>السؤال 9 (2 نقاط)</h2>
+            <div class="question-image"><img src="12.png" alt="Question 9" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question 9:</strong> How much does the fifth unit of labor add to the firm's total revenue?
+                </p>
+                <ul class="options-list">
+                    <li>$16</li>
+                    <li>$60</li>
+                    <li>$80</li>
+                    <li class="correct">✅ $160</li>
+                    <li>None of the above.</li>
+                </ul>
+                <div class="correct-answer">Answer: $160</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p><strong>الناتج الحدي للإيراد (MRP):</strong> = MP × P</p>
+                <p>العامل الخامس (L=5) بينتج:</p>
+                <ul>
+                    <li>MP (الناتج الحدي) = Q(L=5) - Q(L=4) = 570 - 490 = <strong>80 وحدة</strong></li>
+                    <li>MRP = MP × P = 80 × $2 = <strong>$160</strong> ✅</li>
+                </ul>
+                <p>يعني العامل الخامس أضاف 80 وحدة إنتاج × $2 للوحدة = $160 إيرادات إضافية للشركة.</p>
+                <p>زي عامل في مطبعة: لو أضفت عامل خامس وطبع 80 كراسة إضافية وسعر الكراسة $2 — أضاف $160 للإيرادات.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q10 -->
+        <div class="question-wrapper">
+            <h2>السؤال 10 (2 نقاط)</h2>
+            <div class="question-image"><img src="13.png" alt="Question 10" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question 10:</strong> If the wage rate is $200, how many units of labor will the firm employ?
+                </p>
+                <ul class="options-list">
+                    <li>3 units of labor</li>
+                    <li class="correct">✅ 4 units of labor</li>
+                    <li>5 units of labor</li>
+                    <li>6 units of labor</li>
+                    <li>7 units of labor</li>
+                </ul>
+                <div class="correct-answer">Answer: 4 units of labor</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p><strong>قاعدة التوظيف:</strong> وظّف عمالة طالما MRP ≥ الأجر (w).</p>
+                <p>نقارن MRP بـw = $200:</p>
+                <ul>
+                    <li>MRP عند L=4: $240 &gt; $200 ✓ → وظّفه!</li>
+                    <li>MRP عند L=5: $160 &lt; $200 ✗ → لا تُوظّفه!</li>
+                </ul>
+                <p>الشركة تُوظّف <strong>4 عمال</strong>. العامل الرابع بيجيب $240 وبيكلف $200 — فيه ربح صافي $40.
+                    العامل الخامس بيجيب $160 وبيكلف $200 — خسارة $40.</p>
+                <p>قاعدة بسيطة: وظّف العامل طالما هو بيجيب أكتر مما بيكلف.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q11 -->
+        <div class="question-wrapper">
+            <h2>السؤال 11 (2 نقاط)</h2>
+            <div class="question-image"><img src="15.png" alt="Question 11" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question 11:</strong> If the wage rate is $200, the firm should</p>
+                <ul class="options-list">
+                    <li>shut down because average revenue product is $200, which is less than marginal revenue product.
+                    </li>
+                    <li>shut down because average revenue product is $228, which is greater than the wage rate.</li>
+                    <li>produce because average revenue product is $200, which is less than marginal revenue product.
+                    </li>
+                    <li class="correct">✅ produce because average revenue product is $245, which is greater than the
+                        wage rate.</li>
+                </ul>
+                <div class="correct-answer">Answer: produce because average revenue product is $245, which is greater
+                    than the wage rate.</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p><strong>متوسط الإيراد الحدي (ARP):</strong> = TR ÷ L = (P × Q) ÷ L</p>
+                <p>عند L=4 (الاختيار الأمثل من Q10):</p>
+                <ul>
+                    <li>Q = 490 وحدة</li>
+                    <li>TR = P × Q = $2 × 490 = $980</li>
+                    <li>ARP = TR ÷ L = $980 ÷ 4 = <strong>$245</strong></li>
+                </ul>
+                <p>ARP = $245 &gt; أجر = $200 → <strong>الشركة تستمر في الإنتاج</strong> ✅</p>
+                <p>المعنى: كل عامل بيولّد $245 إيراد في المتوسط وبيكلف $200 — الشركة رابحة من التشغيل.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q12 -->
+        <div class="question-wrapper">
+            <h2>السؤال 12 (2 نقاط)</h2>
+            <div class="question-image"><img src="16.png" alt="Question 12" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question 12:</strong> In a perfectly competitive industry, the market price is $25. A firm is
+                    currently producing 10,000 units of output; average total cost is $28, marginal cost is $20, and
+                    average variable cost is $20. The firm should</p>
+                <ul class="options-list">
+                    <li>raise price because the firm is losing money.</li>
+                    <li>keep output the same because the firm is producing at minimum average variable cost.</li>
+                    <li class="correct">✅ produce more because the next unit of output increases profit by $5.</li>
+                    <li>produce less because the last unit of output decreased profit by $3.</li>
+                    <li>shut down because the firm is losing money.</li>
+                </ul>
+                <div class="correct-answer">Answer: produce more because the next unit of output increases profit by $5.
+                </div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p><strong>المعطيات:</strong> P = $25، ATC = $28، MC = $20، AVC = $20، Q = 10,000</p>
+                <p><strong>هل الشركة خاسرة؟</strong> نعم! π = (P - ATC) × Q = ($25 - $28) × 10,000 = -$30,000</p>
+                <p><strong>هل تُغلق؟</strong> لا! P = $25 &gt; AVC = $20 → بتغطي التكاليف المتغيرة → تستمر في الأجل
+                    القصير.</p>
+                <p><strong>هل تزيد الإنتاج؟</strong> نعم! MC = $20 &lt; P = $25 → كل وحدة إضافية بتجيب $25 وتكلف $20 →
+                    <strong>ربح حدي +$5 للوحدة</strong>
+                </p>
+                <p>الشركة تزيد الإنتاج لحد ما MC = P = $25. الخسارة في ATC مش مشكلة على المدى القصير — المهم إنها بتغطي
+                    التكاليف المتغيرة وبتقلل الخسارة الكلية.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q13 -->
+        <div class="question-wrapper">
+            <h2>السؤال 13 (2 نقاط)</h2>
+            <div class="question-image"><img src="17.png" alt="Question 13" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question 13:</strong> In order to minimize losses in the short run, a perfectly competitive
+                    firm should shut down if</p>
+                <ul class="options-list">
+                    <li>total revenue is less than total cost.</li>
+                    <li>total revenue is less than total fixed cost.</li>
+                    <li class="correct">✅ total revenue is less than total variable cost.</li>
+                    <li>total revenue is less than the difference between total fixed cost and total variable cost.</li>
+                </ul>
+                <div class="correct-answer">Answer: total revenue is less than total variable cost.</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p><strong>قاعدة الإغلاق في الأجل القصير:</strong></p>
+                <p>الشركة تُغلق لو: TR &lt; TVC (أو بشكل مكافئ: P &lt; AVC min)</p>
+                <p><strong>ليه؟</strong> لأن:</p>
+                <ul>
+                    <li>لو أغلقت: الخسارة = FC (تدفع الإيجار بس)</li>
+                    <li>لو استمرت وTR &lt; TVC: الخسارة = FC + (TVC - TR) → أكبر من لو أغلقت!</li>
+                </ul>
+                <p>يعني لو الإيرادات مش بتغطي حتى التكاليف المتغيرة → أفضل تقفل وتخسر التكاليف الثابتة بس، بدل ما تُضيف
+                    فوقيها خسارة تشغيلية.</p>
+                <p>مثال: عندك قهوة إيجارها $500/شهر. مبيعاتك $300 وخاماتك (قهوة، سكر، أكواب) بتكلف $400. TR($300) &lt;
+                    TVC($400) → أقفل! خسر الإيجار $500 بس. لو استمريت: تخسر $500+$100 = $600.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q14 -->
+        <div class="question-wrapper">
+            <h2>السؤال 14 (2 نقاط)</h2>
+            <div class="question-image"><img src="18.png" alt="Question 14" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question 14:</strong> When total fixed costs increase,</p>
+                <ul class="options-list">
+                    <li>the profit-maximizing level of output falls.</li>
+                    <li class="correct">✅ economic profit decreases.</li>
+                    <li>marginal costs increase.</li>
+                    <li>all of the above occur.</li>
+                </ul>
+                <div class="correct-answer">Answer: economic profit decreases.</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p><strong>ماذا يحدث لو زادت التكاليف الثابتة (FC)؟</strong></p>
+                <ul>
+                    <li><strong>الكمية المُنتجة:</strong> لا تتغير! MC = P → القرار الإنتاجي لا يتأثر بـFC (التكاليف
+                        الثابتة لا تؤثر على MC)</li>
+                    <li><strong>MC:</strong> لا تتغير! MC = ΔTC/ΔQ — والتكاليف الثابتة ثابتة لا تتغير بتغيير Q</li>
+                    <li><strong>الربح الاقتصادي:</strong> ينخفض! π = TR - TC = TR - (FC + VC). لو FC زادت → π قلّت</li>
+                </ul>
+                <p>الإجابة الصحيحة: <strong>الربح الاقتصادي ينخفض فقط</strong> ✅</p>
+                <p>زي لو إيجار المصنع زاد — ده مش بيغير عدد الوحدات اللي تنتجها (لأن قرار الإنتاج مبني على MC مش FC) —
+                    لكن بيأكل من أرباحك.</p>
+            </div>
+        </div>
+        <hr />
+
+        <!-- Q15 -->
+        <div class="question-wrapper">
+            <h2>السؤال 15 (2 نقاط)</h2>
+            <div class="question-image"><img src="19.png" alt="Question 15" /></div>
+            <div class="question-block" dir="ltr">
+                <p><strong>Question 15:</strong> Suppose that a perfectly competitive industry is in long-run
+                    equilibrium. The price of a complement good decreases. What will happen?</p>
+                <ul class="options-list">
+                    <li>Industry demand for the product will decline.</li>
+                    <li class="correct">✅ Next period a typical firm will earn positive economic profit.</li>
+                    <li>Some firms will be forced to exit the industry.</li>
+                    <li>all of the above will occur.</li>
+                </ul>
+                <div class="correct-answer">Answer: Next period a typical firm will earn positive economic profit.</div>
+            </div>
+            <div class="explanation-block" dir="rtl">
+                <h3>التفسير بالمصري</h3>
+                <p><strong>السلعة المكملة (Complement Good):</strong> سلعة بتُستهلك مع هذه السلعة معاً.</p>
+                <p><strong>ماذا يحدث لو سعر السلعة المكملة نزل؟</strong></p>
+                <ul>
+                    <li>الطلب على المكملة <strong>يزيد</strong> (السعر نزل → الناس تشتري أكتر)</li>
+                    <li>لأنها مكملة → الطلب على <strong>هذه السلعة أيضاً يزيد</strong></li>
+                    <li>زيادة الطلب → السعر يرتفع فوق ATC → <strong>ربح اقتصادي موجب للفترة القادمة</strong></li>
+                </ul>
+                <p>مثال: لو سعر "الشيبسي" نزل → الناس تاكل أكتر شيبسي → تشتري أكتر "عصير" معاه (السلعة المكملة) → الطلب
+                    على العصير يزيد → سعره يرتفع → مصانع العصير تربح.</p>
+                <p>على المدى الطويل: الدخول سيزيد وتعود الأرباح لصفر — لكن في الفترة القادمة مباشرة، الشركات تربح ربحاً
+                    موجباً.</p>
+            </div>
+        </div>
+        <hr />
+
+        <div
+            style="text-align:center;padding:40px;background:linear-gradient(135deg,#1a1a2e,#16213e);color:#e0e0e0;border-radius:12px;margin-top:40px;">
+            <h2 style="color:#f5c518;">🎓 تم حل جميع أسئلة كويز الأسبوع الخامس</h2>
+            <p>المنافسة الكاملة — Perfect Competition</p>
+            <p>15 سؤال | 30 نقطة | صُحِّحت بالكامل بالتحليل التصويري</p>
+        </div>
+    </div>
+</body>
+
+</html>
