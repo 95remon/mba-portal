@@ -56,7 +56,8 @@ export const subjects = [
                     { type: "summary", label: { en: "Lecture (Arabic)", ar: "محاضرة (عربي)" }, url: "./courses/managerial-economics/week5/lecture-ar.html" },
                     { type: "summary", label: { en: "Lecture (English)", ar: "محاضرة (إنجليزي)" }, url: "./courses/managerial-economics/week5/lecture-en.html" },
                     { type: "quiz", label: { en: "Practice Problems (Arabic)", ar: "تمارين عملية (عربي)" }, url: "./courses/managerial-economics/week5/exercises-ar.html" },
-                    { type: "quiz", label: { en: "Practice Problems (English)", ar: "تمارين عملية (إنجليزي)" }, url: "./courses/managerial-economics/week5/exercises-en.html" }
+                    { type: "quiz", label: { en: "Practice Problems (English)", ar: "تمارين عملية (إنجليزي)" }, url: "./courses/managerial-economics/week5/exercises-en.html" },
+                    { type: "quiz", label: { en: "Quiz 5 Answers (Egyptian Arabic) ✅", ar: "إجابات كويز 5 (عامية مصرية) ✅" }, url: "./courses/managerial-economics/week5/quiz/quiz-ar.html" }
                 ]
             }
         ]
